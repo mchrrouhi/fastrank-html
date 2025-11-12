@@ -969,9 +969,8 @@
                                     </defs>
                                     <path fill="url(#bs5-a)" fill-rule="evenodd" d="m661 736 461 369-284 58z" transform="matrix(1 0 0 -1 -661 1163)" />
                                 </svg>
-                            </div>
-                            <!-- Content -->
-                            <div class="grid md:grid-cols-4 xl:-mx-6 text-sm [&>div:nth-of-type(-n+4)]:py-6 [&>div:nth-last-of-type(-n+4)]:pb-6 max-md:[&>div:nth-last-of-type(-n+4)]:mb-8 max-md:[&>div:nth-of-type(-n+4):nth-of-type(n+1)]:rounded-t-3xl max-md:[&>div:nth-last-of-type(-n+4)]:rounded-b-3xl md:[&>div:nth-of-type(2)]:rounded-tl-3xl md:[&>div:nth-of-type(4)]:rounded-tr-3xl md:[&>div:nth-last-of-type(3)]:rounded-bl-3xl md:[&>div:nth-last-of-type(1)]:rounded-br-3xl [&>div]:bg-slate-700/20 [&>div:nth-of-type(4n+1)]:bg-transparent max-md:[&>div:nth-of-type(4n+5)]:hidden max-md:[&>div:nth-of-type(4n+2)]:order-1 max-md:[&>div:nth-of-type(4n+3)]:order-2 max-md:[&>div:nth-of-type(4n+4)]:order-3 max-md:md:[&>div:nth-of-type(n)]:mb-0 [&>div:nth-of-type(4n+3)]:relative [&>div:nth-of-type(4n+3)]:before:absolute [&>div:nth-of-type(4n+3)]:before:-inset-px [&>div:nth-of-type(4n+3)]:before:rounded-[inherit] [&>div:nth-of-type(4n+3)]:before:border-x-2 [&>div:nth-of-type(3)]:before:border-t-2 [&>div:nth-last-of-type(2)]:before:border-b-2 [&>div:nth-of-type(4n+3)]:before:border-purple-500 [&>div:nth-of-type(4n+3)]:before:-z-10 [&>div:nth-of-type(4n+3)]:before:pointer-events-none" x-data="{ annual: true }">
+                            </div>                            <!-- Content -->
+                            <div class="grid md:grid-cols-4 xl:-mx-6 text-sm [&>div:nth-of-type(-n+4)]:py-6 [&>div:nth-last-of-type(-n+4)]:pb-6 max-md:[&>div:nth-last-of-type(-n+4)]:mb-8 max-md:[&>div:nth-of-type(-n+4):nth-of-type(n+1)]:rounded-t-3xl max-md:[&>div:nth-last-of-type(-n+4)]:rounded-b-3xl md:[&>div:nth-of-type(2)]:rounded-tl-3xl md:[&>div:nth-of-type(4)]:rounded-tr-3xl md:[&>div:nth-last-of-type(3)]:rounded-bl-3xl md:[&>div:nth-last-of-type(1)]:rounded-br-3xl [&>div]:bg-slate-700/20 [&>div:nth-of-type(4n+1)]:bg-transparent max-md:[&>div:nth-of-type(4n+5)]:hidden max-md:[&>div:nth-of-type(4n+2)]:order-1 max-md:[&>div:nth-of-type(4n+3)]:order-2 max-md:[&>div:nth-of-type(4n+4)]:order-3 max-md:md:[&>div:nth-of-type(n)]:mb-0 [&>div:nth-of-type(4n+3)]:relative [&>div:nth-of-type(4n+3)]:before:absolute [&>div:nth-of-type(4n+3)]:before:-inset-px [&>div:nth-of-type(4n+3)]:before:rounded-[inherit] [&>div:nth-of-type(4n+3)]:before:border-x-2 [&>div:nth-of-type(3)]:before:border-t-2 [&>div:nth-last-of-type(2)]:before:border-b-2 [&>div:nth-of-type(4n+3)]:before:border-purple-500 [&>div:nth-of-type(4n+3)]:before:-z-10 [&>div:nth-of-type(4n+3)]:before:pointer-events-none">
                                 <!-- Pricing toggle -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="pb-5 md:border-b border-slate-800">
@@ -980,7 +979,7 @@
                                             <div class="inline-flex items-center whitespace-nowrap">
                                                 <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">Monthly</div>
                                                 <div class="relative">
-                                                    <input type="checkbox" id="toggle" class="peer sr-only" x-model="annual" />
+                                                    <input type="checkbox" id="toggle" class="peer sr-only" />
                                                     <label for="toggle" class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-400 px-0.5 outline-slate-400 transition-colors before:h-5 before:w-5 before:rounded-full before:bg-white before:shadow-xs before:transition-transform before:duration-150 peer-checked:bg-purple-500 peer-checked:before:translate-x-full peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-400 peer-focus-visible:peer-checked:outline-purple-500">
                                                         <span class="sr-only">Pay Yearly</span>
                                                     </label>
@@ -990,12 +989,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Pro price -->
+                                <!-- Starter price -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="grow pb-4 mb-4 border-b border-slate-800">
                                         <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Starter Audit</div>
                                         <div class="mb-1">
-                                            <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50" x-text="annual ? '49' : '29'">24</span><span class="text-sm text-slate-600 font-medium">/mo</span>
+                                            <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50">49</span><span class="text-sm text-slate-600 font-medium"> one-time</span>
                                         </div>
                                         <div class="text-slate-500">Focused on essential site performance.</div>
                                     </div>
@@ -1005,12 +1004,12 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!-- Team price -->
+                                <!-- Pro price -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="grow pb-4 mb-4 border-b border-slate-800">
                                         <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">Pro Audit</div>
                                         <div class="mb-1">
-                                            <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50" x-text="annual ? '99' : '54'">49</span><span class="text-sm text-slate-600 font-medium">/mo</span>
+                                            <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50">99</span><span class="text-sm text-slate-600 font-medium"> one-time</span>
                                         </div>
                                         <div class="text-slate-500">Deep technical analysis & 3 pages.</div>
                                     </div>
@@ -1019,7 +1018,8 @@
                                             Get Started <span class="tracking-normal text-purple-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
                                         </a>
                                     </div>
-                                </div>                                <!-- Enterprise price -->
+                                </div>
+                                <!-- eCom/Agency price -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="grow pb-4 mb-4 border-b border-slate-800">
                                         <div class="text-base font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-0.5">eCom/Agency</div>
@@ -1034,6 +1034,7 @@
                                         </a>
                                     </div>
                                 </div>
+
                                 <!-- # Usage -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4">Usage</div>
@@ -1047,7 +1048,8 @@
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Usage</div>
                                 </div>
-                                <!-- 1 Pages Audited -->
+
+                                <!-- Pages Audited -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Pages Audited</div>
                                 </div>
@@ -1064,7 +1066,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span>3 Page Audit <span class="md:hidden">1 Page Audit</span></span>
+                                        <span>3 Page Audit <span class="md:hidden">3 Page Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1072,9 +1074,10 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span>5 Page Audit <span class="md:hidden">1 Page Audit</span></span>
+                                        <span>5 Page Audit <span class="md:hidden">5 Page Audit</span></span>
                                     </div>
                                 </div>
+
                                 <!-- Core Vitals Fixes -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Core Vitals Fixes</div>
@@ -1103,6 +1106,7 @@
                                         <span>Guaranteed <span class="md:hidden">Core Vitals Fixes</span></span>
                                     </div>
                                 </div>
+
                                 <!-- Image Optimization -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Image Optimization</div>
@@ -1112,7 +1116,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Image Optimization</span></span>
+                                        <span>✓ <span class="md:hidden">Image Optimization</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1120,7 +1124,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Image Optimization</span></span>
+                                        <span>✓ <span class="md:hidden">Image Optimization</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1128,9 +1132,10 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Image Optimization</span></span>
+                                        <span>✓ <span class="md:hidden">Image Optimization</span></span>
                                     </div>
                                 </div>
+
                                 <!-- Full Cache Audit -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Full Cache Audit</div>
@@ -1140,7 +1145,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Full Cache Audit</span></span>
+                                        <span>✓ <span class="md:hidden">Full Cache Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1148,7 +1153,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Full Cache Audit</span></span>
+                                        <span>✓ <span class="md:hidden">Full Cache Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1156,9 +1161,10 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Full Cache Audit</span></span>
+                                        <span>✓ <span class="md:hidden">Full Cache Audit</span></span>
                                     </div>
                                 </div>
+
                                 <!-- # Features -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4">Features</div>
@@ -1172,6 +1178,7 @@
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Features</div>
                                 </div>
+
                                 <!-- TTFB Optimization -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">TTFB Optimization</div>
@@ -1181,7 +1188,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                          <span> <span class="md:hidden">TTFB Optimization</span></span>
+                                        <span>✓ <span class="md:hidden">TTFB Optimization</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1189,7 +1196,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">TTFB Optimization</span></span>
+                                        <span>✓ <span class="md:hidden">TTFB Optimization</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1197,14 +1204,17 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">TTFB Optimization</span></span>
+                                        <span>✓ <span class="md:hidden">TTFB Optimization</span></span>
                                     </div>
-                                </div>                                <!-- Render-Blocking Audit -->
+                                </div>
+
+                                <!-- Render-Blocking Audit -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Render-Blocking Audit</div>
-                                </div>                                <div class="px-6 flex flex-col justify-end">
+                                </div>
+                                <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                        <span><span class="md:hidden">Render-Blocking Audit</span></span>
+                                        <span class="text-slate-600">✗ <span class="md:hidden">Render-Blocking Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1212,7 +1222,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">Render-Blocking Audit</span></span>
+                                        <span>✓ <span class="md:hidden">Render-Blocking Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1220,28 +1230,22 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">Render-Blocking Audit</span></span>
+                                        <span>✓ <span class="md:hidden">Render-Blocking Audit</span></span>
                                     </div>
-                                </div>                                <!-- Third-Party Script Audit -->
+                                </div>
+
+                                <!-- Third-Party Script Audit -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Third-Party Script Audit</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                        <span><span class="md:hidden">Third-Party Script Audit</span></span>
+                                        <span class="text-slate-600">✗ <span class="md:hidden">Third-Party Script Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                        <span><span class="md:hidden">Third-Party Script Audit</span></span>
-                                    </div>
-                                </div>
-                                <div class="px-6 flex flex-col justify-end">
-                                    <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                        <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
-                                            <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
-                                        </svg>
-                                        <span> <span class="md:hidden">Render-Blocking Audit</span></span>
+                                        <span class="text-slate-600">✗ <span class="md:hidden">Third-Party Script Audit</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1249,27 +1253,20 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span> <span class="md:hidden">Render-Blocking Audit</span></span>
+                                        <span>✓ <span class="md:hidden">Third-Party Script Audit</span></span>
                                     </div>
                                 </div>
-                              <!-- PDF Action Roadmap -->
+
+                                <!-- PDF Action Roadmap -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">PDF Action Roadmap</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
-                                    <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
+                                    <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">PDF Action Roadmap</span></span>
-                                    </div>
-                                </div>
-                                <div class="px-6 flex flex-col justify-end">
-                                    <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
-                                        <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
-                                            <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
-                                        </svg>
-                                        <span><span class="md:hidden">PDF Action Roadmap</span></span>
+                                        <span>✓ <span class="md:hidden">PDF Action Roadmap</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1277,15 +1274,25 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">PDF Action Roadmap</span></span>
+                                        <span>✓ <span class="md:hidden">PDF Action Roadmap</span></span>
                                     </div>
-                                </div>                                <!-- Ahrefs Data Included -->
+                                </div>
+                                <div class="px-6 flex flex-col justify-end">
+                                    <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
+                                        <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                            <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                        </svg>
+                                        <span>✓ <span class="md:hidden">PDF Action Roadmap</span></span>
+                                    </div>
+                                </div>
+
+                                <!-- Ahrefs Data Included -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Ahrefs Data Included</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                      <span><span class="md:hidden">Ahrefs Data Included</span></span>
+                                        <span class="text-slate-600">✗ <span class="md:hidden">Ahrefs Data Included</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1293,7 +1300,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">Ahrefs Data Included</span></span>
+                                        <span>✓ <span class="md:hidden">Ahrefs Data Included</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1301,15 +1308,17 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">Ahrefs Data Included</span></span>
+                                        <span>✓ <span class="md:hidden">Ahrefs Data Included</span></span>
                                     </div>
-                                </div>                                <!-- Structured Data Review -->
+                                </div>
+
+                                <!-- Structured Data Review -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Structured Data Review</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                        <span><span class="md:hidden">Structured Data Review</span></span>
+                                        <span class="text-slate-600">✗ <span class="md:hidden">Structured Data Review</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1317,7 +1326,7 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                      <span><span class="md:hidden">Structured Data Review</span></span>
+                                        <span>✓ <span class="md:hidden">Structured Data Review</span></span>
                                     </div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
@@ -1325,28 +1334,31 @@
                                         <svg class="shrink-0 fill-purple-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
                                             <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
                                         </svg>
-                                        <span><span class="md:hidden">Structured Data Review</span></span>
+                                        <span>✓ <span class="md:hidden">Structured Data Review</span></span>
                                     </div>
                                 </div>
+
                                 <!-- # Support -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4">Support</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
-                                    <div class="py-2 text-slate-50 font-medium mt-4 hidden">Support</div>
-                                </div>
-                                <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Support</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Support</div>
-                                </div>                                <!-- Priority Chat Support -->
+                                </div>
+                                <div class="px-6 flex flex-col justify-end">
+                                    <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Support</div>
+                                </div>
+
+                                <!-- Priority Chat Support -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Priority Chat Support</div>
                                 </div>
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
-                                      <span class="text-slate-200">30 Days</span>
+                                        <span class="text-slate-200">30 Days</span>
                                         <span class="ml-2 md:hidden">Priority Chat Support</span>
                                     </div>
                                 </div>
@@ -1360,8 +1372,7 @@
                                     <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
                                         <span class="text-slate-200">60 Days</span>
                                         <span class="ml-2 md:hidden">Priority Chat Support</span>
-                                    </div>
-                                </div>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </div>
