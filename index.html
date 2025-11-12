@@ -27,8 +27,7 @@
                     <nav class="hidden md:flex md:grow">                        <!-- Desktop menu links -->                        <ul class="flex grow justify-center flex-wrap items-center">
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="./about.html">About</a>
-                            </li>
-                            <li>
+                            </li>                            <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#pricing">Pricing</a>
                             </li>
                             <li>
@@ -59,11 +58,8 @@
                         <!-- Mobile navigation -->                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
                                 <li>
                                     <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="./about.html">About</a>
-                                </li>
-                                <li>
+                                </li>                                <li>
                                     <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="#pricing">Pricing</a>
-                                </li><li>
-                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="customers/">Testimonials</a>
                                 </li>
                                 <li>
                                     <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="#0">Blog</a>
@@ -130,12 +126,7 @@
                                     </a>
                                 </div>
                             </div>
-                            
-                            <!-- Customer success link -->
-                            <div class="text-center mt-6" data-aos="fade-down" data-aos-delay="600">                                <a class="text-sm text-readable hover:text-white transition duration-150 ease-in-out" href="customers/">
-                                    See results → <span class="text-purple-400">/customers</span>
-                                </a>
-                            </div>
+  
 
                         </div>
 
@@ -613,11 +604,9 @@
                         </div>
             
                     </div>
-                </div>
-            </section>
+                </div>        </section>
 
-            <!-- Testimonials carousel -->
-            <section>    
+            <section>
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="pt-12 md:pt-20">
             
