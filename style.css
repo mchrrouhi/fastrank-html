@@ -4698,3 +4698,79 @@
 .text-readable-sm {
   color: oklch(0.869 0.022 252.894); /* slate-300 for small text readability */
 }
+
+/* Testimonials/Customers page specific classes */
+.t-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .t-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .t-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.t-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.t-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.t-kpi {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(196, 181, 253, 1);
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+
+.t-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.t-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(168, 85, 247, 0.15));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(196, 181, 253, 1);
+}
+
+.t-logo {
+  height: 2rem;
+  width: auto;
+  filter: brightness(0.8) contrast(1.2);
+  transition: filter 0.3s ease;
+}
+
+.t-card:hover .t-logo {
+  filter: brightness(1) contrast(1);
+}
