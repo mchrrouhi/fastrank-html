@@ -29,41 +29,18 @@
                     </div>
         
                     <!-- Desktop navigation -->
-                    <nav class="hidden md:flex md:grow">
-        
-                        <!-- Desktop menu links -->
+                    <nav class="hidden md:flex md:grow">                        <!-- Desktop menu links -->
                         <ul class="flex grow justify-center flex-wrap items-center">
-                            <li>
-                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="integrations.html">Integrations</a>
-                            </li>
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
                             </li>
                             <li>
-                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="customers.html">Customers</a>
-                            </li>
-                            <li>
-                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="changelog.html">Changelog</a>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="customers.html">Testimonials</a>
                             </li>
                         </ul>
         
-                    </nav>
-        
-                    <!-- Desktop sign in links -->
+                    </nav>                    <!-- Desktop sign in links -->
                     <ul class="flex-1 flex justify-end items-center">
-                        <li>
-                            <a class="font-medium text-sm text-slate-300 hover:text-white whitespace-nowrap transition duration-150 ease-in-out" href="signin.html">Sign in</a>
-                        </li>
-                        <li class="ml-6">
-                            <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="signup.html">
-                                <span class="relative inline-flex items-center">
-                                    Sign up <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
-                                </span>
-                            </a>
-                        </li>
                     </ul>
                 
                     <!-- Mobile menu -->
@@ -80,22 +57,12 @@
                         </button>                             
         
                         <!-- Mobile navigation -->
-                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
-                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
-                                <li>
-                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="integrations.html">Integrations</a>
-                                </li>
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
                                 <li>
                                     <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="pricing.html">Pricing</a>
                                 </li>
                                 <li>
-                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="customers.html">Customers</a>
-                                </li>
-                                <li>
-                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="changelog.html">Changelog</a>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="customers.html">Testimonials</a>
                                 </li>
                             </ul>
                         </nav>
@@ -1573,14 +1540,12 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-        
-                    <!-- 2nd block -->
+                    </div>                    <!-- 2nd block -->
                     <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
                         <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
                         <ul class="text-sm space-y-2">
                             <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Features</a>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Audit Features</a>
                             </li>
                             <li>
                                 <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Integrations</a>
@@ -1592,45 +1557,26 @@
                                 <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Changelog</a>
                             </li>
                             <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Our method</a>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Methodology</a>
                             </li>
                         </ul>
-                    </div>
-        
-                    <!-- 3rd block -->
+                    </div>                    <!-- 3rd block -->
                     <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
                         <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
                         <ul class="text-sm space-y-2">
                             <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">About us</a>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="about.html">Our Expertise</a>
                             </li>
                             <li>
                                 <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Diversity & Inclusion</a>
                             </li>
-                            <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Blog</a>
-                            </li>
-                            <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Careers</a>
-                            </li>
-                            <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Financial statements</a>
-                            </li>
                         </ul>
-                    </div>
-        
-                    <!-- 4th block -->
+                    </div>                    <!-- 4th block -->
                     <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
                         <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
                         <ul class="text-sm space-y-2">
                             <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Community</a>
-                            </li>
-                            <li>
                                 <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Terms of service</a>
-                            </li>
-                            <li>
-                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Report a vulnerability</a>
                             </li>
                         </ul>
                     </div>
