@@ -4689,3 +4689,12 @@
   initial-value: "";
   inherits: false;
 }
+
+/* Custom classes for improved accessibility and contrast */
+.text-readable {
+  color: oklch(0.869 0.022 252.894); /* slate-300 for better contrast */
+}
+
+.text-readable-sm {
+  color: oklch(0.869 0.022 252.894); /* slate-300 for small text readability */
+}
