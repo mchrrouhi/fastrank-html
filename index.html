@@ -26,10 +26,9 @@
                     </div>
         
                     <!-- Desktop navigation -->
-                    <nav class="hidden md:flex md:grow">                        <!-- Desktop menu links -->
-                        <ul class="flex grow justify-center flex-wrap items-center">
+                    <nav class="hidden md:flex md:grow">                        <!-- Desktop menu links -->                        <ul class="flex grow justify-center flex-wrap items-center">
                             <li>
-                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#pricing">Pricing</a>
                             </li>
                             <li>
                                 <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="customers.html">Testimonials</a>
@@ -62,7 +61,7 @@
                         <!-- Mobile navigation -->
                         <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
                                 <li>
-                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="pricing.html">Pricing</a>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="#pricing">Pricing</a>
                                 </li>
                                 <li>
                                     <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="customers.html">Testimonials</a>
@@ -1420,24 +1419,22 @@
                                 Alpine.data('carousel', () => ({
                                     active: 0,
                                     autorotate: true,
-                                    autorotateTiming: 7000,                                    items: [
-                                        {
+                                    autorotateTiming: 7000,                                    items: [                                        {
                                             img: './images/Kevin-Sanderson.webp',
-                                            quote: "After implementing their speed optimization recommendations, our conversion rate increased by 34% and monthly revenue jumped from $85k to $124k. The performance improvements directly translated to bottom-line results.",
-                                            name: 'Sarah Chen',
-                                            role: 'Ecommerce Specialist'
+                                            quote: "The Core Web Vitals audit revealed critical performance bottlenecks that were devastating our SEO rankings. After implementing their recommendations, our Largest Contentful Paint improved from 4.2s to 1.8s, and we saw a 45% increase in organic traffic within 6 weeks. Our search visibility score jumped 67 points.",
+                                            name: 'Kamel Farah Taib',
+                                            role: 'SEO Specialist'
                                         },
                                         {
                                             img: './images/Jed-Seigle.webp',
                                             quote: "The site speed audit identified critical issues that were costing us $3,200 per day in lost sales. Within 2 weeks of implementation, we saw a 28% boost in mobile conversions and 42% reduction in cart abandonment.",
                                             name: 'Michael Rodriguez',
                                             role: 'Marketing Executive'
-                                        },
-                                        {
+                                        },                                        {
                                             img: './images/Clotilde-Bedoya.webp',
-                                            quote: "Our PageSpeed score went from 47 to 89, and the impact was immediate - 31% increase in organic traffic, 26% higher average order value, and $67k additional revenue in the first month alone. ROI was incredible.",
-                                            name: 'Emily Thompson',
-                                            role: 'Business Development Executive'
+                                            quote: "The audit report was incredibly detailed and actionable. Every recommendation was prioritized by impact, with clear technical explanations and implementation steps. As an SEO copywriter, I was impressed by how they identified content rendering issues that were affecting our search performance. The quality exceeded our expectations.",
+                                            name: 'Fadwa Nebti',
+                                            role: 'SEO Copywriter, Weshore Agency'
                                         },
                                     ],
                                     init() {
