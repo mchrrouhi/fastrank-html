@@ -706,21 +706,23 @@
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
                     
                     <!-- Logo + Address column -->
-                    <div class="flex flex-col gap-2">
+                    <div>
                         <!-- Logo -->
                         <a class="inline-flex" href="index.html" aria-label="fastrank.io">
-                            <img src="images/fastrank-logo.png"
-                                 alt="Fastrank logo"
-                                 class="h-6 md:h-7 w-auto opacity-95" />
+                            <img 
+                              src="images/fastrank-logo.png" 
+                              alt="Fastrank logo" 
+                              class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4"
+                            />
                         </a>
                         
                         <!-- Company info -->
-                        <div class="text-xs text-slate-400 leading-relaxed space-y-1">
-                            <div class="font-medium text-slate-300">Cadunlock LLC</div>
-                            <div>131 Continental Dr, Suite 305</div>
-                            <div>Newark, DE 19713, United States</div>
-                            <div>Phone: +1 (302) 294-9394</div>
-                            <div>Email: support@fastrank.io</div>
+                        <div class="flex flex-col gap-2 text-slate-300 text-sm">
+                          <span class="font-semibold text-slate-100">Cadunlock LLC</span>
+                          <span>131 Continental Dr, Suite 305</span>
+                          <span>Newark, DE 19713, United States</span>
+                          <span>Phone: +1 (302) 294-9394</span>
+                          <a href="mailto:support@fastrank.io" class="hover:text-white transition">support@fastrank.io</a>
                         </div>
                         
                         <!-- Social links -->
@@ -786,6 +788,10 @@
                     </div>
         
                 </div>
+                
+                <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+                  © 2025 Cadunlock LLC. All rights reserved.
+                </p>
         
             </div>
         </footer>
