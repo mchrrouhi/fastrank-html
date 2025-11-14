@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>Terms of Service - fastrank.io</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./css/vendors/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="index.html" aria-label="fastrank.io">
+                         <img src="./images/logo.svg" width="200" height="46" alt="fastrank.io Logo" class="h-12 w-auto">
+                           </a>
+                    </div>
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="./about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="./index.html#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#0">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Desktop sign in links -->
+                    <ul class="flex-1 flex justify-end items-center">
+                        <li>
+                            <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="./index.html#pricing">
+                                See Plans <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+        
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+        
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="./about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="./index.html#pricing">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="#0">Blog</a>
+                                </li>
+                                <li class="border-t border-slate-700 pt-2 mt-2">
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5 group" href="./index.html#pricing">
+                                        See Plans <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+        
+                    </div>
+        
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+            <!-- Page section -->
+            <section class="relative">
+                <!-- Radial gradient -->
+                <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
+                    <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
+                    <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+                </div>
+
+                <!-- Particles animation -->
+                <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
+                    <canvas data-particle-animation data-particle-quantity="15"></canvas>
+                </div>
+
+                <!-- Illustration -->
+                <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
+                    <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
+                </div>
+
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 pb-20 md:pt-40 md:pb-32">
+                        <!-- Main content container -->
+                        <div class="max-w-3xl mx-auto">
+                            <!-- Page header -->
+                            <div class="text-center mb-12">
+                                <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-6">Terms of Service</h1>
+                                <p class="text-lg text-slate-300">Last updated: November 14, 2025</p>
+                            </div>
+                            
+                            <!-- Terms content -->
+                            <div class="prose prose-lg prose-invert max-w-none space-y-8 text-slate-300 leading-relaxed">
+                                
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">1. Acceptance of Terms</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">Welcome to fastrank.io, operated by Cadunlock LLC, a Delaware limited liability company ("Company," "we," "us," or "our"). By accessing or using our website performance audit services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">2. Company Information</h2>
+                                    <div class="bg-slate-800/30 border border-slate-700 rounded-lg p-6">
+                                        <p class="text-slate-300 leading-7">
+                                            <strong class="text-white">Cadunlock LLC</strong><br>
+                                            131 Continental Dr, Suite 305<br>
+                                            Newark, DE 19713, United States<br>
+                                            Phone: +1 (302) 294-9394<br>
+                                            Email: support@fastrank.io
+                                        </p>
+                                    </div>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">3. Services Description</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We provide technical website performance audit services designed to identify and prioritize Core Web Vitals optimization opportunities. Our services include:</p>
+                                    <ul class="list-disc list-inside space-y-3 mt-4 text-slate-300 leading-7 ml-4">
+                                        <li>PageSpeed Insights analysis and optimization recommendations</li>
+                                        <li>Core Web Vitals assessment and improvement strategies</li>
+                                        <li>Technical performance audits and actionable roadmaps</li>
+                                        <li>Server configuration and third-party script analysis</li>
+                                        <li>Image optimization and lazy loading implementation guidance</li>
+                                        <li>Cache audit and render-blocking resource identification</li>
+                                    </ul>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">4. Payment Terms</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">Payment is required upon ordering. We accept major credit cards and process payments through secure third-party payment processors. All prices are in US dollars and are subject to applicable taxes. Pricing is clearly displayed on our website and may be updated from time to time with notice.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">5. Delivery and Support</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We aim to deliver audit reports within 24-48 hours of receiving your order. Support is provided for 30-60 days depending on your selected package, ensuring you have assistance during the implementation phase of our recommendations.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">6. Intellectual Property</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">All content, materials, and deliverables provided as part of our services remain the intellectual property of Cadunlock LLC unless specifically transferred in writing. You receive a perpetual license to use the audit reports and recommendations for your website optimization purposes.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">7. Service Quality Guarantee</h2>
+                                    <div class="bg-gradient-to-r from-purple-900/20 to-slate-800/20 border border-purple-500/30 rounded-lg p-8">
+                                        <h3 class="font-semibold text-white mb-4 text-lg">Technical Quality Assurance:</h3>
+                                        <p class="text-slate-200 leading-7 mb-6">Cadunlock LLC <strong class="text-white">guarantees the technical accuracy and quality</strong> of all audit reports and optimization recommendations ("The Fix Roadmap") delivered through our services. Our technical analysis is based on industry-standard performance metrics, Google's Core Web Vitals guidelines, and established web performance best practices.</p>
+                                        
+                                        <p class="text-slate-200 leading-7 mb-6">We guarantee that:</p>
+                                        <ul class="list-disc list-inside space-y-2 text-slate-200 leading-7 ml-4 mb-6">
+                                            <li>All recommendations are technically sound and implementable</li>
+                                            <li>Performance metrics are accurately measured and reported</li>
+                                            <li>Priority rankings reflect genuine impact on Core Web Vitals</li>
+                                            <li>Code suggestions follow current web standards and best practices</li>
+                                        </ul>
+                                        
+                                        <div class="border-l-4 border-amber-400 bg-amber-900/10 pl-6 py-4">
+                                            <h4 class="font-medium text-amber-200 mb-3">Important Results Disclaimer:</h4>
+                                            <p class="text-amber-100 leading-7"><strong>While we guarantee the technical quality and accuracy of our recommendations, we explicitly do not guarantee specific external outcomes such as improved search engine rankings, increased website traffic, enhanced conversion rates, or revenue generation.</strong> Website performance and business results are influenced by numerous factors beyond technical optimization, including but not limited to market conditions, competition, content quality, user behavior, and implementation timing. Results may vary significantly based on these and other variables outside our direct control.</p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">8. Refund Policy</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We offer a satisfaction guarantee on our audit services. If you are not satisfied with the technical quality of our analysis or find significant errors in our recommendations, you may request a full refund within 30 days of delivery. Refunds are processed within 5-7 business days after approval.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">9. Limitation of Liability</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">To the fullest extent permitted by law, Cadunlock LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of our services or implementation of our recommendations.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">10. Privacy and Data Protection</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We are committed to protecting your privacy and handling your data responsibly. We only collect necessary information to perform our audit services. Our data collection and processing practices are outlined in our Privacy Policy, which is incorporated into these Terms by reference.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">11. Modification of Services</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We reserve the right to modify, suspend, or discontinue any aspect of our services at any time. We will provide reasonable notice of any material changes that may affect existing customers.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">12. Termination</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We reserve the right to terminate or suspend access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms or engage in fraudulent activity.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">13. Governing Law and Dispute Resolution</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">These Terms shall be interpreted and governed by the laws of the State of Delaware, without regard to its conflict of law provisions. Any disputes arising from these Terms or our services shall be resolved through binding arbitration in Delaware, or if arbitration is not applicable, in the state and federal courts of Delaware.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">14. Changes to Terms</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect. Your continued use of our services after such modifications constitutes acceptance of the updated Terms.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">15. Severability</h2>
+                                    <p class="text-slate-300 leading-7 mb-4">If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will continue in full force and effect, and the invalid provision will be modified to the minimum extent necessary to make it valid and enforceable.</p>
+                                </section>
+
+                                <section class="mb-12">
+                                    <h2 class="text-2xl font-semibold text-white mb-6">16. Contact Information</h2>
+                                    <div class="bg-slate-800/40 border border-slate-600 rounded-lg p-8">
+                                        <p class="text-slate-200 leading-7 mb-6">If you have any questions about these Terms of Service, need clarification on our guarantees, or require support, please contact us:</p>
+                                        <div class="grid sm:grid-cols-2 gap-6">
+                                            <div>
+                                                <h4 class="font-medium text-white mb-3">Email Support</h4>
+                                                <p class="text-slate-300">
+                                                    <a href="mailto:support@fastrank.io" class="text-purple-400 hover:text-purple-300 transition-colors font-medium">support@fastrank.io</a>
+                                                </p>
+                                                <p class="text-sm text-slate-400 mt-1">Response within 24 hours</p>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-medium text-white mb-3">Phone Support</h4>
+                                                <p class="text-slate-300">
+                                                    <a href="tel:+13022949394" class="text-purple-400 hover:text-purple-300 transition-colors font-medium">+1 (302) 294-9394</a>
+                                                </p>
+                                                <p class="text-sm text-slate-400 mt-1">Business hours: Mon-Fri 9AM-6PM EST</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-6 pt-6 border-t border-slate-600">
+                                            <h4 class="font-medium text-white mb-3">Mailing Address</h4>
+                                            <p class="text-slate-300 leading-6">
+                                                Cadunlock LLC<br>
+                                                131 Continental Dr, Suite 305<br>
+                                                Newark, DE 19713<br>
+                                                United States
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Site footer -->
+        <footer>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Blocks -->
+                <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
+                    <!-- 1st block -->
+                    <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
+                        <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
+                            <div class="mb-4 sm:mb-0">
+                                <!-- Logo prominently sized and aligned at top left -->
+                                <div class="mb-4">
+                                    <a class="inline-flex" href="index.html" aria-label="fastrank.io">
+                                        <img src="./images/logo.svg" width="140" height="32" alt="fastrank.io" class="h-8 w-auto">
+                                    </a>
+                                </div>
+                                
+                                <!-- Structured legal information -->
+                                <div class="text-xs text-slate-400 leading-relaxed space-y-1">
+                                    <div class="font-medium text-slate-300">Cadunlock LLC</div>
+                                    <div>131 Continental Dr, Suite 305</div>
+                                    <div>Newark, DE 19713, United States</div>
+                                    <div>Phone: +1 (302) 294-9394</div>
+                                    <div>Email: support@fastrank.io</div>
+                                </div>
+                            </div>
+                            <!-- Social links -->
+                            <ul class="flex">
+                                <li>
+                                    <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Twitter">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="ml-2">
+                                    <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Dev.to">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                            <path class="w-8 h-8 fill-current" d="M12.29 14.3a.69.69 0 0 0-.416-.155h-.623v3.727h.623a.689.689 0 0 0 .416-.156.543.543 0 0 0 .21-.466v-2.488a.547.547 0 0 0-.21-.462ZM22.432 8H9.568C8.704 8 8.002 8.7 8 9.564v12.872A1.568 1.568 0 0 0 9.568 24h12.864c.864 0 1.566-.7 1.568-1.564V9.564A1.568 1.568 0 0 0 22.432 8Zm-8.925 9.257a1.631 1.631 0 0 1-1.727 1.687h-1.657v-5.909h1.692a1.631 1.631 0 0 1 1.692 1.689v2.533ZM17.1 14.09h-1.9v1.372h1.163v1.057H15.2v1.371h1.9v1.056h-2.217a.72.72 0 0 1-.74-.7v-4.471a.721.721 0 0 1 .7-.739H17.1v1.054Zm3.7 4.118c-.471 1.1-1.316.88-1.694 0l-1.372-5.172H18.9l1.058 4.064 1.056-4.062h1.164l-1.378 5.17Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="ml-2">
+                                    <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Github">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2nd block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./index.html#pricing">Audit Features</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./pricing.html">Pricing & Plans</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./methodology.html">Methodology</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3rd block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./about.html">Our Expertise</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Diversity & Inclusion</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 4th block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./terms-of-service.html">Terms of service</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 5th block -->
+                    <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./refund-policy.html">Refund policy</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./terms-of-service.html">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="./privacy-policy.html">Privacy policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
