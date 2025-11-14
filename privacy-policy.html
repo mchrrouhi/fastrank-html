@@ -15,26 +15,40 @@
     <!-- Page wrapper -->
     <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
-<header class="fixed inset-x-0 top-0 z-50 bg-transparent">
-  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-    <a href="index.html" class="flex items-center gap-2">
-      <img
-        src="images/fastrank-logo.png"
-        alt="Fastrank logo"
-        class="h-7 w-auto"
-      />
-    </a>
+<header class="relative z-30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      
+      <!-- Site branding -->
+      <div class="flex-shrink-0 mr-4">
+        <a class="block" href="index.html" aria-label="Cruip">
+          <img 
+            src="images/fastrank-logo.png" 
+            alt="Fastrank logo" 
+            class="h-6 md:h-7 w-auto opacity-95"
+          />
+        </a>
+      </div>
 
-    <div class="hidden md:flex items-center gap-10 text-sm font-medium text-slate-100">
-      <a href="about.html" class="hover:text-violet-300 transition">About</a>
-      <a href="index.html#pricing" class="hover:text-violet-300 transition">Pricing</a>
-      <a href="changelog.html" class="hover:text-violet-300 transition">Blog</a>
+      <!-- Desktop navigation -->
+      <nav class="hidden md:flex md:grow">
+        <!-- Desktop menu links -->
+        <ul class="flex grow justify-end flex-wrap items-center">
+          <li>
+            <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+          </li>
+          <li>
+            <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="index.html#pricing">Pricing</a>
+          </li>
+          <li>
+            <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="changelog.html">Blog</a>
+          </li>
+        </ul>
+      </nav>
+
     </div>
-  </nav>
+  </div>
 </header>
-
-<!-- Spacer to offset fixed header -->
-<div class="h-16 md:h-20"></div>
 
         <!-- Page content -->
         <main class="grow">
