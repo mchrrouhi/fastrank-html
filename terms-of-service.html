@@ -16,63 +16,108 @@
     <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
         <!-- Site header -->
-        <header class="absolute inset-x-0 top-0 z-30">
-          <div class="mx-auto max-w-6xl px-4 sm:px-6">
-            <div class="flex h-16 items-center justify-between md:h-20">
-              <nav class="flex flex-1 items-center justify-between" aria-label="Global">
-                <!-- Logo + main nav (left + center) -->
-                <div class="flex flex-1 items-center">
-                  <!-- Logo -->
-                  <a href="index.html" class="flex items-center">
-                    <span class="sr-only">Fastrank</span>
-                    <img
-                      src="images/fastrank-logo.png"
-                      alt="Fastrank logo"
-                      class="h-8 w-8 rounded-full"
-                    />
-                  </a>
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
 
-                  <!-- Center navigation -->
-                  <div class="hidden md:ml-12 md:flex md:space-x-8 lg:space-x-10">
-                    <a
-                      href="about.html"
-                      class="text-sm font-medium text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                    >
-                      About
-                    </a>
-                    <a
-                      href="#pricing"
-                      class="text-sm font-medium text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                    >
-                      Pricing
-                    </a>
-                    <a
-                      href="#blog"
-                      class="text-sm font-medium text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                    >
-                      Blog
-                    </a>
-                  </div>
-                </div>
+                    <!-- Site branding -->
+                    <div class="flex-shrink-0 mr-4">
+                        <!-- Logo -->
+                        <a class="block" href="index.html" aria-label="Cruip">
+                            <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%" id="header-logo">
+                                        <stop stop-color="#4FD1C7" offset="0%" />
+                                        <stop stop-color="#81E6D9" offset="25.871%" />
+                                        <stop stop-color="#338CF5" offset="100%" />
+                                    </radialGradient>
+                                </defs>
+                                <rect width="32" height="32" rx="16" fill="url(#header-logo)" fill-rule="nonzero" />
+                                <path d="M18.09 8.64c.463 0 .854.077 1.171.23.317.154.556.383.715.69.16.307.24.684.24 1.13 0 .446-.08.82-.24 1.122a1.687 1.687 0 01-.715.69c-.317.153-.708.23-1.171.23h-3.73L9.41 23.36H6.23L10.8 8.64h7.29z" fill="#fff" />
+                            </svg>
+                        </a>
+                    </div>
 
-                <!-- Right side: auth links (Sign in / Sign up) -->
-                <div class="hidden items-center space-x-4 md:flex">
-                  <a
-                    href="#"
-                    class="text-sm font-medium text-slate-300 hover:text-white transition duration-150 ease-in-out"
-                  >
-                    Sign in
-                  </a>
-                  <a
-                    href="#"
-                    class="inline-flex items-center rounded-full border border-transparent bg-white/10 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 transition duration-150 ease-in-out"
-                  >
-                    Sign up
-                  </a>
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="integrations-single.html">Integrations</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="pricing.html">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="customers/index.html">Customers</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="changelog.html">Changelog</a>
+                            </li>
+                        </ul>
+
+                        <!-- Desktop CTA on the right -->
+                        <ul class="flex-shrink-0 flex ml-3">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white px-4 py-2 flex items-center transition duration-150 ease-in-out" href="#">Sign in</a>
+                            </li>
+                            <li class="ml-1">
+                                <a class="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3" href="#">Sign up</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Mobile menu -->
+                    <div class="flex md:hidden" x-data="{ expanded: false }">
+
+                        <!-- Hamburger button -->
+                        <button class="hamburger" :class="{ 'active': expanded }" @click.stop="expanded = !expanded" aria-controls="mobile-nav" :aria-expanded="expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-5 h-5 fill-current text-slate-300 hover:text-white transition duration-150 ease-in-out" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="2" width="20" height="2" rx="1" />
+                                <rect y="9" width="20" height="2" rx="1" />
+                                <rect y="16" width="20" height="2" rx="1" />
+                            </svg>
+                        </button>
+
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <div class="bg-slate-800 px-4 py-2">
+                                <ul class="text-sm space-y-2">
+                                    <li>
+                                        <a class="flex text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a class="flex text-slate-300 hover:text-white py-1.5" href="integrations-single.html">Integrations</a>
+                                    </li>
+                                    <li>
+                                        <a class="flex text-slate-300 hover:text-white py-1.5" href="pricing.html">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a class="flex text-slate-300 hover:text-white py-1.5" href="customers/index.html">Customers</a>
+                                    </li>
+                                    <li>
+                                        <a class="flex text-slate-300 hover:text-white py-1.5" href="changelog.html">Changelog</a>
+                                    </li>
+                                    <li>
+                                        <a class="flex text-slate-300 hover:text-white py-1.5" href="#">Sign in</a>
+                                    </li>
+                                    <li>
+                                        <a class="btn-sm text-white bg-purple-600 hover:bg-purple-700 w-full" href="#">Sign up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+
                 </div>
-              </nav>
             </div>
-          </div>
         </header>        <!-- Page content -->
         <main class="grow">
             <!-- Page section -->
