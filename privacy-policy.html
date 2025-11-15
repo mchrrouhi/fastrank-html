@@ -16,81 +16,83 @@
     <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
         <!-- Site header -->
-        <header class="absolute inset-x-0 top-0 z-30 flex items-center justify-between py-4 sm:px-6 lg:px-8">
-            <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+        <header x-data="{ mobileOpen: false }" class="absolute inset-x-0 top-0 z-30">
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between gap-4 py-4 md:py-6">
+      <!-- Left: Logo -->
+      <div class="flex flex-1 items-center">
+        <a href="index.html" class="inline-flex items-center gap-2">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/90 ring-1 ring-slate-700/70 backdrop-blur">
+            <img
+              src="images/fastrank-logo.svg"
+              alt="Fastrank"
+              class="h-8 w-8 flex-shrink-0"
+            />
+          </span>
+        </a>
+      </div>
 
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-3">
-                    <img
-                        src="images/fastrank-logo.svg"
-                        alt="Fastrank logo"
-                        class="h-8 w-8 flex-shrink-0"
-                    />
-                </a>
+      <!-- Center: navigation -->
+      <div class="hidden md:flex flex-1 items-center justify-center gap-8 text-sm font-medium text-slate-200">
+        <a href="about.html" class="hover:text-white transition">About</a>
+        <a href="integrations-single.html" class="hover:text-white transition">Integrations</a>
+        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+        <a href="changelog.html" class="hover:text-white transition">Changelog</a>
+      </div>
 
-                <!-- Desktop navigation -->
-                <nav class="hidden md:flex md:items-center md:space-x-8 lg:space-x-10">
-                    <a href="about.html" class="text-sm font-medium text-slate-200 hover:text-white transition duration-150 ease-in-out">About</a>
-                    <a href="integrations-single.html" class="text-sm font-medium text-slate-200 hover:text-white transition duration-150 ease-in-out">Integrations</a>
-                    <a href="#pricing" class="text-sm font-medium text-slate-200 hover:text-white transition duration-150 ease-in-out">Pricing</a>
-                    <a href="#customers" class="text-sm font-medium text-slate-200 hover:text-white transition duration-150 ease-in-out">Customers</a>
-                    <a href="changelog.html" class="text-sm font-medium text-slate-200 hover:text-white transition duration-150 ease-in-out">Changelog</a>
-                </nav>
+      <!-- Right: empty (just to keep centering) -->
+      <div class="hidden md:flex flex-1 items-center justify-end"></div>
 
-                <!-- Desktop CTA -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="#pricing" class="text-sm font-medium text-slate-200 hover:text-white transition duration-150 ease-in-out">
-                        See pricing
-                    </a>
-                    <a
-                        href="#get-audit"
-                        class="inline-flex items-center rounded-full bg-fuchsia-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/40 hover:bg-fuchsia-400 transition duration-150 ease-in-out"
-                    >
-                        Get free audit score
-                    </a>
-                </div>
+      <!-- Mobile menu button -->
+      <div class="flex items-center md:hidden">
+        <button
+          type="button"
+          @click="mobileOpen = true"
+          class="inline-flex items-center justify-center rounded-full border border-slate-700/70 bg-slate-900/80 p-2.5 text-slate-200"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none">
+            <path d="M3 5.25h14M3 10h14M3 14.75h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-                <!-- Mobile menu -->
-                <div class="flex md:hidden" x-data="{ expanded: false }">
-                    <!-- Hamburger button -->
-                    <button class="hamburger" :class="{ 'active': expanded }" @click.stop="expanded = !expanded" aria-controls="mobile-nav" :aria-expanded="expanded">
-                        <span class="sr-only">Menu</span>
-                        <svg class="w-5 h-5 fill-current text-slate-300 hover:text-white transition duration-150 ease-in-out" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <rect y="2" width="20" height="2" rx="1" />
-                            <rect y="9" width="20" height="2" rx="1" />
-                            <rect y="16" width="20" height="2" rx="1" />
-                        </svg>
-                    </button>
+  <!-- Mobile menu -->
+  <div
+    x-show="mobileOpen"
+    class="fixed inset-0 z-40 bg-slate-950/90 backdrop-blur-lg md:hidden"
+    style="display:none;"
+  >
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between px-4 pt-4 sm:px-6">
+        <a href="index.html" class="inline-flex items-center gap-2">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/90 ring-1 ring-slate-700/70">
+            <img src="images/fastrank-logo.svg" class="h-8 w-8" />
+          </span>
+        </a>
 
-                    <!-- Mobile navigation -->
-                    <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
-                        <div class="bg-slate-800 px-4 py-2">
-                            <ul class="text-sm space-y-2">
-                                <li>
-                                    <a class="flex text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
-                                </li>
-                                <li>
-                                    <a class="flex text-slate-300 hover:text-white py-1.5" href="integrations-single.html">Integrations</a>
-                                </li>
-                                <li>
-                                    <a class="flex text-slate-300 hover:text-white py-1.5" href="#pricing">Pricing</a>
-                                </li>
-                                <li>
-                                    <a class="flex text-slate-300 hover:text-white py-1.5" href="#customers">Customers</a>
-                                </li>
-                                <li>
-                                    <a class="flex text-slate-300 hover:text-white py-1.5" href="changelog.html">Changelog</a>
-                                </li>
-                                <li>
-                                    <a class="btn-sm text-white bg-fuchsia-500 hover:bg-fuchsia-400 w-full" href="#get-audit">Get free audit score</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+        <button
+          @click="mobileOpen = false"
+          class="rounded-full border border-slate-700/70 bg-slate-900/80 p-2.5 text-slate-200"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none">
+            <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
 
-            </div>
-        </header>        <!-- Page content -->
+      <div class="mt-8 flex-1 px-4 pb-8 sm:px-6">
+        <nav class="space-y-3 text-base font-medium text-slate-100">
+          <a href="about.html" @click="mobileOpen=false" class="block rounded-xl bg-slate-900/60 px-4 py-2.5">About</a>
+          <a href="integrations-single.html" @click="mobileOpen=false" class="block rounded-xl bg-slate-900/40 px-4 py-2.5">Integrations</a>
+          <a href="#pricing" @click="mobileOpen=false" class="block rounded-xl bg-slate-900/40 px-4 py-2.5">Pricing</a>
+          <a href="changelog.html" @click="mobileOpen=false" class="block rounded-xl bg-slate-900/40 px-4 py-2.5">Changelog</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>        <!-- Page content -->
         <main class="grow">
             <!-- Page section -->
             <section class="relative">
