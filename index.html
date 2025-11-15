@@ -39,24 +39,12 @@
         <a href="about.html" class="transition hover:text-white">About</a>
         <a href="integrations-single.html" class="transition hover:text-white">Integrations</a>
         <a href="#pricing" class="transition hover:text-white">Pricing</a>
-        <a href="#customers" class="transition hover:text-white">Customers</a>
         <a href="changelog.html" class="transition hover:text-white">Changelog</a>
       </div>
 
-      <!-- Right: CTAs (desktop) -->
-      <div class="hidden md:flex flex-1 items-center justify-end gap-3">
-        <a
-          href="#pricing"
-          class="text-sm font-medium text-slate-200 transition hover:text-white"
-        >
-          See pricing
-        </a>
-        <a
-          href="#audit"
-          class="inline-flex items-center justify-center rounded-full border border-emerald-400/70 bg-emerald-400/10 px-4 py-1.5 text-sm font-semibold text-emerald-200 shadow-sm shadow-emerald-400/20 backdrop-blur transition hover:bg-emerald-400/20 hover:text-emerald-50 hover:shadow-emerald-400/40"
-        >
-          Get free audit score
-        </a>
+      <!-- Right: (empty, just to keep centering) -->
+      <div class="hidden md:flex flex-1 items-center justify-end">
+        <!-- خويّنا هاد البلوك باش تبقى المينيو فالنص واللوغو فليسار -->
       </div>
 
       <!-- Mobile menu button -->
@@ -130,23 +118,13 @@
           <a href="about.html" class="block rounded-xl bg-slate-900/60 px-4 py-2.5 ring-1 ring-slate-700/70 transition hover:bg-slate-900 hover:ring-slate-500" @click="mobileOpen = false">About</a>
           <a href="integrations-single.html" class="block rounded-xl bg-slate-900/40 px-4 py-2.5 ring-1 ring-slate-800/70 transition hover:bg-slate-900/70 hover:ring-slate-500" @click="mobileOpen = false">Integrations</a>
           <a href="#pricing" class="block rounded-xl bg-slate-900/40 px-4 py-2.5 ring-1 ring-slate-800/70 transition hover:bg-slate-900/70 hover:ring-slate-500" @click="mobileOpen = false">Pricing</a>
-          <a href="#customers" class="block rounded-xl bg-slate-900/40 px-4 py-2.5 ring-1 ring-slate-800/70 transition hover:bg-slate-900/70 hover:ring-slate-500" @click="mobileOpen = false">Customers</a>
           <a href="changelog.html" class="block rounded-xl bg-slate-900/40 px-4 py-2.5 ring-1 ring-slate-800/70 transition hover:bg-slate-900/70 hover:ring-slate-500" @click="mobileOpen = false">Changelog</a>
         </nav>
-
-        <!-- Mobile CTAs -->
-        <div class="mt-6 space-y-3">
-          <a href="#pricing" class="block text-sm font-medium text-slate-200 underline underline-offset-4 hover:text-white" @click="mobileOpen = false">
-            See pricing
-          </a>
-          <a href="#audit" class="inline-flex w-full items-center justify-center rounded-full border border-emerald-400/70 bg-emerald-400/10 px-4 py-2.5 text-sm font-semibold text-emerald-100 shadow-sm shadow-emerald-400/30 backdrop-blur transition hover:bg-emerald-400/20 hover:text-emerald-50 hover:shadow-emerald-400/50" @click="mobileOpen = false">
-            Get free audit score
-          </a>
-        </div>
       </div>
     </div>
   </div>
 </header>
+
         <!-- Page content -->
         <main class="grow">
 
