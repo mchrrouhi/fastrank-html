@@ -924,7 +924,7 @@
             </section>
 
             <!-- Pricing -->
-            <section class="relative">
+            <section id="pricing" class="relative">
                 <!-- Radial gradient -->
                 <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
                     <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
@@ -943,7 +943,7 @@
                             <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
                                 Transparent, results-based pricing
                             </h2>
-                            <p class="text-lg text-slate-400">
+                            <p class="text-lg text-readable">
                                 Whether you're a solo founder or a growing agency, we have a plan that scales with your needs—no hidden fees, just faster sites.
                             </p>
                         </div>
@@ -992,16 +992,16 @@
                                 [&>div:nth-of-type(4n+3)]:before:border-purple-500
                                 [&>div:nth-of-type(4n+3)]:before:-z-10
                                 [&>div:nth-of-type(4n+3)]:before:pointer-events-none"
-                                x-data="{ annual: true }"
                             >
                                 <!-- Pricing toggle -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="pb-5 md:border-b border-slate-800">
+                                        <!-- Toggle switch -->
                                         <div class="max-md:text-center">
                                             <div class="inline-flex items-center whitespace-nowrap">
                                                 <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">Monthly</div>
                                                 <div class="relative">
-                                                    <input type="checkbox" id="toggle" class="peer sr-only" x-model="annual" />
+                                                    <input type="checkbox" id="toggle" class="peer sr-only" />
                                                     <label
                                                         for="toggle"
                                                         class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-400 px-0.5 outline-slate-400 transition-colors
@@ -1011,7 +1011,7 @@
                                                         peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-400
                                                         peer-focus-visible:peer-checked:outline-purple-500"
                                                     >
-                                                        <span class="sr-only">Pay Yearly</span>
+                                                        <span class="sr-only">Pay yearly</span>
                                                     </label>
                                                 </div>
                                                 <div class="text-sm text-slate-500 font-medium ml-2">
@@ -1030,7 +1030,7 @@
                                         </div>
                                         <div class="mb-1">
                                             <span class="text-lg font-medium text-slate-500">$</span>
-                                            <span class="text-3xl font-bold text-slate-50" x-text="annual ? '24' : '29'">24</span>
+                                            <span class="text-3xl font-bold text-slate-50">24</span>
                                             <span class="text-sm text-slate-600 font-medium">/mo</span>
                                         </div>
                                         <div class="text-slate-500">
@@ -1038,14 +1038,9 @@
                                         </div>
                                     </div>
                                     <div class="pb-4 border-b border-slate-800">
-                                        <a
-                                            class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group"
-                                            href="#0"
-                                        >
+                                        <a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
                                             Get Started
-                                            <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                                                -&gt;
-                                            </span>
+                                            <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
                                         </a>
                                     </div>
                                 </div>
@@ -1058,7 +1053,7 @@
                                         </div>
                                         <div class="mb-1">
                                             <span class="text-lg font-medium text-slate-500">$</span>
-                                            <span class="text-3xl font-bold text-slate-50" x-text="annual ? '49' : '54'">49</span>
+                                            <span class="text-3xl font-bold text-slate-50">49</span>
                                             <span class="text-sm text-slate-600 font-medium">/mo</span>
                                         </div>
                                         <div class="text-slate-500">
@@ -1068,9 +1063,7 @@
                                     <div class="pb-4 border-b border-slate-800">
                                         <a class="btn-sm text-white bg-purple-500 hover:bg-purple-600 w-full transition duration-150 ease-in-out group" href="#0">
                                             Get Started
-                                            <span class="tracking-normal text-purple-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                                                -&gt;
-                                            </span>
+                                            <span class="tracking-normal text-purple-300 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
                                         </a>
                                     </div>
                                 </div>
@@ -1083,7 +1076,7 @@
                                         </div>
                                         <div class="mb-1">
                                             <span class="text-lg font-medium text-slate-500">$</span>
-                                            <span class="text-3xl font-bold text-slate-50" x-text="annual ? '79' : '85'">79</span>
+                                            <span class="text-3xl font-bold text-slate-50">79</span>
                                             <span class="text-sm text-slate-600 font-medium">/mo</span>
                                         </div>
                                         <div class="text-slate-500">
@@ -1091,14 +1084,9 @@
                                         </div>
                                     </div>
                                     <div class="pb-4 border-b border-slate-800">
-                                        <a
-                                            class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group"
-                                            href="#0"
-                                        >
+                                        <a class="btn-sm text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
                                             Get Started
-                                            <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                                                -&gt;
-                                            </span>
+                                            <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
                                         </a>
                                     </div>
                                 </div>
@@ -1247,7 +1235,6 @@
                                     <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Optimization features</div>
                                 </div>
 
-                                <!-- Helper: function to render 3 checks per row (all plans include) -->
                                 <!-- Image optimization -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Image optimization</div>
@@ -1428,7 +1415,7 @@
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="py-2 text-slate-400 border-b border-slate-800">Priority support</div>
                                 </div>
-                                <!-- Pro: no check (email only مثلاً) -->
+                                <!-- Pro -->
                                 <div class="px-6 flex flex-col justify-end">
                                     <div class="flex items-center border-b border-slate-800 py-2 text-slate-500 max-md:hidden">
                                         <span>Email support</span>
@@ -1454,127 +1441,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section>
-                <div class="max-w-3xl mx-auto px-4 sm:px-6">
-                    <div class="relative pb-12 md:pb-20">
-
-                        <!-- Particles animation -->
-                        <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-80 h-80 -mt-6">
-                            <div class="absolute inset-0 -z-10" aria-hidden="true">
-                                <canvas data-particle-animation data-particle-quantity="10" data-particle-staticity="30"></canvas>
-                            </div>
-                        </div>
-                        
-                        <!-- Carousel -->
-                        <div class="text-center" x-data="carousel">
-                            <!-- Testimonial image -->
-                            <div class="relative h-32 [mask-image:linear-gradient(0deg,transparent,var(--color-white)_40%,var(--color-white))]">
-                                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] -z-10 pointer-events-none before:rounded-full rounded-full before:absolute before:inset-0 before:bg-linear-to-b before:from-slate-400/20 before:to-transparent before:to-20% after:rounded-full after:absolute after:inset-0 after:bg-slate-900 after:m-px before:-z-20 after:-z-20">
-                                    <!-- Alpine.js template for testimonial images: https://github.com/alpinejs/alpine#x-for -->
-                                    <template x-for="(item, index) in items" :key="index">
-                                        <div
-                                            x-show="active === index"
-                                            class="absolute inset-0 -z-10"
-                                            x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
-                                            x-transition:enter-start="opacity-0 -rotate-[60deg]"
-                                            x-transition:enter-end="opacity-100 rotate-0"
-                                            x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
-                                            x-transition:leave-start="opacity-100 rotate-0"
-                                            x-transition:leave-end="opacity-0 rotate-[60deg]"
-                                        >
-                                            <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="56" height="56" :alt="item.name">
-                                        </div>
-                                    </template>                                
-                                </div>
-                            </div>
-                            <!-- Text -->
-                            <div class="mb-10">
-                                <div class="relative flex flex-col transition-all duration-150 delay-300 ease-in-out" x-ref="testimonials">
-                                    <!-- Alpine.js template for testimonials: https://github.com/alpinejs/alpine#x-for -->
-                                    <template x-for="(item, index) in items" :key="index">
-                                        <div
-                                            x-show="active === index"
-                                            x-transition:enter="transition ease-in-out duration-500 delay-200 order-first"
-                                            x-transition:enter-start="opacity-0 -translate-x-4"
-                                            x-transition:enter-end="opacity-100 translate-x-0"
-                                            x-transition:leave="transition ease-out duration-300 delay-300 absolute"
-                                            x-transition:leave-start="opacity-100 translate-x-0"
-                                            x-transition:leave-end="opacity-0 translate-x-4"
-                                        >
-                                            <div class="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60" x-text="item.quote"></div>
-                                        </div>
-                                    </template>
-                                </div>
-                            </div>
-                            <!-- Buttons -->
-                            <div class="flex flex-wrap justify-center -m-1.5">
-                                <!-- Alpine.js template for buttons: https://github.com/alpinejs/alpine#x-for -->
-                                <template x-for="(item, index) in items" :key="index">
-                                    <button
-                                        class="btn-sm m-1.5 text-xs py-1.5 text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none"
-                                        :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'"
-                                        @click="active = index; stopAutorotate();"
-                                    >
-                                        <span class="relative">
-                                            <span class="text-slate-50" x-text="item.name"></span> <span class="text-slate-600">-</span> <span x-text="item.role"></span>
-                                        </span>
-                                    </button>
-                                </template>
-                            </div>
-                        </div>
-                        <!-- Carousel data and functionality: https://github.com/alpinejs/alpine -->
-                        <script>
-                            document.addEventListener('alpine:init', () => {
-                                Alpine.data('carousel', () => ({
-                                    active: 0,
-                                    autorotate: true,
-                                    autorotateTiming: 7000,
-                                    items: [
-                                        {
-                                            img: './images/testimonial-01.jpg',
-                                            quote: "Load time dropped from 4.2s to 1.1s in three days. Our bounce rate improved by 34% and Google rankings jumped for every key product page. Worth every penny.",
-                                            name: 'Sarah Chen',
-                                            role: 'Shopify Store Owner'
-                                        },
-                                        {
-                                            img: './images/testimonial-02.jpg',
-                                            quote: "Our PageSpeed score was 38 on mobile. FastRank brought it to 92 in 48 hours. Checkout conversion increased 19% month-over-month. Best tech investment we've made this year.",
-                                            name: 'Marcus Johnson',
-                                            role: 'WooCommerce Brand Director'
-                                        },
-                                        {
-                                            img: './images/testimonial-03.jpg',
-                                            quote: "We handle 15 client sites with their Team plan. Reliable green scores, clear documentation, no drama. Our clients are happy and we look like heroes. Perfect white-label partner.",
-                                            name: 'David Park',
-                                            role: 'Agency Founder'
-                                        },
-                                    ],
-                                    init() {
-                                        if (this.autorotate) {
-                                            this.autorotateInterval = setInterval(() => {
-                                                this.active = this.active + 1 === this.items.length ? 0 : this.active + 1
-                                            }, this.autorotateTiming)
-                                        }
-                                        this.$watch('active', callback => this.heightFix())
-                                    },
-                                    stopAutorotate() {
-                                        clearInterval(this.autorotateInterval)
-                                        this.autorotateInterval = null
-                                    },
-                                    heightFix() {
-                                        this.$nextTick(() => {
-                                            this.$refs.testimonials.style.height = this.$refs.testimonials.children[this.active + 1].offsetHeight + 'px'
-                                        })
-                                    }
-                                }))
-                            })
-                        </script>
-            
                     </div>
                 </div>
             </section>
