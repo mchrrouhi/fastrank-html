@@ -212,7 +212,7 @@ canvasElements.forEach(canvas => {
 });
 
 
-// Box highlighter
+// Box highlighter - optimized to batch DOM reads and writes
 class Highlighter {
   constructor(containerElement) {
     this.container = containerElement;
@@ -225,8 +225,11 @@ class Highlighter {
       w: 0,
       h: 0,
     };
+    this.rafId = null;
+    this.isUpdating = false;
     this.initContainer = this.initContainer.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
+    this.updateBoxStyles = this.updateBoxStyles.bind(this);
     this.init();
   }
 
@@ -245,19 +248,37 @@ class Highlighter {
     if (inside) {
       this.mouse.x = x;
       this.mouse.y = y;
-      this.boxes.forEach((box) => {
-        const boxX = -(box.getBoundingClientRect().left - rect.left) + this.mouse.x;
-        const boxY = -(box.getBoundingClientRect().top - rect.top) + this.mouse.y;
-        box.style.setProperty('--mouse-x', `${boxX}px`);
-        box.style.setProperty('--mouse-y', `${boxY}px`);
-      });
+      // Use RAF to batch style updates
+      if (!this.isUpdating) {
+        this.isUpdating = true;
+        this.rafId = requestAnimationFrame(this.updateBoxStyles);
+      }
     }
+  }
+
+  updateBoxStyles() {
+    const rect = this.container.getBoundingClientRect();
+    // Batch all DOM reads first
+    const boxRects = this.boxes.map(box => box.getBoundingClientRect());
+    // Then batch all DOM writes
+    this.boxes.forEach((box, index) => {
+      const boxX = -(boxRects[index].left - rect.left) + this.mouse.x;
+      const boxY = -(boxRects[index].top - rect.top) + this.mouse.y;
+      box.style.setProperty('--mouse-x', `${boxX}px`);
+      box.style.setProperty('--mouse-y', `${boxY}px`);
+    });
+    this.isUpdating = false;
   }
 
   init() {
     this.initContainer();
-    window.addEventListener('resize', this.initContainer);
-    window.addEventListener('mousemove', this.onMouseMove);
+    // Debounced resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => this.initContainer(), 150);
+    });
+    window.addEventListener('mousemove', this.onMouseMove, { passive: true });
   }  
 }
 
