@@ -935,14 +935,21 @@
                 </div>
             </section>
 <!-- Pricing -->
-<section id="pricing" class="py-16 md:py-24">
-  <div class="max-w-6xl mx-auto px-4">
+<section id="pricing" class="relative py-16 md:py-24">
+  <!-- Soft radial background -->
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute inset-x-0 top-0 flex justify-center">
+      <div class="h-64 w-64 rounded-full bg-purple-600/40 blur-3xl"></div>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <!-- Heading -->
     <div class="max-w-3xl mx-auto text-center pb-10">
-      <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">
+      <div class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">
         Pricing plans
       </div>
-      <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+      <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 via-white to-slate-100 pb-4">
         Simple, transparent pricing
       </h2>
       <p class="text-lg text-slate-400">
@@ -952,9 +959,8 @@
 
     <!-- Pricing cards -->
     <div class="grid gap-6 md:grid-cols-3">
-
       <!-- Plan 1 – Essential -->
-      <div class="rounded-3xl border border-white/10 bg-slate-900/40 p-6 flex flex-col">
+      <div class="flex flex-col rounded-3xl border border-slate-700 bg-slate-900/60 p-6">
         <div class="text-sm font-medium text-purple-300 mb-1">Essential Speed Audit</div>
         <h3 class="text-xl font-semibold text-slate-50 mb-2">Best for small stores</h3>
         <p class="text-sm text-slate-400 mb-4">
@@ -969,88 +975,100 @@
 
         <ul class="space-y-2 text-sm text-slate-300 mb-6">
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Full performance check of your main page</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
-            <span>Browser caching + basic image & asset optimization</span>
+            <span>Browser caching + basic image &amp; asset optimization</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
-            <span>Before/after Lighthouse report (Desktop & Mobile)</span>
+            <span>Before/after Lighthouse report (Desktop &amp; Mobile)</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Target: 90+ Desktop / 75+ Mobile</span>
           </li>
         </ul>
 
-        <a href="https://buy.stripe.com/9B628r9bI6ae5i2h0vcQU03" target="_blank"
-           class="mt-auto inline-flex justify-center items-center rounded-full px-4 py-2 text-sm font-medium !text-white !bg-purple-600 hover:!bg-purple-700 transition">
+        <a
+          href="https://buy.stripe.com/9B628r9bI6ae5i2h0vcQU03"
+          target="_blank"
+          class="mt-auto inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white text-slate-900 hover:bg-slate-100 transition-colors"
+        >
           Get Essential Audit
-          <span class="ml-1 text-purple-100">→</span>
+          <span class="ml-1 text-purple-500">→</span>
         </a>
       </div>
 
-      <!-- Plan 2 – Growth (middle highlighted in mauve) -->
-      <div class="rounded-3xl border border-purple-500 bg-purple-900/40 p-6 flex flex-col shadow-lg">
-        <div class="text-sm font-medium text-purple-300 mb-1">Growth Store Audit</div>
-        <h3 class="text-xl font-semibold text-purple-100 mb-2">For growing brands</h3>
-        <p class="text-sm text-purple-200/80 mb-4">
+      <!-- Plan 2 – Growth (featured) -->
+      <div class="flex flex-col rounded-3xl border border-purple-500 bg-purple-900/70 p-6 shadow-lg">
+        <div class="text-sm font-medium text-purple-200 mb-1">Growth Store Audit</div>
+        <h3 class="text-xl font-semibold text-purple-50 mb-2">For growing brands</h3>
+        <p class="text-sm text-purple-100/90 mb-4">
           Best for growing stores needing stable performance gains.
         </p>
 
         <div class="mb-4">
-          <span class="text-lg font-medium text-purple-200">$</span>
+          <span class="text-lg font-medium text-purple-100">$</span>
           <span class="text-3xl font-bold text-white">79</span>
-          <span class="text-sm text-purple-200 font-medium"> one-time</span>
+          <span class="text-sm text-purple-100 font-medium"> one-time</span>
         </div>
 
-        <ul class="space-y-2 text-sm text-purple-100 mb-6">
+        <ul class="space-y-2 text-sm text-purple-50 mb-6">
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-200" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-200" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
-            <span>Advanced performance review & bottleneck detection</span>
+            <span>Advanced performance review &amp; bottleneck detection</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-200" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-200" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
-            <span>TTFB, apps, render-blocking & image optimization review</span>
+            <span>TTFB, apps, render-blocking &amp; image optimization review</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-200" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-200" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Prioritized implementation roadmap (PDF)</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-200" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-200" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Target: 90+ Desktop / 85+ Mobile</span>
           </li>
+          <li class="flex items-start gap-2">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-200" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+            </svg>
+            <span>14 days Q&amp;A support</span>
+          </li>
         </ul>
 
-        <a href="https://buy.stripe.com/3cI4gz2Nk9mq5i2bGbcQU04" target="_blank"
-           class="mt-auto inline-flex justify-center items-center rounded-full px-4 py-2 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 transition">
+        <a
+          href="https://buy.stripe.com/3cI4gz2Nk9mq5i2bGbcQU04"
+          target="_blank"
+          class="mt-auto inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-purple-600 text-white hover:bg-purple-700 transition-colors"
+        >
           Get Growth Audit
           <span class="ml-1 text-purple-100">→</span>
         </a>
       </div>
 
       <!-- Plan 3 – Premium -->
-      <div class="rounded-3xl border border-white/10 bg-slate-900/40 p-6 flex flex-col">
+      <div class="flex flex-col rounded-3xl border border-slate-700 bg-slate-900/60 p-6">
         <div class="text-sm font-medium text-purple-300 mb-1">Premium Enterprise Audit</div>
         <h3 class="text-xl font-semibold text-slate-50 mb-2">For serious scaling</h3>
         <p class="text-sm text-slate-400 mb-4">
@@ -1065,44 +1083,46 @@
 
         <ul class="space-y-2 text-sm text-slate-300 mb-6">
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Full technical audit of all core templates</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
-            <span>Full app & third-party script impact review</span>
+            <span>Full app &amp; third-party script impact review</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Custom implementation roadmap for your dev / agency</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
             <span>Target: 95+ Desktop / 90+ Mobile</span>
           </li>
           <li class="flex items-start gap-2">
-            <svg class="mt-[3px] shrink-0 fill-purple-500" width="12" height="9">
+            <svg class="mt-[3px] h-3 w-3 shrink-0 fill-purple-500" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
             </svg>
-            <span>30 days priority Q&A support</span>
+            <span>30 days priority Q&amp;A support</span>
           </li>
         </ul>
 
-        <a href="https://buy.stripe.com/eVqcN5bjQ4265i239FcQU05" target="_blank"
-           class="mt-auto inline-flex justify-center items-center rounded-full px-4 py-2 text-sm font-medium !text-white !bg-purple-600 hover:!bg-purple-700 transition">
+        <a
+          href="https://buy.stripe.com/eVqcN5bjQ4265i239FcQU05"
+          target="_blank"
+          class="mt-auto inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white text-slate-900 hover:bg-slate-100 transition-colors"
+        >
           Get Premium Audit
-          <span class="ml-1 text-purple-100">→</span>
+          <span class="ml-1 text-purple-500">→</span>
         </a>
       </div>
-
     </div>
   </div>
 </section>
