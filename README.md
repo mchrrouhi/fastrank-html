@@ -1,4 +1,4 @@
-# Stellar HTML
+# Fastrank HTML
 
 HTML landing page template designed by Cruip.
 
