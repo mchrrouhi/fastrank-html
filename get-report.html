@@ -1,158 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <title>Request your custom report - Fastrank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Get a manual review of your website performance, Core Web Vitals, or SEO before choosing a plan."
+  />
 
-                    <!-- Site branding -->
-                    <div class="flex-1">
-                        <!-- Logo -->
-                        <a class="inline-flex" href="/" aria-label="Cruip">
-                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Fastrank">
-                        </a>
-                    </div>
-        </header>
+  <!-- Fonts + CSS مثل باقي صفحات Fastrank -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+  />
+  <link href="./css/vendors/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
+  <link href="./style.css" rel="stylesheet" />
 
-<main class="grow">
+  <!-- تصحيح الألوان داخل الفورم باش تبان الكتابة -->
+  <style>
+    input,
+    select,
+    textarea {
+      color: #e2e8f0 !important; /* slate-300 */
+      background-color: #020617 !important; /* slate-950 تقريباً */
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #64748b !important; /* slate-500 */
+    }
+
+    select option {
+      color: #e2e8f0 !important;
+      background-color: #020617 !important;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      color: #ffffff !important;
+      background-color: #020617 !important;
+    }
+  </style>
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+  <main class="grow min-h-screen flex items-center">
     <!-- Page section -->
-    <section class="relative">
-        <!-- Radial gradient -->
-        <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-            <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-            <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
-        </div>
+    <section class="relative w-full">
+      <!-- Radial gradient -->
+      <div
+        class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square"
+        aria-hidden="true"
+      >
+        <div
+          class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"
+        ></div>
+        <div
+          class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"
+        ></div>
+      </div>
 
-        <!-- Particles animation -->
-        <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
-            <canvas data-particle-animation data-particle-quantity="15"></canvas>
-        </div>
+      <!-- Particles (اختياري) -->
+      <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
+        <canvas data-particle-animation data-particle-quantity="15"></canvas>
+      </div>
 
-        <!-- Illustration -->
-        <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
-            <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
-        </div>
+      <!-- Illustration -->
+      <div
+        class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10"
+        aria-hidden="true"
+      >
+        <img
+          src="./images/page-illustration.svg"
+          class="max-w-none"
+          width="1440"
+          height="427"
+          alt="Page Illustration"
+        />
+      </div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="pt-32 pb-20 md:pt-40 md:pb-32">
-                <!-- Page header -->
-                <div class="max-w-3xl mx-auto text-center mb-12">
-                    <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-6">
-                        Request your custom report
-                    </h1>
-                    <p class="text-lg text-slate-300">
-                        Get a manual review of your website performance, Core Web Vitals, or SEO before choosing a plan.
-                    </p>
-                </div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="pt-32 pb-20 md:pt-40 md:pb-32">
+          <!-- Page header -->
+          <div class="max-w-3xl mx-auto text-center mb-12">
+            <h1
+              class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-6"
+            >
+              Request your custom report
+            </h1>
+            <p class="text-lg text-slate-300">
+              Get a manual review of your website performance, Core Web Vitals, or SEO before choosing a
+              plan.
+            </p>
+          </div>
 
-                <!-- Content -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start max-w-5xl mx-auto">
-                    <!-- Left: explanation -->
-                    <div class="space-y-6">
-                        <div>
-                            <h2 class="text-2xl font-semibold text-white mb-4">When should you use this form?</h2>
-                            <p class="text-slate-300 leading-relaxed mb-4">
-                                This page is for you if:
-                            </p>
-                            <ul class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed ml-2">
-                                <li>You want a <span class="font-medium text-white">detailed performance report</span> before choosing a pack.</li>
-                                <li>You have a <span class="font-medium text-white">custom request</span> (migration, multi-store, custom dev…).</li>
-                                <li>Your needs are <span class="font-medium text-white">outside existing Fastrank packs</span>.</li>
-                                <li>You need a <span class="font-medium text-white">SEO-focused audit</span> (structure, keywords, technical SEO).</li>
-                            </ul>
-                        </div>
+          <!-- Content -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start max-w-5xl mx-auto">
+            <!-- Left: explanation -->
+            <div class="space-y-6">
+              <div>
+                <h2 class="text-2xl font-semibold text-white mb-4">
+                  When should you use this form?
+                </h2>
+                <p class="text-slate-300 leading-relaxed mb-4">This page is for you if:</p>
+                <ul
+                  class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed ml-2"
+                >
+                  <li>
+                    You want a
+                    <span class="font-medium text-white"
+                      >detailed performance report</span
+                    >
+                    before choosing a pack.
+                  </li>
+                  <li>
+                    You have a
+                    <span class="font-medium text-white">custom request</span>
+                    (migration, multi-store, custom dev…).
+                  </li>
+                  <li>
+                    Your needs are
+                    <span class="font-medium text-white"
+                      >outside existing Fastrank packs</span
+                    >.
+                  </li>
+                  <li>
+                    You need a
+                    <span class="font-medium text-white">SEO-focused audit</span>
+                    (structure, keywords, technical SEO).
+                  </li>
+                </ul>
+              </div>
 
-                        <div>
-                            <h3 class="text-xl font-medium text-white mb-3">What you receive</h3>
-                            <ul class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed ml-2">
-                                <li>Summary of your current performance & SEO health.</li>
-                                <li>List of quick wins and main issues.</li>
-                                <li>A recommendation: best Fastrank pack or a fully custom offer.</li>
-                            </ul>
-                            <p class="mt-3 text-sm text-slate-400">
-                                All reports are reviewed manually by our team — no generic automated scans.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Right: form -->
-                    <div>
-                        <div class="bg-slate-800/40 border border-slate-600 rounded-lg p-6 sm:p-8 space-y-6">
-                            <div>
-                                <h2 class="text-xl font-semibold text-white mb-2">Tell us about your project</h2>
-                                <p class="text-sm text-slate-300">
-                                    Fill in the form in less than 2 minutes.
-                                </p>
-                            </div>
-
-                            <form method="post" action="#">
-                                <div class="space-y-4">
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        <div class="space-y-1">
-                                            <label for="name" class="text-sm font-medium text-slate-200">Name</label>
-                                            <input id="name" name="name" type="text" required
-                                                class="w-full rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                                placeholder="Your name">
-                                        </div>
-                                        <div class="space-y-1">
-                                            <label for="email" class="text-sm font-medium text-slate-200">Email</label>
-                                            <input id="email" name="email" type="email" required
-                                                class="w-full rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                                placeholder="you@example.com">
-                                        </div>
-                                    </div>
-
-                                    <div class="space-y-1">
-                                        <label for="website" class="text-sm font-medium text-slate-200">Website URL</label>
-                                        <input id="website" name="website" type="url" required
-                                            class="w-full rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                            placeholder="https://yourwebsite.com">
-                                    </div>
-
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        <div class="space-y-1">
-                                            <label for="platform" class="text-sm font-medium text-slate-200">Platform / CMS</label>
-                                            <select id="platform" name="platform"
-                                                class="w-full rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                                                <option value="">Choose…</option>
-                                                <option value="shopify">Shopify</option>
-                                                <option value="woocommerce">WooCommerce / WordPress</option>
-                                                <option value="prestashop">PrestaShop</option>
-                                                <option value="custom">Custom / Other</option>
-                                                <option value="unknown">I’m not sure</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="space-y-1">
-                                            <label for="service" class="text-sm font-medium text-slate-200">Type of service</label>
-                                            <select id="service" name="service"
-                                                class="w-full rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                                                <option value="">Choose…</option>
-                                                <option value="performance">Speed & Core Web Vitals report</option>
-                                                <option value="full_audit">Full technical performance audit</option>
-                                                <option value="seo_audit">SEO audit (on-page & technical)</option>
-                                                <option value="custom">Custom project / outside packs</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="space-y-1">
-                                        <label for="message" class="text-sm font-medium text-slate-200">Project details</label>
-                                        <textarea id="message" name="message" rows="4"
-                                            class="w-full rounded-md border border-slate-600 bg-slate-900/60 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                                            placeholder="Describe your issues (speed, SEO, conversions...) and what you expect from the report."></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="mt-6 flex items-center justify-between gap-4">
-                                    <button type="submit"
-                                        class="inline-flex items-center justify-center rounded-full bg-purple-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 transition hover:bg-purple-400">
-                                        Send my request
-                                    </button>
-                                    <p class="text-xs text-slate-400 max-w-xs">
-                                        By sending this form, you agree that we can contact you with your report and a tailored proposal.
-                                    </p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
+              <div>
+                <h3 class="text-xl font-medium text-white mb-3">What you receive</h3>
+                <ul
+                  class="list-disc list-inside space-y-2 text-slate-300 leading-relaxed ml-2"
+                >
+                  <li>Summary of your current performance &amp; SEO health.</li>
+                  <li>List of quick wins and main issues.</li>
+                  <li>
+                    A recommendation: best Fastrank pack or a fully custom offer.
+                  </li>
+                </ul>
+                <p class="mt-3 text-sm text-slate-400">
+                  All reports are reviewed manually by our team — no generic automated
+                  scans.
+                </p>
+              </div>
             </div>
+
+            <!-- Right: form -->
+            <div>
+              <div
+                class="bg-slate-800/40 border border-slate-600 rounded-lg p-6 sm:p-8 space-y-6"
+              >
+                <div>
+                  <h2 class="text-xl font-semibold text-white mb-2">
+                    Tell us about your project
+                  </h2>
+                  <p class="text-sm text-slate-300">
+                    Fill in the form in less than 2 minutes.
+                  </p>
+                </div>
+
+                <form method="post" action="#">
+                  <div class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div class="space-y-1">
+                        <label
+                          for="name"
+                          class="text-sm font-medium text-slate-200"
+                          >Name</label
+                        >
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          required
+                          class="w-full rounded-md border border-slate-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                          placeholder="Your name"
+                        />
+                      </div>
+                      <div class="space-y-1">
+                        <label
+                          for="email"
+                          class="text-sm font-medium text-slate-200"
+                          >Email</label
+                        >
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          required
+                          class="w-full rounded-md border border-slate-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                          placeholder="you@example.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="space-y-1">
+                      <label
+                        for="website"
+                        class="text-sm font-medium text-slate-200"
+                        >Website URL</label
+                      >
+                      <input
+                        id="website"
+                        name="website"
+                        type="url"
+                        required
+                        class="w-full rounded-md border border-slate-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="https://yourwebsite.com"
+                      />
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div class="space-y-1">
+                        <label
+                          for="platform"
+                          class="text-sm font-medium text-slate-200"
+                          >Platform / CMS</label
+                        >
+                        <select
+                          id="platform"
+                          name="platform"
+                          class="w-full rounded-md border border-slate-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        >
+                          <option value="">Choose…</option>
+                          <option value="shopify">Shopify</option>
+                          <option value="woocommerce">
+                            WooCommerce / WordPress
+                          </option>
+                          <option value="prestashop">PrestaShop</option>
+                          <option value="custom">Custom / Other</option>
+                          <option value="unknown">I’m not sure</option>
+                        </select>
+                      </div>
+
+                      <div class="space-y-1">
+                        <label
+                          for="service"
+                          class="text-sm font-medium text-slate-200"
+                          >Type of service</label
+                        >
+                        <select
+                          id="service"
+                          name="service"
+                          class="w-full rounded-md border border-slate-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        >
+                          <option value="">Choose…</option>
+                          <option value="performance">
+                            Speed &amp; Core Web Vitals report
+                          </option>
+                          <option value="full_audit">
+                            Full technical performance audit
+                          </option>
+                          <option value="seo_audit">
+                            SEO audit (on-page &amp; technical)
+                          </option>
+                          <option value="custom">
+                            Custom project / outside packs
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="space-y-1">
+                      <label
+                        for="message"
+                        class="text-sm font-medium text-slate-200"
+                        >Project details</label
+                      >
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        class="w-full rounded-md border border-slate-600 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="Describe your issues (speed, SEO, conversions...) and what you expect from the report."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <button
+                      type="submit"
+                      class="inline-flex items-center justify-center rounded-full bg-purple-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 transition hover:bg-purple-400"
+                    >
+                      Send my request
+                    </button>
+                    <p class="text-xs text-slate-400 max-w-xs">
+                      By sending this form, you agree that we can contact you with your
+                      report and a tailored proposal.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
-</main>
+  </main>
+
+  <script src="./js/vendors/alpinejs.min.js" defer></script>
+  <script src="./js/vendors/aos.js"></script>
+  <script src="./js/vendors/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
