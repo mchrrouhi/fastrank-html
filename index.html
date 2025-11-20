@@ -1474,21 +1474,50 @@
 
     </div>
 
-    <button 
-        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        class="fixed bottom-6 right-6 z-50 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition"
-    >
-        ↑
-    </button>
+    <!-- Back to top button -->
+<button
+  id="backToTop"
+  type="button"
+  class="fixed bottom-28 right-6 z-50 hidden h-11 w-11 rounded-full bg-purple-600 shadow-lg shadow-purple-900/40 border border-purple-400/60 flex items-center justify-center text-slate-50 hover:bg-purple-500 hover:border-purple-300 transition-colors duration-200"
+  aria-label="Back to top"
+>
+  <svg
+    class="h-5 w-5"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 4L4 10M10 4L16 10M10 4V16"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
 
-    <style>
-      #crisp-chatbox {
-        bottom: 100px !important;
+<script>
+  (function () {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 400) {
+        btn.classList.remove('hidden');
+      } else {
+        btn.classList.add('hidden');
       }
-      .crisp-client .crisp-4y7j5s {
-        bottom: 100px !important;
-      }
-    </style>
+    });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  })();
+</script>
 
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/vendors/aos.js"></script>
