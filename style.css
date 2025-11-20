@@ -4773,3 +4773,14 @@
 .t-card:hover .t-logo {
   filter: brightness(1) contrast(1);
 }
+
+/* Back to top button animation */
+#backToTop {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#backToTop.show {
+    opacity: 1;
+    transform: translateY(0);
+}
