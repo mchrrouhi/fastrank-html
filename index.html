@@ -1474,30 +1474,6 @@
 
     </div>
 
-    <!-- Scroll to top button -->
-    <button id="scrollToTopBtn" 
-            class="fixed bottom-4 right-4 bg-purple-600 text-white p-3 rounded-full shadow-lg z-50 opacity-0 transition-opacity duration-300 hover:bg-purple-700">
-        ↑
-    </button>
-
-    <script>
-    const btn = document.getElementById('scrollToTopBtn');
-
-    // 1. Manage Visibility (Show/hide based on scroll position)
-    window.onscroll = function() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btn.style.opacity = "1";
-      } else {
-        btn.style.opacity = "0";
-      }
-    };
-
-    // 2. Handle Click (Smooth Scroll)
-    btn.onclick = function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    </script>
-
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/vendors/aos.js"></script>
     <script src="./js/vendors/swiper-bundle.min.js"></script>
