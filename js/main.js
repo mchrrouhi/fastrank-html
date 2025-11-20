@@ -287,3 +287,33 @@ const highlighters = document.querySelectorAll('[data-highlighter]');
 highlighters.forEach((highlighter) => {
   new Highlighter(highlighter);
 });
+
+// Scroll to top button functionality
+(function() {
+  const scrollBtn = document.getElementById('scrollToTop');
+  if (!scrollBtn) return;
+
+  // Show/hide button based on scroll position
+  const toggleButtonVisibility = () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.remove('hidden');
+    } else {
+      scrollBtn.classList.add('hidden');
+    }
+  };
+
+  // Smooth scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // Event listeners
+  window.addEventListener('scroll', toggleButtonVisibility, { passive: true });
+  scrollBtn.addEventListener('click', scrollToTop);
+
+  // Initial check
+  toggleButtonVisibility();
+})();
