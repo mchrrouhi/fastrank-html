@@ -5,47 +5,61 @@ AOS.init({
   easing: 'ease-out-cubic',
 });
 
-const clientsEl = document.querySelectorAll('.clients-carousel');
-if (clientsEl.length > 0) {
-  const clients = new Swiper('.clients-carousel', {
-    slidesPerView: 'auto',
-    spaceBetween: 64,
-    centeredSlides: true,
-    loop: true,
-    speed: 5000,
-    noSwiping: true,
-    noSwipingClass: 'swiper-slide',
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: true,
-    },
-  });
+// Initialize Swiper after DOM is stable to prevent forced reflows
+function initSwipers() {
+  const clientsEl = document.querySelectorAll('.clients-carousel');
+  if (clientsEl.length > 0) {
+    const clients = new Swiper('.clients-carousel', {
+      slidesPerView: 'auto',
+      spaceBetween: 64,
+      centeredSlides: true,
+      loop: true,
+      speed: 5000,
+      noSwiping: true,
+      noSwipingClass: 'swiper-slide',
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: true,
+      },
+      observer: true,
+      observeParents: true,
+    });
+  }
+
+  const carouselEl = document.querySelectorAll('.stellar-carousel');
+  if (carouselEl.length > 0) {
+    const carousel = new Swiper('.stellar-carousel', {
+      breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+        640: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      },
+      grabCursor: true,
+      loop: false,
+      centeredSlides: false,
+      initialSlide: 0,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: '.carousel-next',
+        prevEl: '.carousel-prev',
+      },
+      observer: true,
+      observeParents: true,
+    });
+  }
 }
 
-const carouselEl = document.querySelectorAll('.stellar-carousel');
-if (carouselEl.length > 0) {
-  const carousel = new Swiper('.stellar-carousel', {
-    breakpoints: {
-      320: {
-        slidesPerView: 1
-      },
-      640: {
-        slidesPerView: 2
-      },
-      1024: {
-        slidesPerView: 3
-      }
-    },
-    grabCursor: true,
-    loop: false,
-    centeredSlides: false,
-    initialSlide: 0,
-    spaceBetween: 24,
-    navigation: {
-      nextEl: '.carousel-next',
-      prevEl: '.carousel-prev',
-    },
-  });
+// Use requestIdleCallback for non-critical Swiper init, fallback to setTimeout
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initSwipers, { timeout: 2000 });
+} else {
+  setTimeout(initSwipers, 1);
 }
 
 // Particle animation
@@ -83,17 +97,21 @@ class ParticleAnimation {
   init() {
     this.initCanvas();
     this.animate();
-    window.addEventListener('resize', this.initCanvas);
-    window.addEventListener('mousemove', this.onMouseMove);
+    window.addEventListener('resize', this.initCanvas, { passive: true });
+    window.addEventListener('mousemove', this.onMouseMove, { passive: true });
   }
 
   initCanvas() {
-    this.resizeCanvas();
-    this.drawParticles();
+    // Batch DOM reads before writes
+    requestAnimationFrame(() => {
+      this.resizeCanvas();
+      this.drawParticles();
+    });
   }
 
   onMouseMove(event) {
     const { clientX, clientY } = event;
+    // Batch the read operation
     const rect = this.canvas.getBoundingClientRect();
     const { w, h } = this.canvasSize;
     const x = clientX - rect.left - (w / 2);
@@ -107,12 +125,17 @@ class ParticleAnimation {
 
   resizeCanvas() {
     this.circles.length = 0;
-    this.canvasSize.w = this.canvasContainer.offsetWidth;
-    this.canvasSize.h = this.canvasContainer.offsetHeight;
-    this.canvas.width = this.canvasSize.w * this.dpr;
-    this.canvas.height = this.canvasSize.h * this.dpr;
-    this.canvas.style.width = this.canvasSize.w + 'px';
-    this.canvas.style.height = this.canvasSize.h + 'px';
+    // Batch all DOM reads first
+    const containerWidth = this.canvasContainer.offsetWidth;
+    const containerHeight = this.canvasContainer.offsetHeight;
+    
+    // Then batch all DOM writes
+    this.canvasSize.w = containerWidth;
+    this.canvasSize.h = containerHeight;
+    this.canvas.width = containerWidth * this.dpr;
+    this.canvas.height = containerHeight * this.dpr;
+    this.canvas.style.width = containerWidth + 'px';
+    this.canvas.style.height = containerHeight + 'px';
     this.context.scale(this.dpr, this.dpr);
   }
 
@@ -164,38 +187,54 @@ class ParticleAnimation {
 
   animate() {
     this.clearContext();
+    
+    // Batch all calculations before any DOM operations
+    const { w: canvasWidth, h: canvasHeight } = this.canvasSize;
+    const mouseX = this.mouse.x;
+    const mouseY = this.mouse.y;
+    const { staticity, ease } = this.settings;
+    
     this.circles.forEach((circle, i) => {
-      // Handle the alpha value
+      // Handle the alpha value - all reads done first
       const edge = [
-        circle.x + circle.translateX - circle.size, // distance from left edge
-        this.canvasSize.w - circle.x - circle.translateX - circle.size, // distance from right edge
-        circle.y + circle.translateY - circle.size, // distance from top edge
-        this.canvasSize.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
+        circle.x + circle.translateX - circle.size,
+        canvasWidth - circle.x - circle.translateX - circle.size,
+        circle.y + circle.translateY - circle.size,
+        canvasHeight - circle.y - circle.translateY - circle.size,
       ];
       const closestEdge = edge.reduce((a, b) => Math.min(a, b));
       const remapClosestEdge = this.remapValue(closestEdge, 0, 20, 0, 1).toFixed(2);
+      
       if(remapClosestEdge > 1) {
         circle.alpha += 0.02;
         if(circle.alpha > circle.targetAlpha) circle.alpha = circle.targetAlpha;
       } else {
         circle.alpha = circle.targetAlpha * remapClosestEdge;
       }
+      
       circle.x += circle.dx;
       circle.y += circle.dy;
-      circle.translateX += ((this.mouse.x / (this.settings.staticity / circle.magnetism)) - circle.translateX) / this.settings.ease;
-      circle.translateY += ((this.mouse.y / (this.settings.staticity / circle.magnetism)) - circle.translateY) / this.settings.ease;
-      // circle gets out of the canvas
-      if (circle.x < -circle.size || circle.x > this.canvasSize.w + circle.size || circle.y < -circle.size || circle.y > this.canvasSize.h + circle.size) {
-        // remove the circle from the array
+      circle.translateX += ((mouseX / (staticity / circle.magnetism)) - circle.translateX) / ease;
+      circle.translateY += ((mouseY / (staticity / circle.magnetism)) - circle.translateY) / ease;
+      
+      // Check if circle is out of canvas
+      if (circle.x < -circle.size || circle.x > canvasWidth + circle.size || 
+          circle.y < -circle.size || circle.y > canvasHeight + circle.size) {
         this.circles.splice(i, 1);
-        // create a new circle
-        const circle = this.circleParams();
-        this.drawCircle(circle);
-        // update the circle position
+        const newCircle = this.circleParams();
+        this.drawCircle(newCircle);
       } else {
-        this.drawCircle({ ...circle, x: circle.x, y: circle.y, translateX: circle.translateX, translateY: circle.translateY, alpha: circle.alpha }, true);
+        this.drawCircle({ 
+          ...circle, 
+          x: circle.x, 
+          y: circle.y, 
+          translateX: circle.translateX, 
+          translateY: circle.translateY, 
+          alpha: circle.alpha 
+        }, true);
       }
     });
+    
     window.requestAnimationFrame(this.animate);
   }
 }
@@ -234,13 +273,23 @@ class Highlighter {
   }
 
   initContainer() {
-    this.containerSize.w = this.container.offsetWidth;
-    this.containerSize.h = this.container.offsetHeight;        
+    // Batch DOM read
+    const containerWidth = this.container.offsetWidth;
+    const containerHeight = this.container.offsetHeight;
+    
+    // Then batch DOM writes
+    this.containerSize.w = containerWidth;
+    this.containerSize.h = containerHeight;
   }
 
   onMouseMove(event) {
     const { clientX, clientY } = event;
-    const rect = this.container.getBoundingClientRect();
+    // Cache rect to avoid repeated getBoundingClientRect calls
+    if (!this.cachedRect || Date.now() - this.lastRectUpdate > 100) {
+      this.cachedRect = this.container.getBoundingClientRect();
+      this.lastRectUpdate = Date.now();
+    }
+    const rect = this.cachedRect;
     const { w, h } = this.containerSize;
     const x = clientX - rect.left;
     const y = clientY - rect.top;
@@ -257,27 +306,38 @@ class Highlighter {
   }
 
   updateBoxStyles() {
+    // Get fresh container rect for accuracy
     const rect = this.container.getBoundingClientRect();
-    // Batch all DOM reads first
+    
+    // Batch all DOM reads first (geometry properties)
     const boxRects = this.boxes.map(box => box.getBoundingClientRect());
-    // Then batch all DOM writes
+    
+    // Then batch all DOM writes (style updates)
     this.boxes.forEach((box, index) => {
       const boxX = -(boxRects[index].left - rect.left) + this.mouse.x;
       const boxY = -(boxRects[index].top - rect.top) + this.mouse.y;
       box.style.setProperty('--mouse-x', `${boxX}px`);
       box.style.setProperty('--mouse-y', `${boxY}px`);
     });
+    
     this.isUpdating = false;
   }
 
   init() {
+    this.lastRectUpdate = 0;
+    this.cachedRect = null;
     this.initContainer();
-    // Debounced resize
+    
+    // Debounced resize with longer delay to reduce reflow frequency
     let resizeTimeout;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => this.initContainer(), 150);
-    });
+      resizeTimeout = setTimeout(() => {
+        this.cachedRect = null; // Invalidate cache on resize
+        this.initContainer();
+      }, 150);
+    }, { passive: true });
+    
     window.addEventListener('mousemove', this.onMouseMove, { passive: true });
   }  
 }
