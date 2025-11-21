@@ -4698,6 +4698,15 @@
   color: oklch(0.869 0.022 252.894); /* slate-300 for small text readability */
 }
 
+/* Prose link color override - Fastrank purple theme */
+.prose a {
+  color: #a78bfa; /* purple-400 */
+}
+
+.prose a:hover {
+  color: #c4b5fd; /* purple-300 */
+}
+
 /* Testimonials/Customers page specific classes */
 .t-grid {
   display: grid;
