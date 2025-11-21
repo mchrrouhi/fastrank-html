@@ -4782,3 +4782,16 @@
 .t-card:hover .t-logo {
   filter: brightness(1) contrast(1);
 }
+
+/* Legal pages link colors */
+.legal-page .prose a {
+  color: #a855f7;               /* mauve dyal theme */
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(168, 85, 247, 0.45);
+}
+
+.legal-page .prose a:hover {
+  color: #e5e7ff;               /* presque blanc-mauve */
+  text-decoration-color: rgba(196, 181, 253, 0.85);
+}
