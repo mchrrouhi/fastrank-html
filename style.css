@@ -4795,3 +4795,141 @@
   color: #e5e7ff;               /* presque blanc-mauve */
   text-decoration-color: rgba(196, 181, 253, 0.85);
 }
+
+/* ============================================
+   BLOG POST ARTICLE STYLES
+   Scoped styles for blog/post-template.html
+   ============================================ */
+
+/* Article container - ensures proper text hierarchy */
+.blog-post-article h1 {
+  color: #f8fafc; /* slate-50 - maximum contrast for main title */
+  line-height: 1.1;
+}
+
+.blog-post-article h2 {
+  color: #f1f5f9; /* slate-100 - strong contrast for section headers */
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.blog-post-article h3 {
+  color: #e2e8f0; /* slate-200 - clear visibility */
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Content body - improved text contrast */
+.blog-post-content {
+  color: #cbd5e1; /* slate-300 - optimal reading contrast */
+  line-height: 1.75;
+}
+
+.blog-post-content p {
+  color: #cbd5e1; /* slate-300 */
+  margin-bottom: 1.25rem;
+}
+
+.blog-post-content strong {
+  color: #f1f5f9; /* slate-100 - emphasis text brighter */
+  font-weight: 600;
+}
+
+.blog-post-content ol,
+.blog-post-content ul {
+  color: #cbd5e1; /* slate-300 */
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-content li {
+  color: #cbd5e1; /* slate-300 */
+  margin-bottom: 0.5rem;
+}
+
+/* Links inside blog content */
+.blog-post-content a {
+  color: #c4b5fd; /* purple-300 - clearly visible */
+  text-decoration: underline;
+  text-decoration-color: rgba(196, 181, 253, 0.4);
+  transition: all 0.2s ease;
+}
+
+.blog-post-content a:hover {
+  color: #e9d5ff; /* purple-200 - brighter on hover */
+  text-decoration-color: rgba(233, 213, 255, 0.7);
+}
+
+/* Before/After comparison grid */
+.blog-before-after-grid figure {
+  background: rgba(15, 23, 42, 0.8); /* slate-950 with transparency */
+  border: 1px solid rgba(148, 163, 184, 0.2); /* slate-400 subtle */
+}
+
+.blog-figure-caption {
+  color: #94a3b8; /* slate-400 - clear caption text */
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* Callout boxes */
+.blog-callout {
+  background: rgba(88, 28, 135, 0.15); /* purple-900 tinted */
+  border-color: rgba(168, 85, 247, 0.5); /* purple-500 */
+}
+
+.blog-callout p {
+  color: #e2e8f0; /* slate-200 - high contrast for key info */
+}
+
+.blog-callout .font-semibold {
+  color: #f1f5f9; /* slate-100 - emphasis */
+}
+
+/* CTA section at bottom */
+.blog-post-cta h3 {
+  color: #f8fafc; /* slate-50 - strong CTA heading */
+}
+
+.blog-post-cta p {
+  color: #cbd5e1; /* slate-300 - readable body */
+}
+
+.blog-post-cta strong {
+  color: #e9d5ff; /* purple-200 - highlight key phrase */
+  font-weight: 600;
+}
+
+/* Mobile optimization for Arabic and English text */
+@media (max-width: 768px) {
+  .blog-post-article h1 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.15;
+  }
+
+  .blog-post-article h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .blog-post-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Ensure code blocks (if any) are readable */
+.blog-post-content code {
+  background: rgba(30, 41, 59, 0.8); /* slate-800 */
+  color: #f1f5f9; /* slate-100 */
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.blog-post-content pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+}

@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-  <meta charset="utf-8">
-  <title>[POST TITLE] - Fastrank Blog</title>
-  <meta name="description" content="[SHORT SEO DESCRIPTION FOR THIS POST]">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
+  <meta charset="utf-8" />
+  <title>[POST_TITLE] - Fastrank Blog</title>
+  <meta name="description" content="[META_DESCRIPTION_FOR_THIS_ARTICLE]" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fastrank.io/blog/[post-slug].html" />
 
-  <!-- مهم: غادي تبدليه فكل مقالة باللينك النهائي ديالها -->
-  <link rel="canonical" href="https://fastrank.io/blog/[slug].html" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
-
-  <!-- OG / Twitter (اختياري قدري تبدليهم فكل مقالة) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="[POST TITLE] - Fastrank Blog" />
-  <meta property="og:description" content="[SHORT SEO DESCRIPTION FOR THIS POST]" />
-  <meta property="og:image" content="https://fastrank.io/images/fastrank-logo.svg" />
-  <meta property="og:url" content="https://fastrank.io/blog/[slug].html" />
+  <meta property="og:title" content="[POST_TITLE] - Fastrank Blog" />
+  <meta property="og:description" content="[META_DESCRIPTION_FOR_THIS_ARTICLE]" />
+  <meta property="og:url" content="https://fastrank.io/blog/[post-slug].html" />
+  <meta property="og:image" content="https://fastrank.io/images/blog/[post-og-image].jpg" />
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="[POST TITLE] - Fastrank Blog" />
-  <meta name="twitter:description" content="[SHORT SEO DESCRIPTION FOR THIS POST]" />
-  <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="[POST_TITLE] - Fastrank Blog" />
+  <meta name="twitter:description" content="[META_DESCRIPTION_FOR_THIS_ARTICLE]" />
+  <meta name="twitter:image" content="https://fastrank.io/images/blog/[post-og-image].jpg" />
 
-  <!-- Styles (حيت حنا داخل /blog/ كنطلعو ب ../) -->
-  <link href="../css/vendors/aos.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <!-- CSS -->
+  <link href="../css/vendors/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/vendors/swiper-bundle.min.css" />
-  <link href="../style.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet" />
 
   <!-- Crisp -->
   <script type="text/javascript">
@@ -45,22 +43,50 @@
       d.getElementsByTagName("head")[0].appendChild(s);
     })();
   </script>
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "[POST_TITLE]",
+    "description": "[META_DESCRIPTION_FOR_THIS_ARTICLE]",
+    "image": "https://fastrank.io/images/blog/[post-og-image].jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Fastrank"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cadunlock LLC",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fastrank.io/images/fastrank-logo.svg"
+      }
+    },
+    "datePublished": "[2025-11-21]",
+    "dateModified": "[2025-11-21]",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://fastrank.io/blog/[post-slug].html"
+    }
+  }
+  </script>
 </head>
 
 <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
-
   <!-- Page wrapper -->
   <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
-    <!-- ====== HEADER (نفس ديال البلوغ) ====== -->
+    <!-- Site header (نفس ديال blog) -->
     <header class="absolute w-full z-30">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-16 md:h-20">
 
           <!-- Logo -->
           <div class="flex-1">
-            <a class="inline-flex" href="../index.html" aria-label="Fastrank">
-              <img class="max-w-none" src="../images/logo.svg" width="38" height="38" alt="Fastrank">
+            <a class="inline-flex" href="/" aria-label="Fastrank">
+              <img class="max-w-none" src="../images/logo.svg" width="38" height="38" alt="Fastrank" />
             </a>
           </div>
 
@@ -68,75 +94,45 @@
           <nav class="hidden md:flex md:grow">
             <ul class="flex grow justify-center flex-wrap items-center">
               <li>
-                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="../about.html">Our Expertise</a>
+                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/about.html">Our Expertise</a>
               </li>
               <li>
-                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="../index.html#pricing">Pricing</a>
+                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/#pricing">Pricing</a>
               </li>
               <li>
-                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-                  href="index.html">Blog</a>
+                <a class="font-medium text-sm text-purple-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/blog/">Blog</a>
               </li>
             </ul>
           </nav>
 
-          <!-- Desktop CTA -->
+          <!-- CTA -->
           <ul class="flex-1 flex justify-end items-center">
             <li class="ml-6">
-              <a
-                class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none"
-                href="../get-report.html">
+              <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="/get-report.html">
                 <span class="relative inline-flex items-center">
                   Get Report
-                  <span
-                    class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                    -&gt;</span>
+                  <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
                 </span>
               </a>
             </li>
           </ul>
 
-          <!-- Mobile nav نفس ديال index.html -->
+          <!-- Mobile menu simplified (نخليه كيف هو فـ blog) -->
           <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
-            <button
-              class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition"
-              aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+            <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
               <span class="sr-only">Menu</span>
-              <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect
-                  class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0"
-                  y="7" width="16" height="2" rx="1"></rect>
-                <rect
-                  class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]"
-                  y="7" width="16" height="2" rx="1"></rect>
-                <rect
-                  class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0"
-                  y="7" width="16" height="2" rx="1"></rect>
+              <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
               </svg>
             </button>
 
-            <nav id="mobile-nav"
-              class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out"
-              x-ref="mobileNav"
-              :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'"
-              @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
-              <ul
-                class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
-                <li>
-                  <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5"
-                    href="../about.html">Our Expertise</a>
-                </li>
-                <li>
-                  <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5"
-                    href="../index.html#pricing">Pricing</a>
-                </li>
-                <li>
-                  <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5"
-                    href="index.html">Blog</a>
-                </li>
+            <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+              <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/about.html">Our Expertise</a></li>
+                <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/#pricing">Pricing</a></li>
+                <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/blog/">Blog</a></li>
               </ul>
             </nav>
           </div>
@@ -145,99 +141,166 @@
       </div>
     </header>
 
-    <!-- ====== MAIN ARTICLE ====== -->
+    <!-- Page content -->
     <main class="grow">
       <section class="relative">
-        <!-- نفس الخلفية ديال البلوغ (اختياري) -->
-        <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
-          <canvas data-particle-animation data-particle-quantity="18"></canvas>
-        </div>
+        <!-- background / illustration نفس ستايل blog -->
+        <div class="absolute inset-0 -z-10 h-[420px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-90"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
           <div class="pt-32 pb-20 md:pt-40 md:pb-32">
-            <!-- Article header -->
-            <header class="mb-10">
-              <a href="index.html"
-                class="inline-flex items-center text-sm text-slate-300 hover:text-white mb-6 transition">
+
+            <!-- Breadcrumb -->
+            <div class="mb-6">
+              <a href="/blog/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition">
                 ← Back to blog
               </a>
+            </div>
 
-              <div class="flex items-center gap-3 mb-4">
-                <span
-                  class="inline-flex items-center rounded-full border border-slate-700/70 bg-slate-900/70 px-3 py-1 text-xs font-medium text-slate-200">
-                  [Category]
-                </span>
-                <span class="text-xs text-slate-400">[10 min read]</span>
-                <span class="text-xs text-slate-500">• [Nov 2025]</span>
+            <article class="max-w-3xl mx-auto blog-post-article" itemscope itemtype="https://schema.org/Article">
+              <!-- Meta row: category + date + read time -->
+              <div class="flex flex-wrap items-center justify-between gap-3 mb-4 text-xs text-slate-400">
+                <div class="inline-flex items-center gap-2">
+                  <span class="inline-flex items-center rounded-full border border-purple-500/60 bg-purple-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-purple-300">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-400 mr-1"></span>
+                    [CATEGORY]
+                  </span>
+                  <span aria-hidden="true">•</span>
+                  <span itemprop="datePublished">[Nov 21, 2025]</span>
+                </div>
+                <div class="text-slate-400">
+                  <span>[10 min read]</span>
+                </div>
               </div>
 
-              <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-50 mb-4">
-                [POST TITLE – واضح وقوي]
-              </h1>
-              <p class="text-lg text-slate-300 max-w-2xl">
-                [Intro قصيرة كتشرح فوكس المقالة في 2–3 جمل باش تساعد على SEO والconversion]
-              </p>
-            </header>
-
-            <!-- Article body -->
-            <article
-              class="prose prose-invert prose-lg max-w-none text-slate-200 leading-relaxed space-y-8">
-
-              <section>
-                <h2>Section 1 title</h2>
-                <p>
-                  هنا كتكتبي الفقرة الأولى، مقدمة، context، علاش هاد الموضوع مهم، أشمن مشكلة كتحلّي…
+              <!-- Title -->
+              <header class="mb-8">
+                <h1 itemprop="headline" class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-50 mb-4">
+                  [POST_TITLE – اكتب عنوان ديال المقال هنا]
+                </h1>
+                <p class="text-base md:text-lg text-slate-300 max-w-2xl" itemprop="description">
+                  [Intro قصيرة كتشرح شنو غادي يتعلم القارئ من هاد المقال.]
                 </p>
-              </section>
+              </header>
 
-              <section>
-                <h2>Section 2 title</h2>
-                <p>
-                  تفاصيل تقنية / steps / framework… حاولي ديما تقسمي الفقرات وما تخليش بلوك طويل بزاف.
-                </p>
-                <ul>
-                  <li>نقطة 1 مهمة</li>
-                  <li>نقطة 2 بالأرقام أو مثال</li>
-                  <li>نقطة 3 مع tip عملي</li>
-                </ul>
-              </section>
+              <!-- Hero image -->
+              <figure class="mb-10 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                <img
+                  src="../images/blog/[post-hero].jpg"
+                  alt="[وصف للصورة الرئيسية فيها الكلمات المفتاحية]"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  itemprop="image"
+                />
+                <figcaption class="px-6 py-3 text-xs text-slate-400 border-t border-slate-800">
+                  Optional caption: explain what this screenshot shows (before/after speed, dashboard, etc.).
+                </figcaption>
+              </figure>
 
-              <section>
-                <h2>Section 3 title (Case study / مثال تطبيقي)</h2>
-                <p>
-                  إلى عندك case study، حطي نتيجتك قبل وبعد، أرقام PageSpeed، LCP، revenue، إلخ…
-                </p>
-              </section>
+              <!-- Content body -->
+              <div class="prose prose-lg prose-invert max-w-none text-slate-100 blog-post-content" itemprop="articleBody">
 
-              <section>
-                <h2>Conclusion + CTA</h2>
                 <p>
-                  هنا كتختمي بأهم الخلاصات وكتربطيها بالخدمة ديالك.
+                  [الباراغراف الأول: context، علاش المشكل مهم، شنو النتيجة اللي وصلت لها مع الكلاينت…]
                 </p>
+
+                <h2>1. Situation قبل ما نخدمو على السرعة</h2>
                 <p>
-                  مثلا: “إلا بغيتي نفس النتائج لمتجرك، طلب
-                  <a href="../get-report.html" class="text-purple-400 hover:text-purple-300">
-                    Free Speed Report
-                  </a>
-                  وسنرسل لك خطة واضحة في أقل من 24 ساعة.”
+                  هنا كتبين الأرقام قبل: LCP، CLS، INP، server response time… إلى بغيتي تقدري ديري
+                  <strong>bullets</strong> باش يكون كلشي واضح.
                 </p>
-              </section>
+
+                <!-- مثال بلوك فيه صورتين قبل / بعد -->
+                <div class="grid md:grid-cols-2 gap-6 my-8 blog-before-after-grid">
+                  <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                    <img src="../images/blog/[before-image].jpg" alt="Before optimization - Core Web Vitals" loading="lazy" class="w-full h-auto" />
+                    <figcaption class="px-4 py-2 text-xs border-t border-slate-800 blog-figure-caption">
+                      Before: LCP 4.8s, CLS 0.18, INP 420ms (failing CWV).
+                    </figcaption>
+                  </figure>
+                  <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                    <img src="../images/blog/[after-image].jpg" alt="After optimization - Core Web Vitals" loading="lazy" class="w-full h-auto" />
+                    <figcaption class="px-4 py-2 text-xs border-t border-slate-800 blog-figure-caption">
+                      After: LCP 1.3s, CLS 0.02, INP 118ms (all passing).
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <h2>2. Framework / Steps اللي خدمنا بيهم</h2>
+                <p>
+                  قدّمي steps بشكل واضح، مثلاً:
+                </p>
+                <ol>
+                  <li>Audit للtheme و apps / plugins.</li>
+                  <li>تشخيص render-blocking resources و heavy scripts.</li>
+                  <li>إصلاح الصور، fonts، lazy-loading، critical CSS…</li>
+                </ol>
+
+                <h2>3. Impact على revenue و SEO</h2>
+                <p>
+                  هنا تربطي بين السرعة و KPIs اللي تهم e-commerce: conversion rate، cost per acquisition، ROAS، organic traffic…
+                </p>
+
+                <!-- Callout box -->
+                <div class="my-8 rounded-2xl border border-purple-500/40 p-6 blog-callout">
+                  <p class="text-sm text-slate-50 font-semibold mb-2">
+                    Key takeaway
+                  </p>
+                  <p class="text-sm text-slate-300">
+                    لخصي فـ 2–3 جمل أهم دروس من هاد الكيس ستادي، كيفاش أي store يقدر يطبق نفس
+                    الapproach باش يحسن Core Web Vitals بدون ما يهرّس design.
+                  </p>
+                </div>
+
+                <h2>4. شنو خاص القارئ يدير دابا؟</h2>
+                <p>
+                  هنا CTA ناعم: ولا يطبق steps بوحدو، ولا يطلب audit من Fastrank.
+                </p>
+
+              </div>
+
+              <!-- CTA section تحت المقال -->
+              <div class="mt-12 border-t border-slate-800 pt-8 blog-post-cta">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h3 class="text-lg font-semibold text-slate-50 mb-1">
+                      عندك متجر بطيء و باغة نفس النتيجة؟
+                    </h3>
+                    <p class="text-sm text-slate-300">
+                      نقدرون نرسلو ليك <strong>Free Speed Report</strong> في أقل من 24 ساعة مع plan واضح باش تولّي
+                      Core Web Vitals كلهم خضرا.
+                    </p>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="/get-report.html" class="btn-sm inline-flex items-center justify-center text-sm font-medium text-slate-100 bg-purple-600 hover:bg-purple-500 px-5 py-2 rounded-full shadow-lg shadow-purple-500/30 transition">
+                      Get your Free Speed Report
+                    </a>
+                    <a href="/blog/" class="inline-flex items-center text-sm text-slate-300 hover:text-slate-100 transition">
+                      ← Back to all articles
+                    </a>
+                  </div>
+                </div>
+              </div>
 
             </article>
+
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ====== FOOTER (نفس ديال الموقع) ====== -->
+    <!-- Footer نفس ديال blog/legal pages -->
     <footer>
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
-          <!-- Logo + info -->
+          <!-- Logo + address -->
           <div>
-            <a class="inline-flex" href="../index.html" aria-label="fastrank.io">
-              <img src="../images/fastrank-logo.svg" alt="Fastrank logo"
-                class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4" />
+            <a class="inline-flex" href="/" aria-label="fastrank.io">
+              <img
+                src="../images/fastrank-logo.svg"
+                alt="Fastrank logo"
+                class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4"
+              />
             </a>
             <div class="flex flex-col gap-2 text-slate-300 text-sm">
               <span class="font-semibold text-slate-100">Cadunlock LLC</span>
@@ -251,24 +314,24 @@
           <div>
             <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
             <ul class="text-sm space-y-2">
-              <li><a class="text-slate-400 hover:text-slate-200 transition" href="../index.html">Services</a></li>
-              <li><a class="text-slate-400 hover:text-slate-200 transition" href="../get-report.html">Free Speed Report</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/">Services</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/get-report.html">Free Speed Report</a></li>
             </ul>
           </div>
 
           <div>
             <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
             <ul class="text-sm space-y-2">
-              <li><a class="text-slate-400 hover:text-slate-200 transition" href="../about.html">Our Expertise</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/about.html">Our Expertise</a></li>
             </ul>
           </div>
 
           <div>
             <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
             <ul class="text-sm space-y-2">
-              <li><a class="text-slate-400 hover:text-slate-200 transition" href="../refund-policy.html">Refund policy</a></li>
-              <li><a class="text-slate-400 hover:text-slate-200 transition" href="../terms-of-service.html">Terms of Service</a></li>
-              <li><a class="text-slate-400 hover:text-slate-200 transition" href="../privacy-policy.html">Privacy policy</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/refund-policy.html">Refund policy</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/terms-of-service.html">Terms of Service</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/privacy-policy.html">Privacy policy</a></li>
             </ul>
           </div>
         </div>
@@ -278,14 +341,12 @@
         </p>
       </div>
     </footer>
-
   </div>
 
-  <!-- JS (بـ ../ حيت الصفحة فالـ blog/) -->
+  <!-- JS -->
   <script src="../js/vendors/alpinejs.min.js" defer></script>
   <script src="../js/vendors/aos.js"></script>
   <script src="../js/vendors/swiper-bundle.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
-
 </html>
