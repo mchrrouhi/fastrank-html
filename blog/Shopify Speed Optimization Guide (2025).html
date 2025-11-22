@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <title>Shopify Speed Optimization Guide (2025) - Fastrank Blog</title>
+  <meta name="description" content="Complete Shopify speed optimization guide for 2025. Learn how to optimize Shopify speed, pass Core Web Vitals, and boost conversions with a proven expert framework." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fastrank.io/blog/shopify-speed-optimization-guide-2025.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Shopify Speed Optimization Guide (2025) - Fastrank Blog" />
+  <meta property="og:description" content="Complete Shopify speed optimization guide for 2025. Learn how to optimize Shopify speed, pass Core Web Vitals, and boost conversions with a proven expert framework." />
+  <meta property="og:url" content="https://fastrank.io/blog/shopify-speed-optimization-guide-2025.html" />
+  <meta property="og:image" content="https://fastrank.io/images/blog/shopify-speed-optimization-guide-2025-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shopify Speed Optimization Guide (2025) - Fastrank Blog" />
+  <meta name="twitter:description" content="Complete Shopify speed optimization guide for 2025. Learn how to optimize Shopify speed, pass Core Web Vitals, and boost conversions with a proven expert framework." />
+  <meta name="twitter:image" content="https://fastrank.io/images/blog/shopify-speed-optimization-guide-2025-og.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <!-- Critical CSS (Inline for Header/Nav) -->
+  <style>
+    *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+    html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:Inter,ui-sans-serif,system-ui,sans-serif;scroll-behavior:smooth}
+    body{margin:0;font-family:inherit;line-height:inherit}
+    .font-inter{font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+    .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .bg-slate-900{background-color:rgb(15 23 42)}
+    .text-slate-100{color:rgb(241 245 249)}
+    .tracking-tight{letter-spacing:-0.025em}
+    .flex{display:flex}
+    .flex-col{flex-direction:column}
+    .min-h-screen{min-height:100vh}
+    .overflow-hidden{overflow:hidden}
+    header{position:absolute;width:100%;z-index:30}
+    .max-w-6xl{max-width:72rem}
+    .mx-auto{margin-left:auto;margin-right:auto}
+    .px-4{padding-left:1rem;padding-right:1rem}
+    .items-center{align-items:center}
+    .justify-between{justify-content:space-between}
+    .h-16{height:4rem}
+    .flex-1{flex:1 1 0%}
+    .inline-flex{display:inline-flex}
+    .max-w-none{max-width:none}
+    .hidden{display:none}
+    .grow{flex-grow:1}
+    .justify-center{justify-content:center}
+    .flex-wrap{flex-wrap:wrap}
+    .font-medium{font-weight:500}
+    .text-sm{font-size:0.875rem;line-height:1.25rem}
+    .text-slate-300{color:rgb(203 213 225)}
+    .hover\:text-white:hover{color:rgb(255 255 255)}
+    .transition{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
+    .justify-end{justify-content:flex-end}
+    .ml-6{margin-left:1.5rem}
+    .relative{position:relative}
+    .text-purple-500{color:rgb(168 85 247)}
+    @media(min-width:768px){.md\:flex{display:flex}.md\:h-20{height:5rem}.md\:grow{flex-grow:1}}
+    @media(min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
+
+    /* Blog TOC Styles */
+    .blog-toc {
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: radial-gradient(circle at top, rgba(129, 140, 248, 0.14), rgba(15, 23, 42, 0.95));
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.9);
+    }
+    .blog-toc-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .blog-toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+    .blog-toc-list li {
+      position: relative;
+      padding-left: 0.75rem;
+    }
+    .blog-toc-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #a855f7;
+      font-size: 0.9rem;
+    }
+    .blog-toc-list a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.18s ease, transform 0.18s ease;
+    }
+    .blog-toc-list a:hover {
+      color: #e9d5ff;
+      transform: translateX(2px);
+    }
+    @media (max-width: 768px) {
+      .blog-toc {
+        padding: 1.25rem 1.25rem;
+      }
+      .blog-toc-list {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+
+  <!-- Deferred CSS -->
+  <link rel="preload" href="../css/vendors/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="../css/vendors/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="../style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="../css/vendors/aos.css" rel="stylesheet" />
+    <link href="../css/vendors/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
+  </noscript>
+
+  <!-- Crisp -->
+  <script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "883b2d77-164f-457f-add0-22394a2a3bb2";
+    (function () {
+      d = document;
+      s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fastrank.io/blog/shopify-speed-optimization-guide-2025.html"
+  },
+  "headline": "Shopify Speed Optimization Guide (2025): How to Optimize Shopify Speed Like a Pro",
+  "description": "Complete Shopify speed optimization guide for 2025. Learn how to optimize Shopify speed, pass Core Web Vitals, and boost conversions with a proven expert framework.",
+  "image": [
+    "https://fastrank.io/images/blog/shopify-speed-optimization-guide-2025-og.jpg"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "url": "https://fastrank.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fastrank.io/images/fastrank-logo.svg"
+    }
+  },
+  "datePublished": "2025-11-21",
+  "dateModified": "2025-11-21"
+}
+</script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+  <!-- Page wrapper -->
+  <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+    <!-- Site header -->
+    <header class="absolute w-full z-30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16 md:h-20">
+
+          <!-- Logo -->
+          <div class="flex-1">
+            <a class="inline-flex" href="/" aria-label="Fastrank">
+              <img class="max-w-none" src="../images/logo.svg" width="38" height="38" alt="Fastrank" />
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <nav class="hidden md:flex md:grow">
+            <ul class="flex grow justify-center flex-wrap items-center">
+              <li>
+                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/about.html">Our Expertise</a>
+              </li>
+              <li>
+                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/#pricing">Pricing</a>
+              </li>
+              <li>
+                <a class="font-medium text-sm text-purple-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/blog/">Blog</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- CTA -->
+          <ul class="flex-1 flex justify-end items-center">
+            <li class="ml-6">
+              <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="/get-report.html">
+                <span class="relative inline-flex items-center">
+                  Get Report
+                  <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile menu -->
+          <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+            <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+              <span class="sr-only">Menu</span>
+              <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+              </svg>
+            </button>
+
+            <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+              <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/about.html">Our Expertise</a></li>
+                <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/#pricing">Pricing</a></li>
+                <li><a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/blog/">Blog</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="grow">
+      <section class="relative">
+        <!-- Background -->
+        <div class="absolute inset-0 -z-10 h-[420px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-90"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div class="pt-32 pb-20 md:pt-40 md:pb-32">
+
+            <!-- Breadcrumb -->
+            <div class="mb-6">
+              <a href="/blog/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition">
+                ← Back to blog
+              </a>
+            </div>
+
+            <article class="max-w-3xl mx-auto blog-post-article" itemscope itemtype="https://schema.org/Article">
+              <!-- Meta row: category + date + read time -->
+              <div class="flex flex-wrap items-center justify-between gap-3 mb-4 text-xs text-slate-400">
+                <div class="inline-flex items-center gap-2">
+                  <span class="inline-flex items-center rounded-full border border-purple-500/60 bg-purple-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-purple-300">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-400 mr-1"></span>
+                    Shopify Speed
+                  </span>
+                  <span aria-hidden="true">•</span>
+                  <span itemprop="datePublished" content="2025-11-21">Nov 21, 2025</span>
+                </div>
+                <div class="text-slate-400">
+                  <span>10 min read</span>
+                </div>
+              </div>
+
+              <!-- Title -->
+              <header class="mb-8">
+                <h1 itemprop="headline" class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-50 mb-4">
+                  Shopify Speed Optimization Guide (2025): How to Optimize Shopify Speed Like a Pro
+                </h1>
+                <p class="text-base md:text-lg text-slate-300 max-w-2xl" itemprop="description">
+                  Learn exactly how to optimize Shopify speed in 2025 using a proven expert framework that improves Core Web Vitals, boosts conversions, and reduces ad costs.
+                </p>
+              </header>
+
+              <!-- Hero image -->
+              <figure class="mb-10 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                <img
+                  src="../images/blog/shopify-speed-optimization-guide-2025-hero.jpg"
+                  alt="Shopify speed optimization dashboard showing improved Core Web Vitals and faster page load metrics."
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                  itemprop="image"
+                />
+                <figcaption class="px-6 py-3 text-xs text-slate-400 border-t border-slate-800">
+                  Example of a Shopify store after a full speed optimization: faster load times, green Core Web Vitals, and more stable performance.
+                </figcaption>
+              </figure>
+
+              <!-- Table of Contents -->
+              <nav class="mb-10 rounded-2xl border border-slate-700/50 bg-slate-800/30 p-6" aria-label="Table of contents">
+                <h2 class="text-lg font-semibold text-slate-50 mb-4 flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                  Table of Contents
+                </h2>
+                <ol class="space-y-2 text-sm text-slate-300" id="toc-list">
+                  <li><a href="#section-1" class="hover:text-purple-400 transition">1. Why Shopify Speed Still Matters in 2025</a></li>
+                  <li><a href="#section-2" class="hover:text-purple-400 transition">2. Common Reasons Shopify Stores Slow Down</a></li>
+                  <li><a href="#section-3" class="hover:text-purple-400 transition">3. How to Audit Shopify Speed Like a Pro</a></li>
+                  <li><a href="#section-4" class="hover:text-purple-400 transition">4. Real Before/After Shopify Speed Results</a></li>
+                  <li><a href="#section-5" class="hover:text-purple-400 transition">5. The Shopify Speed Optimization Framework</a></li>
+                  <li><a href="#section-6" class="hover:text-purple-400 transition">6. The Business Impact of Speed Optimization</a></li>
+                  <li><a href="#section-7" class="hover:text-purple-400 transition">7. Should You DIY or Hire an Expert?</a></li>
+                  <li><a href="#section-8" class="hover:text-purple-400 transition">8. Final Takeaways</a></li>
+                </ol>
+              </nav>
+
+              <!-- Content body -->
+              <div class="prose prose-lg prose-invert max-w-none text-slate-100 blog-post-content" itemprop="articleBody">
+
+                <p>
+                  Slow Shopify stores are losing money every single day through higher bounce rates, reduced conversion rates, and wasted ad spend. In this 2025 expert guide, you’ll learn exactly how to optimize your Shopify store to achieve green Core Web Vitals, faster load times, and better ROAS using a proven framework.
+                  This guide is based on our proven framework, developed by our <a href="/about.html">team of speed experts</a>, and used to optimize Shopify, WordPress, and WooCommerce sites globally.
+                </p>
+
+                <h2 id="section-1">1. Why Shopify Speed Still Matters in 2025</h2>
+                <p>
+                  Even with recent improvements to Shopify’s infrastructure, many stores still struggle with slow loading times, especially on mobile. Performance issues directly impact:
+                </p>
+                <ul>
+                  <li>Higher bounce rates on landing pages</li>
+                  <li>Reduced conversion rates across key funnels</li>
+                  <li>Higher CPC and CPA in paid campaigns</li>
+                  <li>Weaker SEO rankings due to poor Core Web Vitals</li>
+                </ul>
+                <p>
+                  Google PageSpeed is no longer “just a score” — it’s a real-world signal that affects SEO, Quality Scores in ad platforms, user experience, and revenue stability. In many cases, every 1 second of delay can cost up to double-digit percentage drops in conversion rates.
+                </p>
+
+                <h2 id="section-2">2. Common Reasons Shopify Stores Slow Down</h2>
+                <p>
+                  Before fixing anything, you need to understand what is actually slowing your store down. These are the most common bottlenecks we see during Shopify speed audits:
+                </p>
+
+                <h3>2.1 Too Many Apps</h3>
+                <p>
+                  Apps are the number one reason Shopify stores slow down. Each app often injects external JavaScript, CSS, and tracking snippets, which can block rendering and delay interaction. Over time, stores accumulate upsell apps, review widgets, chat systems, popups, and tracking scripts that all compete for resources.
+                </p>
+
+                <h3>2.2 Heavy Theme Sections</h3>
+                <p>
+                  Many premium themes look beautiful but ship with heavy animations, sliders, carousels, background videos, and complex sections. If these features are not optimized, they significantly increase the amount of HTML, CSS, and JS that must load before the page becomes usable.
+                </p>
+
+                <h3>2.3 Unoptimized Images and Media</h3>
+                <p>
+                  Oversized JPEGs, PNGs, and GIFs are still one of the biggest performance killers. When product and hero images are not compressed or converted to modern formats like WebP, they contribute to poor LCP (Largest Contentful Paint) and longer loading times, especially on slow mobile networks.
+                </p>
+
+                <h3>2.4 Inefficient Liquid Code</h3>
+                <p>
+                  Shopify relies on Liquid templates rendered on the server. Poorly written Liquid code with nested loops, unnecessary includes, and unoptimized snippets can increase server processing time and slow down the full rendering of the page.
+                </p>
+
+                <h3>2.5 Large JavaScript Bundles</h3>
+                <p>
+                  Tracking pixels, analytics tools, A/B testing scripts, and marketing widgets all add JavaScript. When this code is not deferred, minimized, or scoped correctly, it can block the main thread, delay interaction, and hurt INP (Interaction to Next Paint).
+                </p>
+
+                <!-- Before / After block -->
+                <h2 id="section-3">3. How to Audit Shopify Speed Like a Pro</h2>
+                <p>
+                  A proper Shopify speed audit goes beyond checking a single PageSpeed score. Here is the checklist we use for every store we optimize:
+                </p>
+
+                <h3>3.1 Start with Core Web Vitals</h3>
+                <p>Use tools like:</p>
+                <ul>
+                  <li>Google PageSpeed Insights (field and lab data)</li>
+                  <li>Chrome DevTools Performance panel</li>
+                  <li>Shopify Speed Report</li>
+                  <li>WebPageTest (for deeper diagnostics)</li>
+                </ul>
+                <p>Key metrics to monitor:</p>
+                <ul>
+                  <li><strong>LCP</strong> (Largest Contentful Paint) under 2.5s</li>
+                  <li><strong>CLS</strong> (Cumulative Layout Shift) under 0.1</li>
+                  <li><strong>INP</strong> (Interaction to Next Paint) under 200ms</li>
+                  <li><strong>TTFB</strong> (Time To First Byte) under 600ms</li>
+                  <li>JavaScript execution time under 200ms where possible</li>
+                </ul>
+
+                <h3>3.2 Theme-Level Analysis</h3>
+                <p>
+                  Review the theme structure to identify unused sections, heavy blocks, and complex layouts that may not be needed on every page. Pay particular attention to sliders, video backgrounds, and animated sections that increase layout complexity and resource usage.
+                </p>
+
+                <h3>3.3 Image and Media Review</h3>
+                <p>
+                  Check all hero images, product photos, banners, and collection images for file size, dimensions, and format. Large uncompressed images directly harm LCP and make your store feel slow and heavy.
+                </p>
+
+                <!-- Before/After visual -->
+                <div class="grid md:grid-cols-2 gap-6 my-8 blog-before-after-grid">
+                  <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                    <img src="../images/blog/shopify-speed-before.jpg" alt="Shopify store before speed optimization showing poor Core Web Vitals scores." loading="lazy" class="w-full h-auto" />
+                    <figcaption class="px-4 py-2 text-xs border-t border-slate-800 blog-figure-caption">
+                      Before: LCP 4.8s, CLS 0.18, INP 420ms (failing Core Web Vitals).
+                    </figcaption>
+                  </figure>
+                  <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                    <img src="../images/blog/shopify-speed-after.jpg" alt="Shopify store after speed optimization with green Core Web Vitals and faster loading times." loading="lazy" class="w-full h-auto" />
+                    <figcaption class="px-4 py-2 text-xs border-t border-slate-800 blog-figure-caption">
+                      After: LCP 1.3s, CLS 0.02, INP 118ms (all Core Web Vitals passing).
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <h2 id="section-4">4. Real Before/After Shopify Speed Results</h2>
+                <p>
+                  Here is a real-world example of a Shopify store we optimized using the Fastrank framework:
+                </p>
+                <p><strong>Before optimization:</strong></p>
+                <ul>
+                  <li>LCP: 4.8s</li>
+                  <li>CLS: 0.18</li>
+                  <li>INP: 420ms</li>
+                  <li>Multiple blocking apps and scripts</li>
+                </ul>
+                <p><strong>After optimization (within 48 hours):</strong></p>
+                <ul>
+                  <li>LCP: 1.3s</li>
+                  <li>CLS: 0.02</li>
+                  <li>INP: 118ms</li>
+                  <li>Apps reduced and scripts optimized</li>
+                  <li>All Core Web Vitals passing</li>
+                </ul>
+                <p>
+                  The result was a 29% increase in conversion rate and a visible reduction in ad costs due to higher-quality landing pages.
+                </p>
+
+                <h2 id="section-5">5. The Shopify Speed Optimization Framework</h2>
+                <p>
+                  The following is the step-by-step framework we apply to nearly every Shopify store we optimize. You can use it as a checklist or implementation plan.
+                </p>
+
+                <h3>5.1 Clean Up Apps and Scripts</h3>
+                <ul>
+                  <li>Remove non-essential apps that duplicate functionality.</li>
+                  <li>Replace multiple apps with one lightweight alternative where possible.</li>
+                  <li>Disable app scripts on pages where they are not needed.</li>
+                  <li>Prefer native Shopify features and theme capabilities over heavy third-party scripts.</li>
+                </ul>
+
+                <h3>5.2 Optimize Images and Media</h3>
+                <ul>
+                  <li>Convert major assets to WebP where supported.</li>
+                  <li>Compress and resize hero and product images to realistic dimensions.</li>
+                  <li>Enable lazy-loading for below-the-fold images and embeds.</li>
+                  <li>Replace auto-playing background videos with lighter alternatives.</li>
+                </ul>
+
+                <h3>5.3 Optimize CSS and JavaScript</h3>
+                <ul>
+                  <li>Inline only the critical CSS needed for above-the-fold content.</li>
+                  <li>Defer or delay non-critical JavaScript.</li>
+                  <li>Remove unused CSS and legacy styles shipped with the theme.</li>
+                  <li>Reduce the number of blocking font files and external styles.</li>
+                </ul>
+
+                <h3>5.4 Improve Liquid Rendering</h3>
+                <ul>
+                  <li>Remove unused sections, snippets, and templates.</li>
+                  <li>Optimize loops and conditionals in Liquid.</li>
+                  <li>Consolidate includes to reduce server overhead.</li>
+                  <li>Minimize dynamic operations on critical templates like product and collection pages.</li>
+                </ul>
+
+                <h3>5.5 Optimize Tracking and Pixels</h3>
+                <ul>
+                  <li>Consolidate scripts into a single optimized loader where possible.</li>
+                  <li>Delay heavy pixels such as Meta, TikTok, and advanced analytics until user interaction.</li>
+                  <li>Review the necessity of every tracking tag and remove unused ones.</li>
+                </ul>
+
+                <!-- Callout box -->
+                <div class="my-8 rounded-2xl border border-purple-500/40 p-6 blog-callout">
+                  <p class="text-sm text-slate-50 font-semibold mb-2">
+                    Key takeaway
+                  </p>
+                  <p class="text-sm text-slate-300">
+                    Shopify speed optimization is not about chasing a perfect score. It is about systematically reducing real bottlenecks in apps, theme code, images, and scripts so that customers can browse and buy without friction.
+                  </p>
+                </div>
+
+                <h2 id="section-6">6. The Business Impact of Speed Optimization</h2>
+                <p>
+                  In Shopify, speed is directly tied to revenue. Faster stores enjoy:
+                </p>
+                <ul>
+                  <li>Lower bounce rates on both organic and paid traffic</li>
+                  <li>Higher add-to-cart and checkout completion rates</li>
+                  <li>Better ROAS across Meta, Google, and TikTok campaigns</li>
+                  <li>Improved SEO rankings for high-intent keywords</li>
+                  <li>More stable user experience across devices and regions</li>
+                </ul>
+                <p>
+                  Merchants who systematically invest in speed optimization often see double-digit improvements in conversion rate and significant reductions in acquisition costs.
+                </p>
+
+                <h2 id="section-7">7. Should You DIY or Hire an Expert?</h2>
+                <p>
+                  You can optimize Shopify speed on your own if you are comfortable working with Liquid, JavaScript, and CSS, and if you are ready to test and validate each change across devices.
+                </p>
+                <p>
+                  However, you should consider hiring an expert if:
+                </p>
+                <ul>
+                  <li>Your theme is heavily customized and powers a high-revenue store.</li>
+                  <li>You are spending on paid ads and cannot afford downtime or broken layouts.</li>
+                  <li>You have tried apps and basic optimizations but saw little improvement.</li>
+                  <li>You want predictable, measurable results without guesswork.</li>
+                </ul>
+                <p>
+                  In many cases, one mistake in Liquid or script loading can break critical pages. An experienced optimization team can work faster and more safely while preserving your design and branding.
+                </p>
+
+                <h2 id="section-8">8. Final Takeaways</h2>
+                <p>
+                  In 2025, Shopify speed optimization is not a “nice to have” technical tweak. It is a growth lever that influences SEO, ad performance, user experience, and overall revenue. With the right framework, even complex and customized Shopify stores can reach green Core Web Vitals and feel instantly responsive for customers.
+                </p>
+                <p>
+                  If you want to see how this framework could apply to your store, you can request a free performance review or learn more about how our process works on the <a href="/about.html">Our Expertise</a> page.
+                </p>
+
+              </div>
+
+              <!-- CTA section under the article -->
+              <div class="mt-12 border-t border-slate-800 pt-8 blog-post-cta">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h3 class="text-lg font-semibold text-slate-50 mb-1">
+                      Have a slow Shopify store and want similar results?
+                    </h3>
+                    <p class="text-sm text-slate-300">
+                      We can send you a <strong>Free Speed Report</strong> in under 24 hours with a clear, actionable plan to fix your Core Web Vitals and Shopify performance safely.
+                    </p>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="/get-report.html" class="btn-sm inline-flex items-center justify-center text-sm font-medium text-slate-100 bg-purple-600 hover:bg-purple-500 px-5 py-2 rounded-full shadow-lg shadow-purple-500/30 transition">
+                      Get your Free Speed Report
+                    </a>
+                    <a href="/blog/" class="inline-flex items-center text-sm text-slate-300 hover:text-slate-100 transition">
+                      ← Back to all articles
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
+          <!-- Logo + address -->
+          <div>
+            <a class="inline-flex" href="/" aria-label="Fastrank">
+              <img
+                src="../images/fastrank-logo.svg"
+                alt="Fastrank logo"
+                class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4"
+              />
+            </a>
+            <div class="flex flex-col gap-2 text-slate-300 text-sm">
+              <span class="font-semibold text-slate-100">Cadunlock LLC</span>
+              <span>131 Continental Dr, Suite 305</span>
+              <span>Newark, DE 19713, United States</span>
+              <span>Phone: +1 (302) 294-9394</span>
+              <a href="mailto:support@fastrank.io" class="hover:text-white transition">support@fastrank.io</a>
+            </div>
+          </div>
+
+          <div>
+            <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+            <ul class="text-sm space-y-2">
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/">Services</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/get-report.html">Free Speed Report</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+            <ul class="text-sm space-y-2">
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/about.html">Our Expertise</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+            <ul class="text-sm space-y-2">
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/refund-policy.html">Refund policy</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/terms-of-service.html">Terms of Service</a></li>
+              <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/privacy-policy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+          © 2025 Cadunlock LLC. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JS -->
+  <script src="../js/vendors/alpinejs.min.js" defer></script>
+  <script src="../js/vendors/aos.js"></script>
+  <script src="../js/vendors/swiper-bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

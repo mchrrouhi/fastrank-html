@@ -96,12 +96,12 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://fastrank.io/blog/post-url"
+    "@id": "https://fastrank.io/blog/[post-slug].html"
   },
-  "headline": "Article Title Here",
-  "description": "Short summary of the article (150 characters).",
+  "headline": "[POST_TITLE]",
+  "description": "[META_DESCRIPTION_FOR_THIS_ARTICLE]",
   "image": [
-    "https://fastrank.io/images/blog/cover.jpg"
+    "https://fastrank.io/images/blog/[post-og-image].jpg"
   ],
   "author": {
     "@type": "Organization",
@@ -116,8 +116,8 @@
       "url": "https://fastrank.io/images/fastrank-logo.svg"
     }
   },
-  "datePublished": "2025-01-01",
-  "dateModified": "2025-01-01"
+  "datePublished": "[2025-11-21]",
+  "dateModified": "[2025-11-21]"
 }
 </script>
   <!-- Favicon -->
@@ -220,7 +220,7 @@
                     [CATEGORY]
                   </span>
                   <span aria-hidden="true">•</span>
-                  <span itemprop="datePublished">[Nov 21, 2025]</span>
+                  <span itemprop="datePublished" content="[2025-11-21]">[Nov 21, 2025]</span>
                 </div>
                 <div class="text-slate-400">
                   <span>[10 min read]</span>
@@ -365,7 +365,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
           <!-- Logo + address -->
           <div>
-            <a class="inline-flex" href="/" aria-label="fastrank.io">
+            <a class="inline-flex" href="/" aria-label="Fastrank">
               <img
                 src="../images/fastrank-logo.svg"
                 alt="Fastrank logo"
