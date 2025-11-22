@@ -26,10 +26,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
 
-  <!-- CSS -->
-  <link href="../css/vendors/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/vendors/swiper-bundle.min.css" />
-  <link href="../style.css" rel="stylesheet" />
+  <!-- Critical CSS (Inline for Header/Nav) -->
+  <style>
+    *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+    html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:Inter,ui-sans-serif,system-ui,sans-serif;scroll-behavior:smooth}
+    body{margin:0;font-family:inherit;line-height:inherit}
+    .font-inter{font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+    .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .bg-slate-900{background-color:rgb(15 23 42)}
+    .text-slate-100{color:rgb(241 245 249)}
+    .tracking-tight{letter-spacing:-0.025em}
+    .flex{display:flex}
+    .flex-col{flex-direction:column}
+    .min-h-screen{min-height:100vh}
+    .overflow-hidden{overflow:hidden}
+    header{position:absolute;width:100%;z-index:30}
+    .max-w-6xl{max-width:72rem}
+    .mx-auto{margin-left:auto;margin-right:auto}
+    .px-4{padding-left:1rem;padding-right:1rem}
+    .items-center{align-items:center}
+    .justify-between{justify-content:space-between}
+    .h-16{height:4rem}
+    .flex-1{flex:1 1 0%}
+    .inline-flex{display:inline-flex}
+    .max-w-none{max-width:none}
+    .hidden{display:none}
+    .grow{flex-grow:1}
+    .justify-center{justify-content:center}
+    .flex-wrap{flex-wrap:wrap}
+    .font-medium{font-weight:500}
+    .text-sm{font-size:0.875rem;line-height:1.25rem}
+    .text-slate-300{color:rgb(203 213 225)}
+    .hover\:text-white:hover{color:rgb(255 255 255)}
+    .transition{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
+    .justify-end{justify-content:flex-end}
+    .ml-6{margin-left:1.5rem}
+    .relative{position:relative}
+    .text-purple-500{color:rgb(168 85 247)}
+    @media(min-width:768px){.md\:flex{display:flex}.md\:h-20{height:5rem}.md\:grow{flex-grow:1}}
+    @media(min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
+  </style>
+
+  <!-- Deferred CSS -->
+  <link rel="preload" href="../css/vendors/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="../css/vendors/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="../style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="../css/vendors/aos.css" rel="stylesheet" />
+    <link href="../css/vendors/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
+  </noscript>
 
   <!-- Crisp -->
   <script type="text/javascript">
@@ -204,6 +250,22 @@
                   Optional caption: explain what this screenshot shows (before/after speed, dashboard, etc.).
                 </figcaption>
               </figure>
+
+              <!-- Table of Contents -->
+              <nav class="mb-10 rounded-2xl border border-slate-700/50 bg-slate-800/30 p-6" aria-label="Table of contents">
+                <h2 class="text-lg font-semibold text-slate-50 mb-4 flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                  Table of Contents
+                </h2>
+                <ol class="space-y-2 text-sm text-slate-300" id="toc-list">
+                  <li><a href="#section-1" class="hover:text-purple-400 transition">1. Situation قبل ما نخدمو على السرعة</a></li>
+                  <li><a href="#section-2" class="hover:text-purple-400 transition">2. Framework / Steps اللي خدمنا بيهم</a></li>
+                  <li><a href="#section-3" class="hover:text-purple-400 transition">3. Impact على revenue و SEO</a></li>
+                  <li><a href="#section-4" class="hover:text-purple-400 transition">4. شنو خاص القارئ يدير دابا؟</a></li>
+                </ol>
+              </nav>
 
               <!-- Content body -->
               <div class="prose prose-lg prose-invert max-w-none text-slate-100 blog-post-content" itemprop="articleBody">
