@@ -44,34 +44,36 @@
     })();
   </script>
 
-  <!-- Article structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "[POST_TITLE]",
-    "description": "[META_DESCRIPTION_FOR_THIS_ARTICLE]",
-    "image": "https://fastrank.io/images/blog/[post-og-image].jpg",
-    "author": {
-      "@type": "Organization",
-      "name": "Fastrank"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Cadunlock LLC",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://fastrank.io/images/fastrank-logo.svg"
-      }
-    },
-    "datePublished": "[2025-11-21]",
-    "dateModified": "[2025-11-21]",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://fastrank.io/blog/[post-slug].html"
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fastrank.io/blog/post-url"
+  },
+  "headline": "Article Title Here",
+  "description": "Short summary of the article (150 characters).",
+  "image": [
+    "https://fastrank.io/images/blog/cover.jpg"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "url": "https://fastrank.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fastrank.io/images/fastrank-logo.svg"
     }
-  }
-  </script>
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-01-01"
+}
+</script>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
