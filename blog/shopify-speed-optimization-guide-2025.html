@@ -517,12 +517,20 @@
         const tocList = document.querySelector('.blog-toc-list');
         const tocIcon = document.querySelector('.blog-toc-icon');
         
-        if (tocToggle && tocList) {
+        if (tocToggle && tocList && tocIcon) {
+            // Set initial state - closed on mobile
+            if (window.innerWidth < 768) {
+                tocList.classList.add('hidden');
+                tocIcon.style.transform = 'rotate(0deg)';
+            }
+            
             tocToggle.addEventListener('click', function() {
-                const isHidden = tocList.classList.contains('hidden');
-                tocList.classList.toggle('hidden');
-                tocToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-                if (tocIcon) {
+                // Only work on mobile
+                if (window.innerWidth < 768) {
+                    const isHidden = tocList.classList.contains('hidden');
+                    tocList.classList.toggle('hidden');
+                    tocToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+                    // Rotate chevron: 0deg = closed (pointing down), 180deg = open (pointing up)
                     tocIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
                 }
             });
