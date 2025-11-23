@@ -1,124 +1,307 @@
-  <main class="grow">
-    <section class="relative">
-      <!-- Background -->
-      <div class="absolute inset-0 -z-10 h-[420px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-90"></div>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
-      <div class="max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="pt-32 pb-20 md:pt-40 md:pb-32">
+<head>
+    <meta charset="utf-8">
+    <title>Get Your Free Speed Report - Fastrank</title>
+    <meta name="description" content="Get a detailed speed audit for your Shopify or WordPress store. Core Web Vitals analysis, prioritized fixes, and implementation roadmap - delivered in 24 hours.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fastrank.io/get-report.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Get Your Free Speed Report - Fastrank">
+    <meta property="og:description" content="Professional speed audit for your Shopify or WordPress store. Core Web Vitals analysis + implementation roadmap.">
+    <meta property="og:url" content="https://fastrank.io/get-report.html">
+    <meta property="og:image" content="https://fastrank.io/images/fastrank-logo.svg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Get Your Free Speed Report - Fastrank">
+    <meta name="twitter:description" content="Professional speed audit for your Shopify or WordPress store.">
+    <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
+    
+    <!-- Crisp Live Chat -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    
+    <link href="./style.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
 
-          <!-- Breadcrumb (اختياري، حذفيه إذا ما بغيتوش) -->
-          <div class="mb-4">
-            <a href="/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition">
-              ← Back to home
-            </a>
-          </div>
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
 
-          <!-- Heading + subtitle -->
-          <header class="mb-10 text-left">
-            <h1 class="text-3xl md:text-4xl lg:text-[2.6rem] leading-tight font-extrabold tracking-tight text-slate-50 mb-3">
-              Ready to Fix Your Store? Choose Your Audit Now.
-            </h1>
-            <p class="text-base md:text-lg text-slate-300 max-w-2xl">
-              All plans guarantee a clear action roadmap and fast implementation. No monthly contracts, no long retainers — just focused performance optimization that actually moves your metrics.
-            </p>
-          </header>
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
-          <!-- Section 1: Social proof -->
-          <section class="mb-10">
-            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400 mb-3">
-              Trusted by e-commerce brands and growth teams
-            </h2>
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
 
-            <div class="grid gap-4 md:grid-cols-3">
-              <!-- Testimonial 1 -->
-              <article class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex flex-col justify-between">
-                <p class="text-sm text-slate-200 mb-3">
-                  “We went from failing Core Web Vitals to fully green in less than two weeks. Our Meta campaigns became instantly cheaper.”
-                </p>
-                <div class="text-xs text-slate-400">
-                  <div class="font-semibold text-slate-100">Clotilde Bedoya</div>
-                  <div>Founder, DTC Brand</div>
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Fastrank">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="index.html#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="blog/">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Desktop CTA -->
+                    <ul class="flex-1 flex justify-end items-center">
+                        <li class="ml-6">
+                            <a class="btn-sm text-white bg-purple-600 hover:bg-purple-500 shadow-lg shadow-purple-500/50 transition" href="#form">
+                                <span class="relative inline-flex items-center">
+                                    Get Report <span class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="index.html#pricing">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="blog/">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
                 </div>
-              </article>
-
-              <!-- Testimonial 2 -->
-              <article class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex flex-col justify-between">
-                <p class="text-sm text-slate-200 mb-3">
-                  “Fastrank treated our Shopify store like an asset, not a playground. Load times dropped and our revenue per session went up.”
-                </p>
-                <div class="text-xs text-slate-400">
-                  <div class="font-semibold text-slate-100">Kevin Sanderson</div>
-                  <div>E-commerce Consultant</div>
-                </div>
-              </article>
-
-              <!-- Testimonial 3 (اختياري) -->
-              <article class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 flex flex-col justify-between md:block hidden">
-                <p class="text-sm text-slate-200 mb-3">
-                  “The audit report was super clear. We knew exactly what to fix, in what order, and what impact to expect on conversions.”
-                </p>
-                <div class="text-xs text-slate-400">
-                  <div class="font-semibold text-slate-100">Agency Partner</div>
-                  <div>Performance Marketing Lead</div>
-                </div>
-              </article>
             </div>
-          </section>
+        </header>
 
-          <!-- Section 2: Value proposition -->
-          <section class="mb-12">
-            <h2 class="text-lg font-semibold text-slate-50 mb-3">
-              Why stores choose Fastrank for speed audits
-            </h2>
-            <p class="text-sm text-slate-300 mb-4">
-              You’re not buying a generic report. You’re getting a focused, technical roadmap that connects performance fixes to real business metrics.
-            </p>
+        <!-- Page content -->
+        <main class="grow">
+            <section class="relative">
+                
+                <!-- Background gradient -->
+                <div class="absolute inset-0 -z-10 h-[500px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-90"></div>
 
-            <ul class="space-y-3 text-sm text-slate-200">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400"></span>
-                <span><strong>Core Web Vitals first:</strong> Every audit is built around improving LCP, CLS, and INP using safe, white-hat techniques.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400"></span>
-                <span><strong>Shopify & WordPress focus:</strong> We specialize in Shopify, WordPress, and WooCommerce — no generic “one size fits all” advice.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400"></span>
-                <span><strong>One-time fee, no retainer:</strong> You get a complete audit, prioritized task list, and implementation options without being locked into monthly contracts.</span>
-              </li>
-            </ul>
-          </section>
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 pb-20 md:pt-40 md:pb-32">
 
-          <!-- Final CTA -->
-          <section class="border-t border-slate-800 pt-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h2 class="text-lg font-semibold text-slate-50 mb-1">
-                  Ready to see how much speed you can unlock?
-                </h2>
-                <p class="text-sm text-slate-300 max-w-xl">
-                  Pick the audit level that fits your store size and ad spend. You’ll receive a detailed performance report, video walkthrough, and an implementation roadmap tailored to your stack.
+                        <!-- Breadcrumb -->
+                        <div class="mb-6">
+                            <a href="/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition">
+                                ← Back to home
+                            </a>
+                        </div>
+
+                        <!-- Hero header -->
+                        <header class="mb-12 text-center md:text-left max-w-3xl mx-auto">
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold tracking-tight text-slate-50 mb-4">
+                                Ready to Fix Your Store? Choose Your Audit Now.
+                            </h1>
+                            <p class="text-base md:text-lg text-slate-300">
+                                All plans guarantee a clear action roadmap and fast implementation. No monthly contracts, no long retainers — just focused performance optimization that actually moves your metrics.
+                            </p>
+                        </header>
+
+                        <!-- Social proof testimonials -->
+                        <section class="mb-12">
+                            <h2 class="text-sm font-semibold tracking-[0.18em] uppercase text-slate-400 mb-4 text-center md:text-left">
+                                Trusted by e-commerce brands and growth teams
+                            </h2>
+
+                            <div class="grid gap-4 md:grid-cols-3">
+                                <!-- Testimonial 1 -->
+                                <article class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-5 flex flex-col justify-between hover:border-purple-500/40 transition">
+                                    <p class="text-sm text-slate-200 mb-4 leading-relaxed">
+                                        "We went from failing Core Web Vitals to fully green in less than two weeks. Our Meta campaigns became instantly cheaper."
+                                    </p>
+                                    <div class="text-xs text-slate-400">
+                                        <div class="font-semibold text-slate-100">Clotilde Bedoya</div>
+                                        <div>Founder, DTC Brand</div>
+                                    </div>
+                                </article>
+
+                                <!-- Testimonial 2 -->
+                                <article class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-5 flex flex-col justify-between hover:border-purple-500/40 transition">
+                                    <p class="text-sm text-slate-200 mb-4 leading-relaxed">
+                                        "Fastrank treated our Shopify store like an asset, not a playground. Load times dropped and our revenue per session went up."
+                                    </p>
+                                    <div class="text-xs text-slate-400">
+                                        <div class="font-semibold text-slate-100">Kevin Sanderson</div>
+                                        <div>E-commerce Consultant</div>
+                                    </div>
+                                </article>
+
+                                <!-- Testimonial 3 -->
+                                <article class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-5 flex flex-col justify-between hover:border-purple-500/40 transition">
+                                    <p class="text-sm text-slate-200 mb-4 leading-relaxed">
+                                        "The audit report was super clear. We knew exactly what to fix, in what order, and what impact to expect on conversions."
+                                    </p>
+                                    <div class="text-xs text-slate-400">
+                                        <div class="font-semibold text-slate-100">Agency Partner</div>
+                                        <div>Performance Marketing Lead</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <!-- Value proposition -->
+                        <section class="mb-12 max-w-3xl mx-auto">
+                            <div class="rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm p-6 md:p-8">
+                                <h2 class="text-xl font-semibold text-slate-50 mb-4">
+                                    Why stores choose Fastrank for speed audits
+                                </h2>
+                                <p class="text-sm text-slate-300 mb-6">
+                                    You're not buying a generic report. You're getting a focused, technical roadmap that connects performance fixes to real business metrics.
+                                </p>
+
+                                <ul class="space-y-4 text-sm text-slate-200">
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-1.5 h-2 w-2 rounded-full bg-purple-400 flex-shrink-0"></span>
+                                        <span><strong class="text-slate-100">Core Web Vitals first:</strong> Every audit is built around improving LCP, CLS, and INP using safe, white-hat techniques.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-1.5 h-2 w-2 rounded-full bg-purple-400 flex-shrink-0"></span>
+                                        <span><strong class="text-slate-100">Shopify & WordPress focus:</strong> We specialize in Shopify, WordPress, and WooCommerce — no generic "one size fits all" advice.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="mt-1.5 h-2 w-2 rounded-full bg-purple-400 flex-shrink-0"></span>
+                                        <span><strong class="text-slate-100">One-time fee, no retainer:</strong> You get a complete audit, prioritized task list, and implementation options without being locked into monthly contracts.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Final CTA -->
+                        <section class="border-t border-slate-800/60 pt-10 max-w-3xl mx-auto" id="form">
+                            <div class="rounded-2xl bg-gradient-to-br from-purple-600/10 via-purple-500/5 to-transparent border border-purple-500/30 p-8 md:p-10">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                                    <div class="flex-1">
+                                        <h2 class="text-2xl md:text-3xl font-bold text-slate-50 mb-3">
+                                            Ready to see how much speed you can unlock?
+                                        </h2>
+                                        <p class="text-sm md:text-base text-slate-300 max-w-xl leading-relaxed">
+                                            Pick the audit level that fits your store size and ad spend. You'll receive a detailed performance report, video walkthrough, and an implementation roadmap tailored to your stack.
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col gap-3 md:flex-shrink-0">
+                                        <a
+                                            href="index.html#pricing"
+                                            class="inline-flex items-center justify-center text-sm font-semibold text-white bg-purple-600 hover:bg-purple-500 px-8 py-4 rounded-full shadow-lg shadow-purple-500/50 hover:shadow-purple-400/60 transition-all duration-200"
+                                        >
+                                            See Plans & Start Now →
+                                        </a>
+                                        <a
+                                            href="about.html"
+                                            class="inline-flex items-center justify-center text-sm text-slate-400 hover:text-slate-200 transition"
+                                        >
+                                            Learn more about our framework
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Site footer -->
+        <footer>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Footer links -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
+
+                    <!-- Logo + address -->
+                    <div>
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img src="./images/fastrank-logo.svg" alt="Fastrank logo" class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4" />
+                        </a>
+                        <div class="flex flex-col gap-2 text-slate-300 text-sm">
+                            <span class="font-semibold text-slate-100">Cadunlock LLC</span>
+                            <span>131 Continental Dr, Suite 305</span>
+                            <span>Newark, DE 19713, United States</span>
+                            <span>Phone: +1 (302) 294-9394</span>
+                            <a href="mailto:support@fastrank.io" class="hover:text-white transition">support@fastrank.io</a>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/">Services</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="get-report.html">Free Speed Report</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="about.html">Our Expertise</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legals -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="refund-policy.html">Refund policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="terms-of-service.html">Terms of Service</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="privacy-policy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+                    © 2025 Cadunlock LLC. All rights reserved.
                 </p>
-              </div>
-              <div class="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="/#pricing"
-                  class="btn-sm inline-flex items-center justify-center text-sm font-medium text-slate-100 bg-purple-600 hover:bg-purple-500 px-6 py-2.5 rounded-full shadow-lg shadow-purple-500/30 transition"
-                >
-                  See Plans &amp; Start Optimization Now →
-                </a>
-                <a
-                  href="/about.html"
-                  class="inline-flex items-center justify-center text-sm text-slate-300 hover:text-slate-100 transition"
-                >
-                  Learn more about our framework
-                </a>
-              </div>
-            </div>
-          </section>
 
-        </div>
-      </div>
-    </section>
-  </main>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JS -->
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+
+</body>
+</html>
