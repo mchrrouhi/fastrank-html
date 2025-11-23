@@ -192,8 +192,13 @@
 
                             <!-- Table of Contents -->
                             <nav class="blog-toc mb-10" aria-label="Table of contents">
-                                <div class="blog-toc-label">Table of Contents</div>
-                                <ul class="blog-toc-list">
+                                <button type="button" class="blog-toc-toggle w-full flex items-center justify-between text-left" aria-expanded="false">
+                                    <span class="blog-toc-label">Table of Contents</span>
+                                    <svg class="blog-toc-icon w-5 h-5 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul class="blog-toc-list hidden md:grid">
                                     <li><a href="#section-1">1. Why Shopify speed still matters in 2025</a></li>
                                     <li><a href="#section-2">2. Common reasons Shopify stores are slow</a></li>
                                     <li><a href="#section-3">3. How to audit your Shopify store's performance</a></li>
@@ -260,9 +265,14 @@
                                     <li><strong>Test on real devices:</strong> Use your phone on a 3G connection to experience what your mobile customers see. Desktop scores don't tell the full story.</li>
                                 </ol>
 
-                                <!-- Video block placeholder -->
-                                <div class="my-10 rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden aspect-video">
-                                    <!-- Paste YouTube or Loom embed iframe here -->
+                                <!-- Optional media block: 16:9 responsive container -->
+                                <div class="blog-audit-media my-10">
+                                    <div class="blog-media-wrapper">
+                                        <!-- Replace this placeholder with an <img> or YouTube <iframe> as needed -->
+                                        <div class="blog-media-placeholder">
+                                            <p class="text-sm text-slate-400">Optional: Add screenshot or video embed here</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <h2 id="section-4">4. Real Before &amp; After case study</h2>
@@ -361,32 +371,36 @@
                                 <div class="blog-faq-grid mt-4">
                                     <details class="blog-faq-item">
                                         <summary>
-                                            <span>Does using more apps always slow down my Shopify store?</span>
-                                            <span class="text-slate-500 text-xs">+</span>
+                                            <span class="blog-faq-icon"></span>
+                                            <span class="blog-faq-question">Does using more apps always slow down my Shopify store?</span>
+                                            <span class="blog-faq-toggle">+</span>
                                         </summary>
                                         <p>Not always, but most apps add JavaScript and CSS that load on every page, even if the app is only used on one page. The more apps you have, the higher the risk of performance degradation. Always audit app code before installing.</p>
                                     </details>
 
                                     <details class="blog-faq-item">
                                         <summary>
-                                            <span>Will switching to a faster Shopify theme improve my speed?</span>
-                                            <span class="text-slate-500 text-xs">+</span>
+                                            <span class="blog-faq-icon"></span>
+                                            <span class="blog-faq-question">Will switching to a faster Shopify theme improve my speed?</span>
+                                            <span class="blog-faq-toggle">+</span>
                                         </summary>
                                         <p>Possibly, but theme alone isn't the problem. Most speed issues come from apps, unoptimized images, and third-party scripts. A fast theme can help, but you still need to optimize images and remove bloat.</p>
                                     </details>
 
                                     <details class="blog-faq-item">
                                         <summary>
-                                            <span>How often should I run a speed audit?</span>
-                                            <span class="text-slate-500 text-xs">+</span>
+                                            <span class="blog-faq-icon"></span>
+                                            <span class="blog-faq-question">How often should I run a speed audit?</span>
+                                            <span class="blog-faq-toggle">+</span>
                                         </summary>
                                         <p>Run a full audit every 3 months, or anytime you install a new app, update your theme, or add a major feature like a new product slider or video background. Regular monitoring prevents performance regression.</p>
                                     </details>
 
                                     <details class="blog-faq-item">
                                         <summary>
-                                            <span>Can I get a 100/100 PageSpeed score on Shopify?</span>
-                                            <span class="text-slate-500 text-xs">+</span>
+                                            <span class="blog-faq-icon"></span>
+                                            <span class="blog-faq-question">Can I get a 100/100 PageSpeed score on Shopify?</span>
+                                            <span class="blog-faq-toggle">+</span>
                                         </summary>
                                         <p>It's very difficult. Shopify's core JavaScript and tracking scripts make perfect scores rare. A score of 85–95 is excellent for a production Shopify store. Focus on Core Web Vitals (LCP, CLS, INP) instead of chasing a perfect score.</p>
                                     </details>
@@ -410,20 +424,20 @@
 
                             <!-- CTA section under the article -->
                             <div class="mt-12 border-t border-slate-800 pt-8 blog-post-cta">
-                                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                                    <div>
-                                        <h3 class="text-lg font-semibold text-slate-50 mb-1">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-50 mb-2">
                                             Ready to speed up your Shopify store?
                                         </h3>
                                         <p class="text-sm text-slate-300">
-                                            Get a <strong>Free Speed &amp; Performance Report</strong> in under 24 hours with a clear, safe action plan tailored to your store.
+                                            See our optimization plans and get started with professional speed improvements backed by our performance guarantee.
                                         </p>
                                     </div>
-                                    <div class="flex flex-wrap gap-3">
-                                        <a href="../get-report.html" class="btn-sm inline-flex items-center justify-center text-sm font-medium text-slate-100 bg-purple-600 hover:bg-purple-500 px-5 py-2 rounded-full shadow-lg shadow-purple-500/30 transition">
-                                            Get your Free Report
+                                    <div class="flex flex-col sm:flex-row gap-3 md:flex-shrink-0">
+                                        <a href="../index.html#pricing" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-purple-600 hover:bg-purple-500 rounded-full shadow-lg shadow-purple-500/30 transition duration-150 ease-in-out w-full sm:w-auto">
+                                            See Plans &amp; Pricing
                                         </a>
-                                        <a href="/blog/" class="inline-flex items-center text-sm text-slate-300 hover:text-slate-100 transition">
+                                        <a href="/blog/" class="inline-flex items-center justify-center text-sm text-slate-300 hover:text-slate-100 transition duration-150 w-full sm:w-auto">
                                             ← Back to all articles
                                         </a>
                                     </div>
@@ -502,6 +516,26 @@
     <script src="../js/vendors/aos.js"></script>
     <script src="../js/vendors/swiper-bundle.min.js"></script>
     <script src="../js/main.js"></script>
+    
+    <!-- Blog TOC Toggle -->
+    <script>
+    (function() {
+        const tocToggle = document.querySelector('.blog-toc-toggle');
+        const tocList = document.querySelector('.blog-toc-list');
+        const tocIcon = document.querySelector('.blog-toc-icon');
+        
+        if (tocToggle && tocList) {
+            tocToggle.addEventListener('click', function() {
+                const isHidden = tocList.classList.contains('hidden');
+                tocList.classList.toggle('hidden');
+                tocToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+                if (tocIcon) {
+                    tocIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        }
+    })();
+    </script>
 </body>
 
 </html>

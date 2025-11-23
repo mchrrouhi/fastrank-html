@@ -4933,3 +4933,223 @@
   padding: 0;
   border: none;
 }
+
+/* ============================================
+   BLOG TABLE OF CONTENTS (TOC) - COLLAPSIBLE
+   ============================================ */
+
+.blog-toc {
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: radial-gradient(circle at top, rgba(129, 140, 248, 0.14), rgba(15, 23, 42, 0.95));
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.9);
+}
+
+.blog-toc-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  margin-bottom: 1rem;
+}
+
+.blog-toc-toggle:hover .blog-toc-label {
+  color: #e9d5ff; /* purple-200 */
+}
+
+.blog-toc-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.blog-toc-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.blog-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.blog-toc-list li {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.blog-toc-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a855f7;
+  font-size: 0.9rem;
+}
+
+.blog-toc-list a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.18s ease, transform 0.18s ease;
+  display: inline-block;
+}
+
+.blog-toc-list a:hover {
+  color: #e9d5ff;
+  transform: translateX(2px);
+}
+
+/* Desktop: always show TOC list */
+@media (min-width: 768px) {
+  .blog-toc-toggle {
+    pointer-events: none;
+    cursor: default;
+    margin-bottom: 0.75rem;
+  }
+  
+  .blog-toc-icon {
+    display: none;
+  }
+}
+
+/* ============================================
+   BLOG MEDIA BLOCK - 16:9 RESPONSIVE
+   ============================================ */
+
+.blog-audit-media {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+
+.blog-media-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.blog-media-wrapper iframe,
+.blog-media-wrapper img,
+.blog-media-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+
+.blog-media-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.95);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ============================================
+   BLOG FAQ ACCORDIONS - PURPLE THEME
+   ============================================ */
+
+.blog-faq-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.blog-faq-item {
+  border-radius: 1rem;
+  border: 1px solid rgba(100, 116, 139, 0.4);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 1), rgba(15, 23, 42, 0.96));
+  padding: 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.blog-faq-item:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  background: linear-gradient(145deg, rgba(30, 27, 75, 0.5), rgba(15, 23, 42, 0.98));
+}
+
+.blog-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: #e5e7eb;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.blog-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.blog-faq-item summary:hover {
+  color: #f1f5f9;
+}
+
+.blog-faq-icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #a855f7;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+}
+
+.blog-faq-question {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.blog-faq-toggle {
+  color: #a855f7;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.blog-faq-item[open] .blog-faq-toggle {
+  transform: rotate(45deg);
+}
+
+.blog-faq-item[open] summary {
+  color: #f1f5f9;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.blog-faq-item p {
+  margin: 0;
+  padding: 0 1.25rem 1rem 2.5rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
