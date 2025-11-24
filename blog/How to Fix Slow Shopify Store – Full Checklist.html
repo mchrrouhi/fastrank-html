@@ -312,16 +312,41 @@
                                     Here’s the exact checklist we use internally when we deliver a <strong>shopify speed optimization service</strong>. You can go through it yourself or use it as a framework when working with a developer.
                                 </p>
 
-                                <h3>Step 1: Clean up apps and scripts</h3>
-                                <p>
-                                    Start with everything that runs on every page:
-                                </p>
-                                <ul>
-                                    <li>Uninstall apps you haven’t used in the last 30–60 days.</li>
-                                    <li>Disable overlapping functionality (e.g. two upsell apps, two analytics tools).</li>
-                                    <li>Ask app developers how to load their script only where it’s needed.</li>
-                                    <li>Remove old tracking pixels or experiments that are no longer active.</li>
-                                </ul>
+                                <!-- NEW 3.1 SECTION / STEP 1 REWRITTEN -->
+                                <h3 id="section-5-1">3.1 Removing or Replacing Performance-Killing Shopify Apps</h3>
+                                <p>Third-party apps are the number one reason why otherwise healthy Shopify stores become slow. Each installed app injects JavaScript, CSS, and external requests — often on every page. This additional code increases main-thread work, blocks rendering, and negatively impacts Core Web Vitals such as <strong>LCP</strong> and <strong>INP</strong>.</p>
+
+                                <p>This step focuses on structured cleanup and smart removal to restore performance safely.</p>
+
+                                <h4>The App Cleanup Checklist</h4>
+
+                                <h5>1) Surgical App Uninstall</h5>
+                                <p><strong>Action:</strong> Remove any app not actively used in the last 30 days. Unused apps continue loading scripts, slowing the store globally.</p>
+                                <p><strong>Tip:</strong> If an app is needed only for a specific page, configure it to load scripts on that page only, not site-wide. For more insights, see our article:<br>
+                                <a href="/blog/best-shopify-apps-that-slow-down-your-store/" class="text-purple-400 hover:text-purple-300">Best Shopify Apps That Slow Down Your Store (2025 Analysis)</a></p>
+
+                                <h5>2) Code Scavenging (Critical Step)</h5>
+                                <p>Deleting an app does <strong>not</strong> remove its leftover code. Many apps leave behind JavaScript files, CSS, theme snippets, and script tags inside <code>theme.liquid</code>.</p>
+                                <p><strong>Action:</strong> Manually audit your theme and asset files to remove residual code.</p>
+                                <p><strong>Expert Insight:</strong> Use Chrome DevTools → Coverage Tab to identify unused JS/CSS added by deleted apps.<br>
+                                Related guide:<br>
+                                <a href="/blog/shopify-core-web-vitals-why-your-store-is-slow/" class="text-purple-400 hover:text-purple-300">Shopify Core Web Vitals: Why Your Store Is Slowing Down &amp; How to Fix It</a></p>
+
+                                <h5>3) App Consolidation</h5>
+                                <p><strong>Action:</strong> Replace multiple single-purpose apps (popups, reviews, badges) with one lightweight multipurpose tool. This reduces external script requests and improves speed immediately.</p>
+                                <p>See real examples:<br>
+                                <a href="/blog/before-after-shopify-speed-optimization-case-study/" class="text-purple-400 hover:text-purple-300">Before/After Shopify Speed Optimization – Case Study</a></p>
+
+                                <h5>4) Prefer Native Shopify Features</h5>
+                                <p><strong>Action:</strong> Use built-in Shopify theme features (filters, FAQ accordion, tabs, announcement bar) instead of third-party apps whenever possible.</p>
+                                <p>More best practices inside:<br>
+                                <a href="/blog/shopify-speed-optimization-guide-2025/" class="text-purple-400 hover:text-purple-300">Shopify Speed Optimization Guide (2025)</a></p>
+
+                                <div class="my-6 p-4 rounded-xl border border-purple-500/40 bg-purple-500/5">
+                                    <p class="text-sm text-slate-200"><strong>⚠ Important:</strong> Removing leftover app code can break critical theme functionality. If you're not comfortable editing Liquid templates, deployment backups, or script cleanup, consider hiring a Shopify speed expert.</p>
+                                    <p class="text-sm"><a href="/blog/wordpress-speed-optimization-services-what-to-expect/" class="text-purple-400 hover:text-purple-300 underline">Learn what to expect from a professional optimization service →</a></p>
+                                </div>
+                                <!-- END OF NEW 3.1 / STEP 1 -->
 
                                 <h3>Step 2: Fix image bloat</h3>
                                 <p>
