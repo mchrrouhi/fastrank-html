@@ -238,36 +238,142 @@
                                     Once you know the store is slow, the next step is understanding <em>why</em>. After hundreds of audits, we see the same causes of poor performance over and over again.
                                 </p>
 
-                                <h3>2.1. Too many third-party apps</h3>
-                                <p>
-                                    Every app can add its own JavaScript, CSS, fonts, and network requests. Even “lightweight” apps can stack up. Review apps, upsell widgets, chat tools, page builders, and tracking pixels frequently end up on our checklist when we work on <strong>shopify performance optimization</strong>.
-                                </p>
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.1. Too many third-party apps</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Every app can add its own JavaScript, CSS, fonts, and network requests. Even "lightweight" apps can stack up. Review apps, upsell widgets, chat tools, page builders, and tracking pixels frequently end up on our checklist when we work on <strong>shopify performance optimization</strong>.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                <h3>2.2. Unoptimized product and banner images</h3>
-                                <p>
-                                    High-resolution product photos uploaded directly from the camera can weigh several megabytes each. Without compression, WebP conversion, and lazy loading, these assets destroy LCP and make the whole site feel heavy.
-                                </p>
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.2. Unoptimized product and banner images</h3>
+                                        <p class="text-sm text-slate-300">
+                                            High-resolution product photos uploaded directly from the camera can weigh several megabytes each. Without compression, WebP conversion, and lazy loading, these assets destroy LCP and make the whole site feel heavy.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                <h3>2.3. Render-blocking CSS and JavaScript</h3>
-                                <p>
-                                    Stylesheets and scripts loaded in the <code>&lt;head&gt;</code> block the browser from showing content. That’s why part of any serious <strong>shopify core web vitals fix</strong> is identifying which resources are truly critical and which can be deferred until after the first paint.
-                                </p>
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.3. Render-blocking CSS and JavaScript</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Stylesheets and scripts loaded in the <code>&lt;head&gt;</code> block the browser from showing content. That's why part of any serious <strong>shopify core web vitals fix</strong> is identifying which resources are truly critical and which can be deferred until after the first paint.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                <h3>2.4. Over-customized themes</h3>
-                                <p>
-                                    Sliders, video backgrounds, animation libraries, and complex sections can look impressive, but they bring extra code with them. These customizations increase Total Blocking Time and slow down interaction for shoppers on mid-range devices.
-                                </p>
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.4. Over-customized themes</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Sliders, video backgrounds, animation libraries, and complex sections can look impressive, but they bring extra code with them. These customizations increase Total Blocking Time and slow down interaction for shoppers on mid-range devices.
+                                        </p>
+                                    </div>
+                                </div>
 
                                 <h2 id="section-3">3. Pre-optimization audit checklist</h2>
                                 <p>
                                     Before you start making changes, capture a snapshot of how your store performs today. That way you can see what your work actually changed.
                                 </p>
-                                <ol>
-                                    <li><strong>Record your PageSpeed Insights scores:</strong> Save screenshots of mobile and desktop results for at least three key URLs.</li>
-                                    <li><strong>Export a GTmetrix or WebPageTest report:</strong> This will give you a waterfall view of exactly what loads and in which order.</li>
-                                    <li><strong>List all installed apps:</strong> Note which ones directly affect front-end rendering (reviews, pop-ups, chat, tracking, A/B testing, etc.).</li>
-                                    <li><strong>Check Shopify’s Online Store Speed report:</strong> It gives you a simple score and lets you track progress after you go through the checklist.</li>
-                                </ol>
+                                <div class="grid md:grid-cols-2 gap-4 my-8">
+                                    <!-- Tool 1: PageSpeed Insights -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">PageSpeed Insights</h4>
+                                                <p class="text-sm text-slate-400">Save screenshots of mobile and desktop results for at least three key URLs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 2: GTmetrix / WebPageTest -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">GTmetrix / WebPageTest</h4>
+                                                <p class="text-sm text-slate-400">Export a waterfall report showing exactly what loads and in which order.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 3: App Inventory -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">List All Installed Apps</h4>
+                                                <p class="text-sm text-slate-400">Note which apps affect front-end rendering (reviews, pop-ups, chat, tracking, etc.).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 4: Shopify Speed Report -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">Shopify Speed Report</h4>
+                                                <p class="text-sm text-slate-400">Track your baseline score and monitor progress after optimizations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pro Tip callout -->
+                                <div class="my-6 p-5 rounded-xl border border-purple-500/40 bg-gradient-to-br from-purple-500/10 to-transparent">
+                                    <div class="flex items-start gap-3">
+                                        <div class="flex-shrink-0">
+                                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-semibold text-purple-300 mb-1">Pro Tip</p>
+                                            <p class="text-sm text-slate-300">Always test on mobile devices first. Desktop scores look better, but most of your customers shop on phones where performance issues are amplified.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <!-- Optional media block: 16:9 responsive container -->
                                 <div class="blog-audit-media my-10">
