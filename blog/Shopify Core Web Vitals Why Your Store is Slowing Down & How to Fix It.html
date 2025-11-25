@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date());
+
+            gtag('config', 'G-EZ9KWQEM4F');
+        </script>
+        <!-- Cookiebot -->
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3a3581e5-019e-48bb-806f-24f31fbd1959" type="text/javascript" async></script>
+    <meta charset="utf-8">
+    <title>Shopify Core Web Vitals: Why Your Store Is Slowing Down &amp; How to Fix It (2025) - Fastrank Blog</title>
+    <meta name="description" content="Learn how Shopify Core Web Vitals work, why your store’s scores drop over time, and the exact steps to fix LCP, CLS, and INP issues so your Shopify shop feels instant again in 2025.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fastrank.io/blog/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.html" />
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Shopify Core Web Vitals: Why Your Store Is Slowing Down &amp; How to Fix It (2025) - Fastrank Blog">
+    <meta property="og:description" content="A practical guide to Shopify Core Web Vitals. Understand why your store is slowing down, what LCP, CLS and INP really mean, and how to fix your real-world performance scores in 2025.">
+    <meta property="og:url" content="https://fastrank.io/blog/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.html">
+    <meta property="og:image" content="https://fastrank.io/blog/images/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shopify Core Web Vitals: Why Your Store Is Slowing Down &amp; How to Fix It (2025)">
+    <meta name="twitter:description" content="Learn how to diagnose and fix Shopify Core Web Vitals issues so your store stops feeling slow and starts converting better in 2025.">
+    <meta name="twitter:image" content="https://fastrank.io/blog/images/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.png">
+    <link href="../style.css" rel="stylesheet">
+    <!-- Crisp Live Chat -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fastrank.io/blog/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.html"
+  },
+  "headline": "Shopify Core Web Vitals: Why Your Store Is Slowing Down & How to Fix It (2025)",
+  "description": "Learn how Shopify Core Web Vitals work, why your store’s scores drop over time, and the exact steps to fix LCP, CLS, and INP issues so your Shopify shop feels instant again in 2025.",
+  "image": [
+    "https://fastrank.io/blog/images/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.png"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "url": "https://fastrank.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fastrank.io/images/fastrank-logo.svg"
+    }
+  },
+  "datePublished": "2025-04-20",
+  "dateModified": "2025-04-20"
+}
+</script>
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img class="max-w-none" src="../images/logo.svg" width="38" height="38" alt="Fastrank">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="../about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="../index.html#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/blog/">Blog</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                    <ul class="flex-1 flex justify-end items-center">
+                        <li class="ml-6">
+                            <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="../get-report.html">
+                                <span class="relative inline-flex items-center">
+                                    Get Report <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="../about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="../index.html#pricing">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-white hover:text-white py-1.5" href="/blog/">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+            <section class="relative">
+                <!-- Background -->
+                <div class="absolute inset-0 -z-10 h-[420px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-90"></div>
+
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 pb-20 md:pt-40 md:pb-32">
+
+                        <!-- Breadcrumb -->
+                        <div class="mb-6">
+                            <a href="/blog/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition">
+                                ← Back to blog
+                            </a>
+                        </div>
+
+                        <article class="max-w-3xl mx-auto blog-post-article relative z-10" itemscope itemtype="https://schema.org/Article">
+
+                            <!-- Meta row: category + date + read time -->
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 text-xs text-slate-400">
+                                <div class="inline-flex items-center gap-2">
+                                    <span class="inline-flex items-center rounded-full border border-purple-500/60 bg-purple-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-purple-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-purple-400 mr-1"></span>
+                                        Shopify
+                                    </span>
+                                    <span aria-hidden="true">•</span>
+                                    <span itemprop="datePublished" content="2025-04-20">Apr 20, 2025</span>
+                                </div>
+                                <div class="text-slate-400">
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+
+                            <!-- Title -->
+                            <header class="mb-12">
+                                <h1 itemprop="headline" class="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] leading-snug md:leading-tight max-w-3xl font-extrabold tracking-tight text-slate-100 mb-4 break-words">
+                                    Shopify Core Web Vitals: Why Your Store Is Slowing Down &amp; How to Fix It (2025)
+                                </h1>
+                                <p class="text-base md:text-lg text-slate-300 max-w-2xl" itemprop="description">
+                                    If your Shopify store has started to feel slower, show red scores in PageSpeed Insights, or fail Core Web Vitals, this guide explains exactly why it happens — and the practical steps you can take in 2025 to fix LCP, CLS, and INP without breaking your theme or apps.
+                                </p>
+                            </header>
+
+                            <!-- Hero image -->
+                            <figure class="mb-10 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60 blog-hero relative">
+                                <img src="./images/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it.png" alt="Dashboard-style graphic visualizing Shopify Core Web Vitals metrics like LCP, CLS and INP and how they impact store speed" class="w-full h-auto object-cover" loading="eager" itemprop="image" width="1200" height="675" />
+                                <figcaption class="px-6 py-3 text-xs text-slate-400 border-t border-slate-800">
+                                    Understanding and fixing Shopify Core Web Vitals in 2025
+                                </figcaption>
+                            </figure>
+
+                            <!-- Table of Contents -->
+                            <nav class="blog-toc mb-10" aria-label="Table of contents">
+                                <button type="button" class="blog-toc-toggle w-full flex items-center justify-between text-left" aria-expanded="false">
+                                    <span class="blog-toc-label">Table of Contents</span>
+                                    <svg class="blog-toc-icon w-5 h-5 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul class="blog-toc-list hidden md:grid">
+                                    <li><a href="#section-1">1. Why Shopify Core Web Vitals matter</a></li>
+                                    <li><a href="#section-2">2. Quick checks to confirm your Shopify store is slow</a></li>
+                                    <li><a href="#section-3">3. How Core Web Vitals work on Shopify (LCP, CLS, INP)</a></li>
+                                    <li><a href="#section-4">4. Pre-optimization Core Web Vitals audit checklist</a></li>
+                                    <li><a href="#section-5">5. Full checklist to fix Shopify Core Web Vitals (2025)</a></li>
+                                    <li><a href="#section-6">6. Testing after improvements</a></li>
+                                    <li><a href="#section-7">7. When to hire a Shopify Core Web Vitals expert</a></li>
+                                    <li><a href="#section-8">8. How this guide connects to other Shopify speed resources</a></li>
+                                    <li><a href="#section-9">9. How to get started improving Shopify Core Web Vitals</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- Content body -->
+                            <div class="prose prose-lg prose-invert max-w-none text-slate-100 blog-post-content" itemprop="articleBody">
+
+                                <p>
+                                    When most merchants talk about “speeding up” a Shopify store, they think about loading time in general. Google, however, measures that experience through a stricter lens: <strong>Core Web Vitals</strong>. If your LCP, CLS, or INP metrics are poor, your store can feel slow and unstable even if the overall load time doesn’t look terrible.
+                                </p>
+                                <p>
+                                    This article focuses specifically on <strong>Shopify Core Web Vitals</strong> — why your scores often drop over time, what’s really slowing you down, and how to fix the underlying issues without rebuilding your store from scratch. If you want a broader speed checklist later, you can pair this guide with our <a href="/blog/how-to-fix-slow-shopify-store-full-checklist.html" class="text-purple-400 hover:text-purple-300">full slow Shopify store checklist</a>.
+                                </p>
+
+                                <h2 id="section-1">1. Why Shopify Core Web Vitals matter</h2>
+                                <p>
+                                    Core Web Vitals are Google’s way of measuring real user experience. For Shopify merchants, that translates directly into money. A store that feels instant and stable is easier to shop from; a store that janks, jumps, or hesitates quietly kills conversion rate.
+                                </p>
+                                <ul>
+                                    <li><strong>Higher organic rankings:</strong> Core Web Vitals are part of Google’s page experience signals. While they’re not the only ranking factor, consistently poor metrics can hold back your SEO.</li>
+                                    <li><strong>Better paid traffic results:</strong> Fast, stable landing pages help improve Quality Score in Google Ads and performance in Meta campaigns, which can lower your cost per click and per purchase.</li>
+                                    <li><strong>More completed checkouts:</strong> Shoppers are less likely to abandon a smooth, predictable experience. Slow product pages and jumpy carts cause subtle friction at every step.</li>
+                                    <li><strong>Stronger brand perception:</strong> A snappy store feels modern and trustworthy; a sluggish one feels outdated, even if your design looks good.</li>
+                                </ul>
+                                <p>
+                                    The tricky part? You can have a beautiful, high-converting Shopify theme at launch, then watch performance degrade over time as you add apps, scripts, and content. That’s usually when Core Web Vitals warnings start showing up.
+                                </p>
+
+                                <h2 id="section-2">2. Quick checks to confirm your Shopify store is slow</h2>
+                                <p>
+                                    Before you start uninstalling apps or editing your theme, it’s worth confirming with data that your store really has a Core Web Vitals problem. These quick checks take less than 10 minutes.
+                                </p>
+                                <ul>
+                                    <li><strong>Run PageSpeed Insights on key templates:</strong> Test your homepage, a best-selling product page, and a high-traffic collection. Focus on the <strong>mobile</strong> report and the Core Web Vitals section.</li>
+                                    <li><strong>Check the “Origin summary” tab:</strong> If Google has enough field data, you’ll see how real visitors experience LCP, CLS, and INP — not just lab scores.</li>
+                                    <li><strong>Open your store on 4G:</strong> Use your phone on a cellular network with no Wi-Fi. If the page feels heavy or jerky to you, it’s likely worse for shoppers on mid-range devices.</li>
+                                    <li><strong>Watch for layout shifts:</strong> Pay attention to buttons or text that unexpectedly move as images, banners, or apps finish loading. That’s CLS in action.</li>
+                                    <li><strong>Test a simple page vs a “marketing-heavy” one:</strong> Compare a bare-bones page with few apps to a campaign landing page with pop-ups, tracking pixels, and media. The difference usually reveals where your biggest problems sit.</li>
+                                </ul>
+                                <p>
+                                    If your mobile scores are orange or red, or if the Core Web Vitals field data shows “Needs improvement” or “Poor”, it’s time to treat <strong>Shopify performance optimization</strong> as a priority, not a nice-to-have.
+                                </p>
+
+                                <h2 id="section-3">3. How Core Web Vitals work on Shopify (LCP, CLS, INP)</h2>
+                                <p>
+                                    Core Web Vitals aren’t random numbers — each metric describes a specific moment in your shopper’s journey. Understanding them makes it much easier to fix them.
+                                </p>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">3.1 Largest Contentful Paint (LCP)</h3>
+                                        <p class="text-sm text-slate-300">
+                                            LCP measures how quickly the main piece of content becomes visible — usually your hero image, featured product media, or headline. On Shopify, oversized imagery, sliders, and render-blocking apps are the main reasons LCP creeps above the recommended 2.5 seconds on mobile.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">3.2 Cumulative Layout Shift (CLS)</h3>
+                                        <p class="text-sm text-slate-300">
+                                            CLS tracks how much the content moves around as the page loads. Common Shopify culprits include announcement bars that push everything down, late-loading app widgets (reviews, badges, pop-ups), and images without reserved space. High CLS scores make your store feel unpolished and frustrating to navigate.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">3.3 Interaction to Next Paint (INP)</h3>
+                                        <p class="text-sm text-slate-300">
+                                            INP measures how responsive your store feels when shoppers interact with it — clicking “Add to cart”, opening filters, switching product variants, or navigating the menu. Heavy JavaScript from apps, sliders, and tracking scripts can keep the main thread busy and make every click feel laggy.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    A strong <strong>Shopify Core Web Vitals fix</strong> focuses on all three metrics together. Speeding up LCP but ignoring CLS and INP still leaves users with a clunky experience and can hurt your long-term SEO.
+                                </p>
+
+                                <h2 id="section-4">4. Pre-optimization Core Web Vitals audit checklist</h2>
+                                <p>
+                                    Before you start removing apps or rewriting sections, capture a baseline. That way, you’ll know what actually moved the needle. This small audit mirrors what we do at FASTRANK before any <strong>Shopify speed optimization service</strong>.
+                                </p>
+
+                                <div class="grid md:grid-cols-2 gap-4 my-8">
+                                    <!-- Tool 1: PageSpeed Insights -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">PageSpeed Insights (Core Web Vitals)</h4>
+                                                <p class="text-sm text-slate-400">Save mobile results for your homepage, top product page, and a key collection. Note LCP, CLS, and INP from both lab and field data.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 2: Shopify Speed Report -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">Shopify Speed dashboard</h4>
+                                                <p class="text-sm text-slate-400">Record your current Shopify “speed score” for desktop and mobile. It’s not perfect, but it gives a useful trend over time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 3: App inventory -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">List every installed app</h4>
+                                                <p class="text-sm text-slate-400">Create a simple spreadsheet with all your apps, what they do, and whether they inject front-end scripts (reviews, chat, pop-ups, tracking, upsells, etc.).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 4: Theme and media snapshot -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a2 2 0 012-2h12a2 2 0 012 2v2H4V5zm0 4h16v10a2 2 0 01-2 2H6a2 2 0 01-2-2V9zm4 3h8"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">Theme &amp; media overview</h4>
+                                                <p class="text-sm text-slate-400">Note your current theme, any major customizations, and the size of key hero images and product media on your most important templates.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pro Tip callout -->
+                                <div class="my-6 p-5 rounded-xl border border-purple-500/40 bg-gradient-to-br from-purple-500/10 to-transparent">
+                                    <div class="flex items-start gap-3">
+                                        <div class="flex-shrink-0">
+                                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-semibold text-purple-300 mb-1">Pro Tip</p>
+                                            <p class="text-sm text-slate-300">Always keep screenshots of your initial Core Web Vitals and Shopify speed score. When you later share a case study or brief an agency, “before vs after” charts are far more convincing than vague statements like “it feels faster now”.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <figure class="mb-10 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60 blog-hero relative">
+                                  <picture>
+                                    <source srcset="./images/shopify-speed-optimization-flow-2025-1200x675.webp" type="image/webp">
+                                    <img
+                                      src="./images/shopify-speed-optimization-flow-2025-1200x675.png"
+                                      alt="Visual flow diagram showing the complete Shopify speed optimization process from audit to cleanup, Core Web Vitals fixes and ongoing monitoring"
+                                      class="w-full h-auto"
+                                      loading="lazy"
+                                      width="1200"
+                                      height="675"
+                                    />
+                                  </picture>
+                                  <figcaption class="px-6 py-3 text-xs text-slate-400 border-t border-slate-800">
+                                    Shopify optimization workflow: Audit → Fix → Monitor
+                                  </figcaption>
+                                </figure>
+
+                                <h2 id="section-5">5. Full checklist to fix Shopify Core Web Vitals (2025)</h2>
+                                <p>
+                                    This is the same framework we use when we help clients move from red to green Core Web Vitals scores on Shopify. You can follow it yourself or treat it as a blueprint for your developer or agency. If you want a broader view that also covers hosting and long-term maintenance, pair this guide with our <a href="/blog/shopify-speed-optimization-guide-2025.html" class="text-purple-400 hover:text-purple-300">Shopify Speed Optimization Guide (2025)</a>.
+                                </p>
+
+                                <h3 id="section-5-1">5.1 Remove or replace performance-killing apps</h3>
+                                <p>
+                                    Apps are the number one reason Shopify stores become slow. Every app can add scripts, styles, external requests, and hidden DOM elements — often on every page, not just where you use the feature.
+                                </p>
+                                <ul>
+                                    <li><strong>Uninstall anything you no longer use:</strong> If an app isn’t actively contributing to sales or workflows, remove it completely instead of leaving it “just in case”.</li>
+                                    <li><strong>Consolidate overlapping functionality:</strong> Replace several single-purpose widgets (badges, pop-ups, timers) with one lightweight solution.</li>
+                                    <li><strong>Prefer apps that load selectively:</strong> Look for tools that only inject scripts on specific templates instead of site-wide.</li>
+                                    <li><strong>Clean up leftover code:</strong> Even after you delete an app, snippets may remain in <code>theme.liquid</code> or section files. If you’re comfortable with Liquid, remove orphaned includes and script tags carefully.</li>
+                                </ul>
+                                <p class="text-sm text-slate-300">
+                                    For a deeper breakdown of which tools tend to cause bloat, see our upcoming analysis: <a href="/blog/best-shopify-apps-that-slow-down-your-store/" class="text-purple-400 hover:text-purple-300">Best Shopify Apps That Slow Down Your Store (2025)</a>.
+                                </p>
+
+                                <div class="my-6 p-4 rounded-xl border border-purple-500/40 bg-purple-500/5">
+                                    <p class="text-sm text-slate-200"><strong>⚠ Important:</strong> Removing app code can break important functionality such as reviews, tracking, or upsells. Always duplicate your theme and test changes on the copy before touching the live store.</p>
+                                    <p class="text-sm mt-2"><a href="/blog/before-after-shopify-speed-optimization-case-study/" class="text-purple-400 hover:text-purple-300 underline">See a before/after Shopify optimization case study →</a></p>
+                                </div>
+
+                                <h3>5.2 Fix image-related LCP problems</h3>
+                                <p>
+                                    Oversized, unoptimized images are one of the fastest ways to destroy LCP. The goal isn’t to make your store ugly — it’s to serve the same visual quality with far less weight.
+                                </p>
+                                <ul>
+                                    <li>Compress hero and banner images so they stay under roughly <strong>200KB</strong> whenever possible.</li>
+                                    <li>Use <strong>WebP</strong> (or AVIF if supported by your stack) alongside fallbacks for older browsers.</li>
+                                    <li>Resize product images to the largest size they’re actually displayed at, rather than uploading 4000px versions.</li>
+                                    <li>Lazy-load below-the-fold imagery so it only loads when a shopper scrolls down.</li>
+                                    <li>Ensure your LCP image is requested early, with no unnecessary placeholders or blocking scripts in front of it.</li>
+                                </ul>
+
+                                <h3>5.3 Stabilize layout to fix CLS</h3>
+                                <p>
+                                    Shopify themes tend to accumulate layout shifts as merchants add announcement bars, app widgets, and new sections. The objective here is to reserve space for everything that will appear, so nothing surprises the shopper.
+                                </p>
+                                <ul>
+                                    <li><strong>Set fixed heights where possible:</strong> Reserve space for hero images, slideshows, and home page banners.</li>
+                                    <li><strong>Pre-allocate areas for app content:</strong> For review widgets, badges, or upsell modules, give the container a minimum height so they don’t suddenly push content down.</li>
+                                    <li><strong>Avoid inserting elements above existing content:</strong> If you add a new announcement bar or free-shipping strip, place it inside a reserved container rather than pushing the entire header down on load.</li>
+                                    <li><strong>Use system fonts or font-display strategies:</strong> Poor font loading can also contribute to CLS if large chunks of text suddenly re-render.</li>
+                                </ul>
+
+                                <h3>5.4 Improve INP by reducing JavaScript bloat</h3>
+                                <p>
+                                    INP is heavily influenced by how much work your JavaScript has to do when somebody interacts with your store. The more you can trim, defer, or compartmentalize scripts, the more responsive everything will feel.
+                                </p>
+                                <ul>
+                                    <li>Limit heavy sliders, carousels, and video backgrounds on mobile.</li>
+                                    <li>Defer non-critical scripts so they run after the first paint instead of blocking user interaction.</li>
+                                    <li>Load third-party scripts (analytics, chat, A/B testing) asynchronously where possible.</li>
+                                    <li>Remove unused event listeners, abandoned tracking pixels, and old A/B test scripts that are no longer in use.</li>
+                                </ul>
+
+                                <h3>5.5 Use theme settings instead of extra apps</h3>
+                                <p>
+                                    Modern Shopify themes ship with a surprising amount of built-in functionality: FAQs, color swatches, announcement bars, product tabs, and more. Using theme features instead of installing yet another app is an easy way to protect your Core Web Vitals.
+                                </p>
+                                <p>
+                                    Before browsing the app store, check whether your theme already offers what you’re looking for. Many merchants install apps for features they technically had from day one.
+                                </p>
+
+                                <h3>5.6 Combine this with a broader optimization plan</h3>
+                                <p>
+                                    Core Web Vitals don’t exist in a vacuum. Hosting, CDN configuration, and caching also influence how quickly your Shopify store responds, especially for international audiences. For a bigger, strategic view of all the moving parts, you can follow the step-by-step process in our <a href="/blog/how-to-fix-slow-shopify-store-full-checklist.html" class="text-purple-400 hover:text-purple-300">slow Shopify store checklist</a> alongside this Core Web Vitals guide.
+                                </p>
+
+                                <h2 id="section-6">6. Testing after improvements</h2>
+                                <p>
+                                    Once you’ve worked through a first pass of the checklist, repeat the tests you ran during your initial audit. Use the same URLs and tools so the comparison is fair.
+                                </p>
+                                <ul>
+                                    <li>Re-run <strong>PageSpeed Insights</strong> on mobile and note the new LCP, CLS, and INP values.</li>
+                                    <li>Check the <strong>Core Web Vitals field data</strong> again after a few weeks to see how real-world metrics respond.</li>
+                                    <li>Compare your updated Shopify speed score with the baseline you recorded earlier.</li>
+                                    <li>Keep an eye on business metrics: conversion rate, bounce rate, and cost per purchase from paid campaigns.</li>
+                                </ul>
+                                <p>
+                                    If you see strong lab improvements but field data stays poor, that usually means certain templates or countries are still under-optimized, or that a heavy app only loads for specific traffic sources.
+                                </p>
+
+                                <div class="my-8 rounded-2xl border border-purple-500/40 p-6 blog-callout">
+                                    <p class="text-sm text-slate-50 font-semibold mb-2">
+                                        Pro tip
+                                    </p>
+                                    <p class="text-sm text-slate-300">
+                                        Don’t change everything at once. Work in small, deliberate batches — for example, apps first, then imagery, then layout and scripts. It’s much easier to understand what helped (or hurt) your Core Web Vitals when you make one kind of change at a time.
+                                    </p>
+                                </div>
+
+                                <h2 id="section-7">7. When to hire a Shopify Core Web Vitals expert</h2>
+                                <p>
+                                    Many of the steps above are safe to tackle yourself, especially if you’re comfortable experimenting on a duplicate theme. But there are cases where bringing in a specialist saves a lot of time, stress, and lost revenue.
+                                </p>
+                                <p><strong>Consider expert help if:</strong></p>
+                                <ul>
+                                    <li>Your store is a major revenue channel and you can’t risk breaking the live theme.</li>
+                                    <li>You rely on several mission-critical apps (subscriptions, bundles, reviews) that need careful coordination.</li>
+                                    <li>Your current theme has years of custom code layered on top of it.</li>
+                                    <li>You’ve tried “one-click” optimization apps but Core Web Vitals are still poor.</li>
+                                    <li>You want a structured, report-driven approach rather than trial and error.</li>
+                                </ul>
+                                <p>
+                                    A good <strong>Shopify speed optimization agency</strong> will start with a clear audit, explain what’s actually slowing you down, and then implement fixes with backups and staging in place. They’ll also show before/after metrics, not just say “we turned on a setting in an app”.
+                                </p>
+
+                                <h2 id="section-8">8. How this guide connects to other Shopify speed resources</h2>
+                                <p>
+                                    This article zooms in on Core Web Vitals, but it’s part of a larger Shopify performance playbook. For a complete picture, you can read it alongside:
+                                </p>
+                                <ul>
+                                    <li><a href="/blog/how-to-fix-slow-shopify-store-full-checklist.html" class="text-purple-400 hover:text-purple-300">How to Fix a Slow Shopify Store – Full Checklist (2025)</a> — practical, step-by-step tasks that go beyond Web Vitals alone.</li>
+                                    <li><a href="/blog/shopify-speed-optimization-guide-2025.html" class="text-purple-400 hover:text-purple-300">Shopify Speed Optimization Guide (2025)</a> — a higher-level roadmap from audit to implementation and monitoring.</li>
+                                    <li><a href="/blog/before-after-shopify-speed-optimization-case-study/" class="text-purple-400 hover:text-purple-300">Before/After Shopify Speed Optimization – Case Study</a> — a real-world example of how these principles play out on a live store.</li>
+                                </ul>
+                                <p>
+                                    If you also run a WordPress or WooCommerce site alongside Shopify, you can apply the same thinking there using our <a href="/blog/wordpress-speed-optimization-guide-2025.html" class="text-purple-400 hover:text-purple-300">WordPress Speed Optimization Guide (2025)</a>. The stack is different, but the Core Web Vitals logic is the same.
+                                </p>
+
+                                <h2 id="section-9">9. How to get started improving Shopify Core Web Vitals</h2>
+                                <p>
+                                    You don’t need to become a performance engineer to make meaningful improvements. Start small, be methodical, and treat this guide as a living checklist rather than a one-off project.
+                                </p>
+                                <ul>
+                                    <li>Run your initial audits and save screenshots of your scores.</li>
+                                    <li>Clean up apps and images first — they usually give the fastest wins.</li>
+                                    <li>Move on to layout stability and JavaScript bloat to unlock better CLS and INP.</li>
+                                    <li>Re-test regularly and keep an eye on both Core Web Vitals and business metrics.</li>
+                                </ul>
+                                <p>
+                                    And if you’d rather hand the heavy lifting to a team that lives and breathes this stuff, our specialists at FASTRANK offer done-for-you <strong>Shopify site speed optimization</strong> with a clear process, transparent pricing, and detailed before/after reporting.
+                                </p>
+
+                            </div>
+
+                            <!-- CTA section under the article -->
+                            <div class="mt-12 pt-10 border-t border-slate-800/60 blog-post-cta">
+                                <div class="rounded-2xl bg-gradient-to-br from-purple-600/10 via-purple-500/5 to-transparent border border-purple-500/30 p-8 md:p-10">
+                                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                                        <div class="flex-1 text-center md:text-left">
+                                            <h3 class="text-2xl md:3xl font-bold text-slate-50 mb-3">
+                                                Want help fixing your Shopify Core Web Vitals?
+                                            </h3>
+                                            <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                                                We turn this Core Web Vitals checklist into a complete, done-for-you Shopify optimization service — from audit to implementation — so your store loads fast, feels smooth, and converts better.
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-center md:items-end gap-4 md:flex-shrink-0">
+                                            <a href="../index.html#pricing" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-purple-600 hover:bg-purple-500 rounded-full shadow-lg shadow-purple-500/50 hover:shadow-purple-400/60 transition-all duration-200">
+                                                See Shopify Speed Plans →
+                                            </a>
+                                            <a href="/blog/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition duration-150">
+                                                ← Back to all articles
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- About Fastrank - E-E-A-T Block -->
+                            <div class="mt-16 pt-8 border-t border-slate-800/60">
+                                <div class="max-w-3xl">
+                                    <h3 class="text-lg font-semibold text-slate-100 mb-3">About Fastrank</h3>
+                                    <p class="text-sm text-slate-400 leading-relaxed">
+                                        Fastrank specializes in speed optimization for WordPress, WooCommerce, and Shopify stores. Our team has optimized hundreds of e-commerce websites, improving Core Web Vitals scores by an average of 40+ points and increasing conversion rates by 15–30%. We use safe, white-hat techniques and provide detailed before/after reports with every optimization project.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Site footer -->
+        <footer>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Footer links -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
+
+                    <!-- Logo + address -->
+                    <div>
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img src="../images/fastrank-logo.svg" alt="Fastrank logo" class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4" />
+                        </a>
+                        <div class="flex flex-col gap-2 text-slate-300 text-sm">
+                            <span class="font-semibold text-slate-100">Cadunlock LLC</span>
+                            <span>131 Continental Dr, Suite 305</span>
+                            <span>Newark, DE 19713, United States</span>
+                            <span>Phone: +1 (302) 294-9394</span>
+                            <a href="mailto:support@fastrank.io" class="hover:text-white transition">support@fastrank.io</a>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/">Services</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../get-report.html">Free Speed Report</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../about.html">Our Expertise</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legals -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../refund-policy.html">Refund policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../terms-of-service.html">Terms of Service</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../privacy-policy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+                    © 2025 Cadunlock LLC. All rights reserved.
+                </p>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JS -->
+    <script src="../js/vendors/alpinejs.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    
+    <!-- Blog TOC Toggle -->
+    <script>
+    (function() {
+        const tocToggle = document.querySelector('.blog-toc-toggle');
+        const tocList = document.querySelector('.blog-toc-list');
+        const tocIcon = document.querySelector('.blog-toc-icon');
+        
+        if (tocToggle && tocList && tocIcon) {
+            // Set initial state - closed on mobile
+            if (window.innerWidth < 768) {
+                tocList.classList.add('hidden');
+                tocIcon.style.transform = 'rotate(0deg)';
+            }
+            
+            tocToggle.addEventListener('click', function() {
+                // Only work on mobile
+                if (window.innerWidth < 768) {
+                    const isHidden = tocList.classList.contains('hidden');
+                    tocList.classList.toggle('hidden');
+                    tocToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+                    // Rotate chevron: 0deg = closed (pointing down), 180deg = open (pointing up)
+                    tocIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        }
+    })();
+    </script>
+</body>
+
+</html>
