@@ -23,6 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank">
@@ -202,7 +205,9 @@
                     <!-- Illustration -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
                         <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-                            <img src="./images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="lazy" decoding="async">
+                            <img src="./images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="lazy" decoding="async"
+                                srcset="./images/glow-bottom.svg 2146w, ./images/glow-bottom-mobile.svg 800w"
+                                sizes="(max-width: 800px) 100vw, 2146px">
                         </div>
                     </div>
 
@@ -333,7 +338,9 @@
                     <!-- Illustration -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
                         <div class="absolute left-1/2 -translate-x-1/2 top-0 -z-10">
-                            <img src="./images/glow-top.svg" class="max-w-none" width="1404" height="658" alt="Features Illustration" loading="lazy" decoding="async">
+                            <img src="./images/glow-top.svg" class="max-w-none" width="1404" height="658" alt="Features Illustration" loading="lazy" decoding="async"
+                                srcset="./images/glow-top.svg 1404w, ./images/glow-top-mobile.svg 800w"
+                                sizes="(max-width: 800px) 100vw, 1404px">
                         </div>
                     </div>
 
@@ -557,7 +564,9 @@
                                                 </div>
                                                 <!-- Image -->
                                                 <div class="relative w-full h-64 md:h-auto overflow-hidden">
-                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0" src="./images/feature-image-01.png" width="504" height="400" alt="Feature 01" loading="lazy" decoding="async">
+                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:relative md:left-0 md:translate-x-0" src="./images/feature-image-01.png" width="504" height="400" alt="Feature 01" loading="lazy" decoding="async"
+                                                        srcset="./images/feature-image-01.png 504w, ./images/feature-image-01-mobile.png 320w"
+                                                        sizes="(max-width: 600px) 100vw, 504px">
                                                 </div>
                                             </div>
                                         </div>
@@ -581,7 +590,9 @@
                                                 </div>
                                                 <!-- Image -->
                                                 <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
-                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/feature-image-02.png" width="536" height="230" alt="Feature 02" loading="lazy" decoding="async">
+                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/feature-image-02.png" width="536" height="230" alt="Feature 02" loading="lazy" decoding="async"
+                                                        srcset="./images/feature-image-02.png 536w, ./images/feature-image-02-mobile.png 320w"
+                                                        sizes="(max-width: 600px) 100vw, 536px">
                                                 </div>
                                             </div>
                                         </div>
@@ -605,7 +616,9 @@
                                                 </div>
                                                 <!-- Image -->
                                                 <div class="relative w-full h-64 md:h-auto overflow-hidden md:pb-8">
-                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/feature-image-03.png" width="230" height="230" alt="Feature 03" loading="lazy" decoding="async">
+                                                    <img class="absolute bottom-0 left-1/2 -translate-x-1/2 mx-auto max-w-none md:max-w-full md:relative md:left-0 md:translate-x-0" src="./images/feature-image-03.png" width="230" height="230" alt="Feature 03" loading="lazy" decoding="async"
+                                                        srcset="./images/feature-image-03.png 230w, ./images/feature-image-03-mobile.png 160w"
+                                                        sizes="(max-width: 600px) 100vw, 230px">
                                                 </div>
                                             </div>
                                         </div>
@@ -1560,8 +1573,8 @@
     </div>
 
     <script src="./js/vendors/alpinejs.min.js" defer></script>
-    <script src="./js/vendors/aos.js"></script>
-    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/vendors/aos.js" defer></script>
+    <script src="./js/vendors/swiper-bundle.min.js" defer></script>
     <script src="./js/main.js"></script>
 
 </body>
