@@ -1,4 +1,750 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<!-- Content migrated from How to Optimize WordPress Core Web Vitals – Real Client Example.html. Silo: WordPress -->
-<!-- The rest of the content will be updated with silo nav, category, CTA, etc. -->
+
+<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date());
+
+            gtag('config', 'G-EZ9KWQEM4F');
+        </script>
+        <!-- Cookiebot -->
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3a3581e5-019e-48bb-806f-24f31fbd1959" type="text/javascript" async></script>
+    <meta charset="utf-8">
+    <title>How to Optimize WordPress Core Web Vitals – Real Client Example (2025) - Fastrank Blog</title>
+    <meta name="description" content="See exactly how we optimized a real client’s WordPress Core Web Vitals in 2025. Step-by-step case study covering LCP, CLS, INP fixes, plugin cleanup, hosting improvements, and performance best practices.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fastrank.io/blog/how-to-optimize-wordpress-core-web-vitals-real-client-example/" />
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Optimize WordPress Core Web Vitals – Real Client Example (2025) - Fastrank Blog">
+    <meta property="og:description" content="Real-life WordPress Core Web Vitals optimization case study. Learn how we fixed LCP, CLS, INP, and load time with a practical, repeatable process you can apply to your own site.">
+    <meta property="og:url" content="https://fastrank.io/blog/how-to-optimize-wordpress-core-web-vitals-real-client-example/">
+    <meta property="og:image" content="https://fastrank.io/blog/images/how-to-optimize-wordpress-core-web-vitals-real-client-example.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Optimize WordPress Core Web Vitals – Real Client Example (2025) - Fastrank Blog">
+    <meta name="twitter:description" content="Step-by-step WordPress Core Web Vitals optimization walkthrough based on a real client project.">
+    <meta name="twitter:image" content="https://fastrank.io/blog/images/how-to-optimize-wordpress-core-web-vitals-real-client-example.png">
+    <link href="../style.css" rel="stylesheet">
+    <!-- Crisp Live Chat -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fastrank.io/blog/how-to-optimize-wordpress-core-web-vitals-real-client-example/"
+  },
+  "headline": "How to Optimize WordPress Core Web Vitals – Real Client Example (2025)",
+  "description": "Real-world walkthrough of how we optimized a client's WordPress Core Web Vitals in 2025, including LCP, CLS, and INP fixes, plugin cleanup, hosting improvements, and ongoing monitoring.",
+  "image": [
+    "https://fastrank.io/blog/images/how-to-optimize-wordpress-core-web-vitals-real-client-example.png"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "url": "https://fastrank.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastrank",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fastrank.io/images/fastrank-logo.svg"
+    }
+  },
+  "datePublished": "2025-04-22",
+  "dateModified": "2025-04-22"
+}
+</script>
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img class="max-w-none" src="../images/logo.svg" width="38" height="38" alt="Fastrank">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="../about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="../index.html#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/blog/">Blog</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                    <ul class="flex-1 flex justify-end items-center">
+                        <li class="ml-6">
+                            <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="../get-report.html">
+                                <span class="relative inline-flex items-center">
+                                    Get Report <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="../about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="../index.html#pricing">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-white hover:text-white py-1.5" href="/blog/">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+            <section class="relative">
+                <!-- Background -->
+                <div class="absolute inset-0 -z-10 h-[420px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 opacity-90"></div>
+
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 pb-20 md:pt-40 md:pb-32">
+
+                        <!-- Breadcrumb -->
+                        <div class="mb-6">
+                            <a href="/blog/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition">
+                                ← Back to blog
+                            </a>
+                        </div>
+
+                        <article class="max-w-3xl mx-auto blog-post-article relative z-10" itemscope itemtype="https://schema.org/Article">
+
+                            <!-- Meta row: category + date + read time -->
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 text-xs text-slate-400">
+                                <div class="inline-flex items-center gap-2">
+                                    <span class="inline-flex items-center rounded-full border border-purple-500/60 bg-purple-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-purple-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-purple-400 mr-1"></span>
+                                        WordPress
+                                    </span>
+                                    <span aria-hidden="true">•</span>
+                                    <span itemprop="datePublished" content="2025-04-22">Apr 22, 2025</span>
+                                </div>
+                                <div class="text-slate-400">
+                                    <span>13 min read</span>
+                                </div>
+                            </div>
+
+                            <!-- Title -->
+                            <header class="mb-12">
+                                <h1 itemprop="headline" class="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] leading-snug md:leading-tight max-w-3xl font-extrabold tracking-tight text-slate-100 mb-4 break-words">
+                                    How to Optimize WordPress Core Web Vitals – Real Client Example (2025)
+                                </h1>
+                                <p class="text-base md:text-lg text-slate-300 max-w-2xl" itemprop="description">
+                                    This real-world walkthrough shows you exactly how we diagnosed and fixed a client’s WordPress Core Web Vitals issues — from slow LCP and layout shifts to interaction delays — and turned their site into a fast, stable, conversion-ready experience.
+                                </p>
+                            </header>
+
+                            <!-- Hero image -->
+                            <figure class="mb-10 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60 blog-hero relative">
+                                <img src="./images/how-to-optimize-wordpress-core-web-vitals-real-client-example.png" alt="Hero image for article explaining how to optimize WordPress Core Web Vitals based on a real client example" class="w-full h-auto object-cover" loading="eager" itemprop="image" width="1200" height="675" />
+                                <figcaption class="px-6 py-3 text-xs text-slate-400 border-t border-slate-800">
+                                    Real client walkthrough: WordPress Core Web Vitals optimization in 2025
+                                </figcaption>
+                            </figure>
+
+                            <!-- Table of Contents -->
+                            <nav class="blog-toc mb-10" aria-label="Table of contents">
+                                <button type="button" class="blog-toc-toggle w-full flex items-center justify-between text-left" aria-expanded="false">
+                                    <span class="blog-toc-label">Table of Contents</span>
+                                    <svg class="blog-toc-icon w-5 h-5 text-purple-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <ul class="blog-toc-list hidden md:grid">
+                                    <li><a href="#section-1">1. Quick checks to confirm your WordPress Core Web Vitals are failing</a></li>
+                                    <li><a href="#section-2">2. Common reasons WordPress sites fail Core Web Vitals</a></li>
+                                    <li><a href="#section-3">3. Pre-optimization audit checklist</a></li>
+                                    <li><a href="#section-4">4. Real Before &amp; After client example</a></li>
+                                    <li><a href="#section-5">5. Full checklist to fix WordPress Core Web Vitals</a></li>
+                                    <li><a href="#section-6">6. Business impact of fixing Core Web Vitals</a></li>
+                                    <li><a href="#section-7">7. DIY fixes vs hiring a WordPress speed expert</a></li>
+                                    <li><a href="#section-8">8. Frequently asked questions</a></li>
+                                    <li><a href="#section-9">9. How to get started with WordPress performance optimization</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- Content body -->
+                            <div class="prose prose-lg prose-invert max-w-none text-slate-100 blog-post-content" itemprop="articleBody">
+
+                                <p>
+                                    If your WordPress site feels sluggish, fails Core Web Vitals in Search Console, or loads in more than a few seconds on mobile, you're not alone. Many site owners only notice speed problems after adding page builders, plugins, tracking scripts, and large images. This article shows you, step by step, how we optimized <strong>WordPress Core Web Vitals</strong> for a real client — and how you can apply the same process to your own site.
+                                </p>
+
+                                <h2 id="section-1">1. Quick checks to confirm your WordPress Core Web Vitals are failing</h2>
+                                <p>
+                                    Before changing plugins, themes, or hosting, you need to confirm there’s really a performance problem. These quick checks take less than 10 minutes and give you an honest baseline.
+                                </p>
+                                <ul>
+                                    <li><strong>Open your site on 4G:</strong> Use your phone on a mobile network. If your homepage or key landing pages feel slow, your visitors feel it too.</li>
+                                    <li><strong>Run a PageSpeed Insights test:</strong> Test your homepage, a high-traffic blog post, and any critical landing pages. Pay close attention to the mobile scores and the Core Web Vitals section.</li>
+                                    <li><strong>Check Search Console Core Web Vitals:</strong> Look for URLs flagged as “Poor” or “Needs improvement” for LCP, CLS, or INP.</li>
+                                    <li><strong>Check for obvious bloat:</strong> Heavy sliders, pop-ups, chat widgets, analytics tags, and marketing plugins are often the first suspects when <strong>WordPress performance optimization</strong> becomes necessary.</li>
+                                    <li><strong>Ask your team:</strong> If your marketing or content team says “the site feels slow or jumpy”, treat that as a signal to start the checklist.</li>
+                                </ul>
+
+                                <h2 id="section-2">2. Common reasons WordPress sites fail Core Web Vitals</h2>
+                                <p>
+                                    Once you know your site is struggling, the next step is understanding <em>why</em>. After hundreds of WordPress audits, we see the same root causes of poor Core Web Vitals over and over again.
+                                </p>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.1. Too many WordPress plugins</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Every plugin can add its own JavaScript, CSS, database queries, and network requests. Even “lightweight” plugins stack up. Page builders, form plugins, analytics tags, marketing add-ons, and visual effects are frequent culprits when we work on <strong>WordPress Core Web Vitals optimization</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.2. Unoptimized hero and content images</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Large hero images and blog thumbnails uploaded straight from the camera can weigh several megabytes each. Without compression, WebP conversion, and lazy loading, these assets destroy LCP and make the site feel sluggish — especially on mobile connections.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.3. Render-blocking CSS and JavaScript</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Many WordPress themes and plugins load full CSS bundles and blocking scripts in the <code>&lt;head&gt;</code>. This stops the browser from painting content quickly. That’s why any serious <strong>WordPress Core Web Vitals fix</strong> must identify which resources are truly critical and which can be deferred or loaded asynchronously.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-purple-500/40 transition-colors my-6">
+                                    <div class="flex-shrink-0">
+                                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-slate-100 mb-2">2.4. Heavy themes, page builders, and animations</h3>
+                                        <p class="text-sm text-slate-300">
+                                            Multi-purpose themes, Elementor/Divi layouts, sliders, and animation libraries look impressive but bring extra code with them. These customizations increase Total Blocking Time and make interactions feel sluggish for users on mid-range devices.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <h2 id="section-3">3. Pre-optimization audit checklist</h2>
+                                <p>
+                                    Before you start making changes, capture a snapshot of how your WordPress site performs today. That way you can see exactly what your work changed later.
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-4 my-8">
+                                    <!-- Tool 1: PageSpeed Insights -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">PageSpeed Insights</h4>
+                                                <p class="text-sm text-slate-400">Save screenshots of mobile and desktop results for at least three key URLs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 2: GTmetrix / WebPageTest -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">GTmetrix / WebPageTest</h4>
+                                                <p class="text-sm text-slate-400">Export a waterfall report showing exactly what loads and in which order.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 3: Plugin Inventory -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">List All Installed Plugins</h4>
+                                                <p class="text-sm text-slate-400">Note which plugins affect front-end rendering (page builders, sliders, popups, analytics, etc.).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tool 4: Core Web Vitals in Search Console -->
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 hover:border-purple-500/50 transition-colors">
+                                        <div class="flex items-start gap-3 mb-3">
+                                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h4 class="font-semibold text-slate-100 mb-1">Search Console Core Web Vitals</h4>
+                                                <p class="text-sm text-slate-400">Track your baseline Core Web Vitals status and monitor improvements over time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pro Tip callout -->
+                                <div class="my-6 p-5 rounded-xl border border-purple-500/40 bg-gradient-to-br from-purple-500/10 to-transparent">
+                                    <div class="flex items-start gap-3">
+                                        <div class="flex-shrink-0">
+                                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-semibold text-purple-300 mb-1">Pro Tip</p>
+                                            <p class="text-sm text-slate-300">Always audit your Core Web Vitals using real-user data from Search Console, not just lab scores. Real field data shows how fast (or slow) your site feels for actual visitors.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- WordPress optimization flow diagram -->
+                                <figure class="mb-10 rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/60 blog-hero relative">
+  <picture>
+    <source srcset="./images/wordpress-speed-optimization-flow-2025-1200x675.webp" type="image/webp">
+    <img
+      src="./images/wordpress-speed-optimization-flow-2025-1200x675.png"
+      alt="Visual flow diagram showing the WordPress speed and Core Web Vitals optimization process from audit to implementation and monitoring in 2025"
+      class="w-full h-auto"
+      loading="lazy"
+      width="1200"
+      height="675"
+    />
+  </picture>
+  <figcaption class="px-6 py-3 text-xs text-slate-400 border-t border-slate-800">
+    WordPress optimization workflow: Audit → Fix → Monitor
+  </figcaption>
+</figure>
+
+                                <h2 id="section-4">4. Real Before &amp; After client example</h2>
+                                <p>
+                                  One FASTRANK client, a content-heavy WordPress site with a WooCommerce store, came to us with poor mobile Core Web Vitals. Their site relied on a multi-purpose theme, Elementor layouts, many marketing plugins, and unoptimized hero images that hadn’t been cleaned up in years.
+                                </p>
+
+                                <div class="grid md:grid-cols-2 gap-6 my-6">
+                                    <figure class="rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60">
+                                        <img src="./images/optimization-PageSpeed-report.jpg" alt="PageSpeed Insights report showing major improvement in WordPress Core Web Vitals after optimization" loading="lazy" class="w-full h-auto" width="800" height="450" />
+                                        <figcaption class="px-4 py-2 text-xs border-t border-slate-800 text-slate-400">
+                                            Real client results: Mobile score improved from 31 to 89, LCP reduced from 6.8s to 1.9s, CLS stabilized from 0.32 to 0.01
+                                        </figcaption>
+                                    </figure>
+                                </div>
+
+                                <p>
+                                    After going through a structured <strong>WordPress Core Web Vitals</strong> checklist — removing slow plugins, compressing images, fixing render-blocking files, and stabilizing layout shifts — their mobile PageSpeed score jumped from 31 to 89, LCP dropped from 6.8s to 1.9s, CLS went from 0.32 to 0.01, and organic conversions increased by 17%.
+                                </p>
+
+                                <h2 id="section-5">5. Full checklist to fix WordPress Core Web Vitals</h2>
+                                <p>
+                                    Here’s the exact checklist we use internally when we deliver a <strong>WordPress speed optimization service</strong>. You can go through it yourself or use it as a framework when working with a developer.
+                                </p>
+
+                                <!-- STEP 1 -->
+                                <h3 id="section-5-1">3.1 Removing or Replacing Performance-Killing WordPress Plugins</h3>
+                                <p>Plugins are the number one reason why otherwise healthy WordPress sites fail Core Web Vitals. Each installed plugin injects JavaScript, CSS, database queries, and external requests — often on every page. This additional work increases main-thread time, delays rendering, and negatively impacts <strong>LCP</strong>, <strong>INP</strong>, and <strong>CLS</strong>.</p>
+
+                                <p>This step focuses on structured plugin cleanup to restore performance safely.</p>
+
+                                <h4>The Plugin Cleanup Checklist</h4>
+
+                                <h5>1) Surgical Plugin Deactivation &amp; Removal</h5>
+                                <p><strong>Action:</strong> Deactivate and remove any plugin not actively used in the last 30 days. Unused plugins still add code, database overhead, and potential security issues.</p>
+                                <p><strong>Tip:</strong> If a plugin is only needed for a specific page (for example, a form or landing-page builder), use a tool like Perfmatters, Asset CleanUp, or LiteSpeed’s CSS/JS controls to load scripts on that page only — not site-wide.</p>
+
+                                <h5>2) Code Scavenging (Critical Step)</h5>
+                                <p>Deleting a plugin does <strong>not</strong> always remove its leftover code or data. Many plugins leave behind CSS/JS files, database tables, and autoloaded options that keep slowing your site.</p>
+                                <p><strong>Action:</strong> Manually audit your <code>wp-content/plugins</code> directory, theme files, and database for orphaned code and tables.</p>
+                                <p><strong>Expert Insight:</strong> Use Chrome DevTools → Coverage Tab or a waterfall report to identify unused JS/CSS linked to old plugins.<br>
+                                Related deep-dive:<br>
+                                <a href="/blog/wordpress-speed-optimization-guide-2025/" class="text-purple-400 hover:text-purple-300">WordPress Speed Optimization Guide (2025)</a></p>
+
+                                <h5>3) Plugin Consolidation</h5>
+                                <p><strong>Action:</strong> Replace multiple single-purpose plugins (popups, social sharing, minor visual effects) with one lightweight, well-maintained alternative. This reduces HTTP requests and improves speed immediately.</p>
+                                <p>Looking for a platform-specific example instead? Check our Shopify case study:<br>
+                                <a href="/blog/before-after-shopify-speed-optimization-case-study/" class="text-purple-400 hover:text-purple-300">Before/After Shopify Speed Optimization – Case Study</a></p>
+
+                                <h5>4) Prefer Native WordPress &amp; Theme Features</h5>
+                                <p><strong>Action:</strong> Whenever possible, use native block editor features (FAQ blocks, columns, buttons, galleries) and built-in theme options instead of heavy third-party addons.</p>
+                                <p>More best practices inside:<br>
+                                <a href="/blog/wordpress-speed-optimization-services-what-you-should-expect/" class="text-purple-400 hover:text-purple-300">WordPress Speed Optimization Services – What You Should Expect</a></p>
+
+                                <div class="my-6 p-4 rounded-xl border border-purple-500/40 bg-purple-500/5">
+                                    <p class="text-sm text-slate-200"><strong>⚠ Important:</strong> Removing plugins and leftover code can break important functionality if done blindly. If you're not comfortable editing PHP, managing backups, or cleaning the database, consider hiring a WordPress speed expert.</p>
+                                    <p class="text-sm"><a href="/blog/how-speed-audits-improve-seo-rankings-technical-breakdown/" class="text-purple-400 hover:text-purple-300 underline">See how professional speed audits boost SEO rankings →</a></p>
+                                </div>
+                                <!-- END STEP 1 -->
+
+                                <h3>Step 2: Fix image bloat and LCP</h3>
+                                <p>
+                                    Image optimization is one of the fastest ways to see Core Web Vitals improvement:
+                                </p>
+                                <ul>
+                                    <li>Keep hero and featured images under ~200KB where possible.</li>
+                                    <li>Convert images to modern formats like WebP using a plugin or CDN.</li>
+                                    <li>Enable lazy loading for below-the-fold images and embeds.</li>
+                                    <li>Set width/height attributes to avoid unexpected layout shifts.</li>
+                                    <li>Serve properly sized images instead of oversized originals.</li>
+                                </ul>
+
+                                <h3>Step 3: Reduce render-blocking CSS and JS</h3>
+                                <p>
+                                    Once images and plugins are under control, move to critical resources:
+                                </p>
+                                <ul>
+                                    <li>Generate and inline critical CSS for above-the-fold content.</li>
+                                    <li>Load non-critical styles asynchronously or split them by template.</li>
+                                    <li>Add <code>defer</code> or <code>async</code> to non-essential JavaScript.</li>
+                                    <li>Delay third-party scripts (chat, tracking, A/B testing) until user interaction when possible.</li>
+                                </ul>
+
+                                <h3>Step 4: Stabilize Core Web Vitals (LCP, CLS, INP)</h3>
+                                <p>
+                                    A proper <strong>WordPress Core Web Vitals fix</strong> focuses on LCP, CLS, and INP together:
+                                </p>
+                                <ul>
+                                    <li><strong>LCP:</strong> Prioritize the main hero image or heading, minimize competing requests, and reduce server response time.</li>
+                                    <li><strong>CLS:</strong> Reserve space for images, ads, banners, and embeds so they don’t push content down as they load.</li>
+                                    <li><strong>INP:</strong> Limit heavy JavaScript execution, reduce main-thread blocking, and avoid unnecessary animations and sliders.</li>
+                                </ul>
+
+                                <h3>Step 5: Upgrade hosting, caching, and CDN</h3>
+                                <p>
+                                    WordPress is sensitive to slow hosting and weak caching. For stable Core Web Vitals:
+                                </p>
+                                <ul>
+                                    <li>Use performant hosting (managed WordPress, LiteSpeed, or cloud-based providers).</li>
+                                    <li>Configure full-page caching with plugins such as LiteSpeed Cache, WP Rocket, or W3 Total Cache.</li>
+                                    <li>Enable Brotli or GZIP compression for text resources.</li>
+                                    <li>Use a CDN like Cloudflare to cache static assets globally and reduce latency.</li>
+                                </ul>
+
+                                <h3>Step 6: Re-test and document improvements</h3>
+                                <p>
+                                    After working through the checklist, repeat the same tests you ran at the beginning. Capture new PageSpeed Insights screenshots, GTmetrix waterfalls, and updated Core Web Vitals reports from Search Console. This creates a clear before/after story to share with your team or with clients.
+                                </p>
+
+                                <div class="my-8 rounded-2xl border border-purple-500/40 p-6 blog-callout">
+                                    <p class="text-sm text-slate-50 font-semibold mb-2">
+                                        Pro tip
+                                    </p>
+                                    <p class="text-sm text-slate-300">
+                                        Don’t try to brute-force perfect 100/100 scores. Focus instead on stable, green Core Web Vitals and a fast, consistent real-user experience. That’s what actually improves rankings, conversions, and revenue.
+                                    </p>
+                                </div>
+
+                                <h2 id="section-6">6. Business impact of fixing Core Web Vitals</h2>
+                                <p>
+                                    The goal of this checklist isn’t just a nicer score in a lab tool. When you systematically improve your WordPress Core Web Vitals, you usually see:
+                                </p>
+                                <ul>
+                                    <li><strong>Higher conversion rate:</strong> Visitors stop abandoning pages before key content loads.</li>
+                                    <li><strong>Lower bounce rate:</strong> Users stay longer, consume more content, and browse more pages.</li>
+                                    <li><strong>Better ad and campaign performance:</strong> Faster landing pages improve Quality Score, which can reduce CPC on Google and Meta.</li>
+                                    <li><strong>Stronger SEO:</strong> Stable Core Web Vitals support your long-term organic rankings and crawl efficiency.</li>
+                                </ul>
+
+                                <h2 id="section-7">7. DIY fixes vs hiring a WordPress speed expert</h2>
+                                <p>
+                                    Many checklist items — plugin cleanup, basic image compression, and simple caching — are safe to handle yourself. But other tasks, especially those that touch PHP, theme files, JavaScript, or database structure, can break layouts or cause downtime if done incorrectly.
+                                </p>
+                                <p>
+                                    If your site is a key revenue channel, or you’re running paid ads to slow pages, consider working with a specialist. A good partner offering <strong>WordPress speed optimization services</strong> will:
+                                </p>
+                                <ul>
+                                    <li>Run a detailed audit and explain findings in plain language.</li>
+                                    <li>Follow a safe deployment process with backups and staging.</li>
+                                    <li>Focus on measurable metrics (Core Web Vitals, load time, conversions).</li>
+                                    <li>Provide a transparent before/after report so you can see the ROI.</li>
+                                </ul>
+                                <p>
+                                    At FASTRANK, we provide a structured <strong>WordPress performance optimization</strong> process and dedicated plans for site owners who want expert help instead of spending weeks debugging plugins and scripts themselves. You can <a href="../index.html#pricing" class="text-purple-400 hover:text-purple-300 underline transition">view our WordPress optimization plans</a> if you’d rather <strong>hire a WordPress speed expert</strong> than go through every step alone.
+                                </p>
+
+                                <h2 id="section-8">8. Frequently asked questions</h2>
+                                <p>
+                                    Here are some of the most common questions we hear from site owners going through this WordPress Core Web Vitals checklist for the first time.
+                                </p>
+
+                                <div class="blog-faq-grid mt-4">
+                                    <details class="blog-faq-item">
+                                        <summary>
+                                            <span class="blog-faq-question">How do I know which plugins are actually slowing my WordPress site?</span>
+                                            <svg class="blog-faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </summary>
+                                        <p>Start by cloning your site to a staging environment. Disable one plugin group at a time and re-run your speed tests. Plugins that inject large JavaScript bundles, external fonts, or multiple tracking scripts are usually the first culprits when we fix slow WordPress websites.</p>
+                                    </details>
+
+                                    <details class="blog-faq-item">
+                                        <summary>
+                                            <span class="blog-faq-question">Is switching themes enough to fix bad Core Web Vitals?</span>
+                                            <svg class="blog-faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </summary>
+                                        <p>A faster theme can help, but it won’t solve problems caused by plugins, large images, or third-party scripts. Treat a theme change as one piece of your optimization process, not a silver bullet.</p>
+                                    </details>
+
+                                    <details class="blog-faq-item">
+                                        <summary>
+                                            <span class="blog-faq-question">How often should I repeat this Core Web Vitals checklist?</span>
+                                            <svg class="blog-faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </summary>
+                                        <p>Run a mini-audit every time you install a major new plugin, change themes, or add heavy marketing scripts. For most WordPress sites, a full review of this checklist every 3–4 months keeps performance healthy.</p>
+                                    </details>
+
+                                    <details class="blog-faq-item">
+                                        <summary>
+                                            <span class="blog-faq-question">Can every WordPress site reach a 100/100 performance score?</span>
+                                            <svg class="blog-faq-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </summary>
+                                        <p>In practice, no. Real-world sites rely on essential plugins, analytics, and third-party tools. A realistic goal is a stable score in the 80–95 range on mobile with green Core Web Vitals. That’s more than enough for great UX and strong SEO.</p>
+                                    </details>
+                                </div>
+
+                                <h2 id="section-9">9. How to get started with WordPress performance optimization</h2>
+                                <p>
+                                    If this feels like a lot, remember you don’t need to tackle every point in one day. Start with the easiest wins: plugins, images, and obvious layout issues. Then work your way toward deeper technical changes like critical CSS, server tuning, and script deferral.
+                                </p>
+                                <ul>
+                                    <li>Use this article as your working checklist and tick off items as you go.</li>
+                                    <li>Keep before/after screenshots and reports so you can see how much faster your site becomes.</li>
+                                    <li>Share the checklist with your developer or agency so everyone is aligned on priorities.</li>
+                                </ul>
+                                <p>
+                                    And if you’d rather have an expert handle everything, our team at FASTRANK offers a structured <strong>WordPress site speed optimization</strong> service with clear pricing, guaranteed improvements, and a detailed before/after report. If you also run a Shopify store, you can pair this article with our <a href="/blog/how-to-fix-slow-shopify-store-full-checklist/" class="text-purple-400 hover:text-purple-300 underline">Shopify speed optimization checklist</a> to keep both platforms fast.
+                                </p>
+
+                            </div>
+
+                            <!-- CTA section under the article -->
+                            <div class="mt-12 pt-10 border-t border-slate-800/60 blog-post-cta">
+                                <div class="rounded-2xl bg-gradient-to-br from-purple-600/10 via-purple-500/5 to-transparent border border-purple-500/30 p-8 md:p-10">
+                                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                                        <div class="flex-1 text-center md:text-left">
+                                            <h3 class="text-2xl md:3xl font-bold text-slate-50 mb-3">
+                                                Fixed some issues but Core Web Vitals still red?
+                                            </h3>
+                                            <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                                                We turn this checklist into a done-for-you service — from deep audit to implementation — so your WordPress site loads fast and stays fast without guesswork or plugin roulette.
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col items-center md:items-end gap-4 md:flex-shrink-0">
+                                            <a href="../index.html#pricing" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-purple-600 hover:bg-purple-500 rounded-full shadow-lg shadow-purple-500/50 hover:shadow-purple-400/60 transition-all duration-200">
+                                                See WordPress Speed Plans →
+                                            </a>
+                                            <a href="/blog/" class="inline-flex items-center text-sm text-slate-400 hover:text-slate-200 transition duration-150">
+                                                ← Back to all articles
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- About Fastrank - E-E-A-T Block -->
+                            <div class="mt-16 pt-8 border-t border-slate-800/60">
+                                <div class="max-w-3xl">
+                                    <h3 class="text-lg font-semibold text-slate-100 mb-3">About Fastrank</h3>
+                                    <p class="text-sm text-slate-400 leading-relaxed">
+                                        Fastrank specializes in speed optimization for WordPress, WooCommerce, and Shopify stores. Our team has optimized hundreds of websites, improving Core Web Vitals scores by an average of 40+ points and increasing conversion rates by 15–30%. We use safe, white-hat techniques and provide detailed before/after reports with every optimization project.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Site footer -->
+        <footer>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Footer links -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
+
+                    <!-- Logo + address -->
+                    <div>
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img src="../images/fastrank-logo.svg" alt="Fastrank logo" class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4" />
+                        </a>
+                        <div class="flex flex-col gap-2 text-slate-300 text-sm">
+                            <span class="font-semibold text-slate-100">Cadunlock LLC</span>
+                            <span>131 Continental Dr, Suite 305</span>
+                            <span>Newark, DE 19713, United States</span>
+                            <span>Phone: +1 (302) 294-9394</span>
+                            <a href="mailto:support@fastrank.io" class="hover:text-white transition">support@fastrank.io</a>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/">Services</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../get-report.html">Free Speed Report</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../about.html">Our Expertise</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legals -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../refund-policy.html">Refund policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../terms-of-service.html">Terms of Service</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../privacy-policy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+                    © 2025 Cadunlock LLC. All rights reserved.
+                </p>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JS -->
+    <script src="../js/vendors/alpinejs.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    
+    <!-- Blog TOC Toggle -->
+    <script>
+    (function() {
+        const tocToggle = document.querySelector('.blog-toc-toggle');
+        const tocList = document.querySelector('.blog-toc-list');
+        const tocIcon = document.querySelector('.blog-toc-icon');
+        
+        if (tocToggle && tocList && tocIcon) {
+            // Set initial state - closed on mobile
+            if (window.innerWidth < 768) {
+                tocList.classList.add('hidden');
+                tocIcon.style.transform = 'rotate(0deg)';
+            }
+            
+            tocToggle.addEventListener('click', function() {
+                // Only work on mobile
+                if (window.innerWidth < 768) {
+                    const isHidden = tocList.classList.contains('hidden');
+                    tocList.classList.toggle('hidden');
+                    tocToggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+                    // Rotate chevron: 0deg = closed (pointing down), 180deg = open (pointing up)
+                    tocIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        }
+    })();
+    </script>
+</body>
+
+</html>
