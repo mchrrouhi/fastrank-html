@@ -5153,3 +5153,37 @@
   font-size: 0.9rem;
   line-height: 1.6;
 }
+/* Back-to-top button (global) */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 108px; /* above Crisp chat bubble */
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.9), rgba(99,102,241,0.9));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(124,58,237,0.35);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease, filter 150ms ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+.back-to-top:hover { filter: brightness(1.06); }
+.back-to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top svg { width: 20px; height: 20px; }
+@media (max-width: 640px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 132px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: none; }
+}

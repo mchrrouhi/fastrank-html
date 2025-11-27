@@ -347,3 +347,58 @@ const highlighters = document.querySelectorAll('[data-highlighter]');
 highlighters.forEach((highlighter) => {
   new Highlighter(highlighter);
 });
+
+// Global Back-to-Top button (avoids Crisp chat bubble)
+(function() {
+  // Create button element
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('type', 'button');
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5" />
+      <path d="M5 12l7-7 7 7" />
+    </svg>
+  `;
+
+  // Smooth scroll to top
+  btn.addEventListener('click', () => {
+    try {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (_) {
+      // Fallback for very old browsers
+      window.scrollTo(0, 0);
+    }
+  });
+
+  // Insert into DOM once body is ready
+  const insert = () => document.body && document.body.appendChild(btn);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', insert, { once: true });
+  } else {
+    insert();
+  }
+
+  // Show/Hide based on scroll distance
+  const toggle = () => {
+    if (window.scrollY > 600) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  };
+
+  // Keep above Crisp chat bubble on all devices
+  const adjustForChat = () => {
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    // Default offset above chat bubble (~24px from bottom). Place ~100-130px higher.
+    btn.style.bottom = isMobile ? '132px' : '108px';
+    btn.style.right = isMobile ? '16px' : '24px';
+  };
+
+  adjustForChat();
+  toggle();
+  window.addEventListener('scroll', toggle, { passive: true });
+  window.addEventListener('resize', adjustForChat, { passive: true });
+})();
