@@ -155,7 +155,7 @@
                                 <h1 itemprop="headline" class="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] leading-snug md:leading-tight font-extrabold tracking-tight text-slate-100 mb-4">
                                     Shopify Speed Optimization Guide (2025)
                                 </h1>
-                                <p class="text-base md:text-lg text-slate-300 max-w-2xl" itemprop="description">
+                                <p class="text-base md:text-lg text-slate-100 max-w-2xl" itemprop="description">
                                     A comprehensive, step-by-step guide to improving your Shopify store's speed, Core Web Vitals, and overall performance—without breaking your theme or losing conversions.
                                 </p>
                             </header>
@@ -236,7 +236,12 @@
                                 <p>After auditing hundreds of Shopify stores, we see the same bottlenecks over and over. Here are the top culprits:</p>
                                 <h3>2.1. Too many third-party apps</h3>
                                 <p>Every Shopify app injects its own JavaScript and CSS into your store. Apps like review widgets, pop-ups, chat tools, and analytics trackers can add 500KB–2MB of code, blocking the main thread and delaying interactivity.</p>
-                                text-sm text-slate-100"><a href="/blog/best-shopify-apps-that-slow-down-your-store-2025-analysis/" class="text-purple-400 hover:text-purple-300 underline">See our 2025 analysis of which app categories slow down Shopify stores most →</a></p>
+                                <p class="text-sm text-slate-100">
+                                  <a href="/blog/best-shopify-apps-that-slow-down-your-store-2025-analysis/"
+                                     class="text-purple-400 hover:text-purple-300 underline">
+                                    See our 2025 analysis of which app categories slow down Shopify stores most →
+                                  </a>
+                                </p>
 
                                 <h3>2.2. Unoptimized images</h3>
                                 <p>Product images shot on high-res cameras are often uploaded at 5MB+ per image. Without lazy loading, WebP conversion, or responsive srcset, these images crush your Largest Contentful Paint (LCP) score.</p>
@@ -249,11 +254,27 @@
 
                                 <h2 id="audit-performance">3. How to audit your Shopify store's performance</h2>
                                 <p>Before you start optimizing, you need a baseline. Here's how to run a proper speed audit:</p>
-                                <ol>
-                                    <li class="text-slate-100"><strong>Use Google PageSpeed Insights:</strong> Test your homepage, a product page, and a collection page. Look at the Core Web Vitals section (LCP, CLS, INP) and the Opportunities tab for quick wins.</li>
-                                    <li class="text-slate-100"><strong>Check Chrome DevTools:</strong> Open the Performance tab, record a page load, and identify long tasks (anything over 50ms). Look for third-party scripts hogging the main thread.</li>
-                                    <li class="text-slate-100"><strong>Run a waterfall analysis:</strong> Use WebPageTest.org or GTmetrix to see which resources are loading slowly, which are render-blocking, and where you have too many requests.</li>
-                                    <li class="text-slate-100"><strong>Test on real devices:</strong> Use your phone on a 3G connection to experience what your mobile customers see. Desktop scores don't tell the full story.</li>
+                                <ol class="list-decimal list-outside space-y-2 pl-5">
+                                  <li>
+                                    Test your homepage, a product page, and a collection page.
+                                    Look at the Core Web Vitals section (LCP, CLS, INP) and the
+                                    Opportunities tab for quick wins.
+                                  </li>
+                                  <li>
+                                    Open Chrome DevTools → Performance tab, record a page load, and
+                                    identify long tasks (anything over 50 ms). Look for third-party
+                                    scripts hogging the main thread.
+                                  </li>
+                                  <li>
+                                    Run a waterfall analysis with WebPageTest.org or GTmetrix to see
+                                    which resources are loading slowly, which are render-blocking, and
+                                    where you have too many requests.
+                                  </li>
+                                  <li>
+                                    Test on real devices: use your phone on a 3G-like connection to see
+                                    what mobile customers experience. Desktop scores don't tell the full
+                                    story.
+                                  </li>
                                 </ol>
                                 <p class="text-sm text-slate-100 mt-3"><a href="/blog/shopify-core-web-vitals-why-your-store-is-slowing-down-and-how-to-fix-it/" class="text-purple-400 hover:text-purple-300 underline">Deep dive into Shopify Core Web Vitals: what they mean and how to fix them →</a></p>
 
