@@ -348,6 +348,34 @@ highlighters.forEach((highlighter) => {
   new Highlighter(highlighter);
 });
 
+// Make blog index card CTA "Read article →" clickable
+(function() {
+  const enhanceCTAs = () => {
+    // Only on blog index page
+    const isBlogIndex = /\/blog\/?$/.test(location.pathname) || /\/blog\/index\.html$/.test(location.pathname);
+    if (!isBlogIndex) return;
+    const articles = document.querySelectorAll('section#shopify article, section#wordpress article, section#core-web-vitals article');
+    articles.forEach(article => {
+      const titleLink = article.querySelector('h3 a');
+      const ctaSpan = Array.from(article.querySelectorAll('span')).find(s => /Read article\s*→/.test(s.textContent));
+      if (titleLink && ctaSpan) {
+        const href = titleLink.getAttribute('href');
+        // Replace span with anchor preserving classes and text
+        const ctaAnchor = document.createElement('a');
+        ctaAnchor.setAttribute('href', href);
+        ctaAnchor.setAttribute('class', ctaSpan.getAttribute('class') || 'inline-flex items-center text-sm font-medium');
+        ctaAnchor.textContent = ctaSpan.textContent;
+        ctaSpan.replaceWith(ctaAnchor);
+      }
+    });
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', enhanceCTAs, { once: true });
+  } else {
+    enhanceCTAs();
+  }
+})();
+
 // Global Back-to-Top button (avoids Crisp chat bubble)
 (function() {
   // Create button element
