@@ -351,16 +351,15 @@ highlighters.forEach((highlighter) => {
 // Make blog index card CTA "Read article →" clickable
 (function() {
   const enhanceCTAs = () => {
-    // Only on blog index page
-    const isBlogIndex = /\/blog\/?$/.test(location.pathname) || /\/blog\/index\.html$/.test(location.pathname);
-    if (!isBlogIndex) return;
+    const sections = document.querySelectorAll('section#shopify, section#wordpress, section#core-web-vitals');
+    if (sections.length === 0) return;
     const articles = document.querySelectorAll('section#shopify article, section#wordpress article, section#core-web-vitals article');
     articles.forEach(article => {
       const titleLink = article.querySelector('h3 a');
-      const ctaSpan = Array.from(article.querySelectorAll('span')).find(s => /Read article\s*→/.test(s.textContent));
+      // Look for any span containing "Read article" text
+      const ctaSpan = Array.from(article.querySelectorAll('span')).find(s => (s.textContent || '').trim().startsWith('Read article'));
       if (titleLink && ctaSpan) {
         const href = titleLink.getAttribute('href');
-        // Replace span with anchor preserving classes and text
         const ctaAnchor = document.createElement('a');
         ctaAnchor.setAttribute('href', href);
         ctaAnchor.setAttribute('class', ctaSpan.getAttribute('class') || 'inline-flex items-center text-sm font-medium');
@@ -370,7 +369,7 @@ highlighters.forEach((highlighter) => {
     });
   };
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', enhanceCTAs, { once: true });
+    document.addEventListener('DOMContentLoaded', enhanceCTAs);
   } else {
     enhanceCTAs();
   }
