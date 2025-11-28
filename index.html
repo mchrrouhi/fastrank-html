@@ -1112,36 +1112,6 @@
     <script src="./js/vendors/aos.js"></script>
     <script src="./js/vendors/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
-<script>
-  // Lazy-load Crisp after main content loads
-  window.$crisp = [];
-  window.CRISP_WEBSITE_ID = "883b2d77-164f-457f-add0-22394a2a3bb2";
-
-  (function () {
-    var loaded = false;
-
-    function loadCrisp() {
-      if (loaded) return;
-      loaded = true;
-
-      var d = document;
-      var s = d.createElement("script");
-      s.src = "https://client.crisp.chat/l.js";
-      s.async = true;
-      s.defer = true;
-      d.getElementsByTagName("head")[0].appendChild(s);
-    }
-
-    // load only after page is ready
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(loadCrisp);
-    } else {
-      window.addEventListener("load", function () {
-        setTimeout(loadCrisp, 1500);
-      });
-    }
-  })();
-</script>
 
 </body>
 
