@@ -33,9 +33,16 @@
     <meta name="twitter:title" content="Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank">
     <meta name="twitter:description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
     <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
-    <link href="./css/vendors/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
-    <link href="./style.css" rel="stylesheet">
+<!-- Preload critical CSS -->
+<link rel="preload" href="./style.css" as="style" />
+<link rel="stylesheet" href="./style.css" />
+
+<!-- Lazy-load AOS + Swiper CSS -->
+<link rel="preload" href="./css/vendors/swiper-bundle.min.css" as="style" />
+<link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" media="print" onload="this.media='all'">
+
+<link rel="preload" href="./css/vendors/aos.css" as="style" />
+<link rel="stylesheet" href="./css/vendors/aos.css" media="print" onload="this.media='all'">
     <!-- Crisp Live Chat -->
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <!-- Google Ads tag (gtag.js) -->
