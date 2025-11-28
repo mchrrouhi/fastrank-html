@@ -382,7 +382,7 @@ highlighters.forEach((highlighter) => {
 
   // Show/Hide based on scroll distance
   const toggle = () => {
-    if (window.scrollY > 600) {
+    if (window.scrollY > 200) {
       btn.classList.add('show');
     } else {
       btn.classList.remove('show');
