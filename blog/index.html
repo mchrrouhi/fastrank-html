@@ -81,6 +81,36 @@
 	.cta-highlight { padding-top: 1.5rem; }
 	@media (min-width:768px){ .cta-highlight { padding-top: 2rem; } }
 	.cta-highlight h2 { margin-top: 0; }
+
+	/* Category header enhancements */
+	.category-head { position:relative; padding:1.25rem 1.5rem; border-radius:1rem; background:linear-gradient(140deg,#1e293b,#0f172a 70%); border:1px solid rgba(148,163,184,0.15); box-shadow:0 4px 20px -6px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,58,237,0.08) inset; }
+	@media (min-width:768px){ .category-head { padding:1.5rem 1.75rem; } }
+	.category-head::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(124,58,237,0.18), transparent 65%); pointer-events:none; }
+	#wordpress .category-head::before { background:radial-gradient(circle at 18% 30%, rgba(37,99,235,0.18), transparent 65%); }
+	#core-web-vitals .category-head::before { background:radial-gradient(circle at 18% 30%, rgba(22,163,74,0.18), transparent 65%); }
+	.category-head h2 { margin:0; background:linear-gradient(90deg,#ffffff,#cbd5e1 60%); -webkit-background-clip:text; color:transparent; letter-spacing:-0.5px; }
+	.category-head p { margin-top:0.6rem; color:#94a3b8; }
+	.category-head > div:first-child span { background:rgba(0,0,0,0.25); border:1px solid rgba(148,163,184,0.25); box-shadow:0 0 0 1px rgba(255,255,255,0.04) inset; }
+	.category-head:hover { box-shadow:0 6px 26px -8px rgba(0,0,0,0.6), 0 0 0 1px rgba(124,58,237,0.18) inset; }
+
+	/* Apply category-head styling to existing intro blocks without changing HTML */
+	#shopify > div > div.flex.items-center.gap-4.mb-10,
+	#wordpress > div > div.flex.items-center.gap-4.mb-10,
+	#core-web-vitals > div > div.flex.items-center.gap-4.mb-10 { position:relative; padding:1.25rem 1.5rem; border-radius:1rem; background:linear-gradient(140deg,#1e293b,#0f172a 70%); border:1px solid rgba(148,163,184,0.15); box-shadow:0 4px 20px -6px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,58,237,0.08) inset; }
+	@media (min-width:768px){ #shopify > div > div.flex.items-center.gap-4.mb-10,
+	#wordpress > div > div.flex.items-center.gap-4.mb-10,
+	#core-web-vitals > div > div.flex.items-center.gap-4.mb-10 { padding:1.5rem 1.75rem; } }
+	#shopify > div > div.flex.items-center.gap-4.mb-10::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(124,58,237,0.18), transparent 65%); pointer-events:none; }
+	#wordpress > div > div.flex.items-center.gap-4.mb-10::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(37,99,235,0.18), transparent 65%); pointer-events:none; }
+	#core-web-vitals > div > div.flex.items-center.gap-4.mb-10::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(22,163,74,0.18), transparent 65%); pointer-events:none; }
+	#shopify h2, #wordpress h2, #core-web-vitals h2 { margin:0; background:linear-gradient(90deg,#ffffff,#cbd5e1 60%); -webkit-background-clip:text; color:transparent; letter-spacing:-0.5px; }
+	#shopify h2 + p, #wordpress h2 + p, #core-web-vitals h2 + p { margin-top:0.6rem !important; color:#94a3b8 !important; }
+	#shopify > div > div.flex.items-center.gap-4.mb-10 > div.flex-shrink-0 span,
+	#wordpress > div > div.flex.items-center.gap-4.mb-10 > div.flex-shrink-0 span,
+	#core-web-vitals > div > div.flex.items-center.gap-4.mb-10 > div.flex-shrink-0 span { background:rgba(0,0,0,0.25); border:1px solid rgba(148,163,184,0.25); box-shadow:0 0 0 1px rgba(255,255,255,0.04) inset; }
+	#shopify > div > div.flex.items-center.gap-4.mb-10:hover,
+	#wordpress > div > div.flex.items-center.gap-4.mb-10:hover,
+	#core-web-vitals > div > div.flex.items-center.gap-4.mb-10:hover { box-shadow:0 6px 26px -8px rgba(0,0,0,0.6), 0 0 0 1px rgba(124,58,237,0.18) inset; }
 </style>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement('script');s.src='https://client.crisp.chat/l.js';s.async=1;d.getElementsByTagName('head')[0].appendChild(s);})();</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
