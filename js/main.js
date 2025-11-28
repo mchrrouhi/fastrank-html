@@ -373,6 +373,13 @@ highlighters.forEach((highlighter) => {
           ctaSpan.setAttribute('tabindex', '0');
           ctaSpan.addEventListener('click', () => { location.href = href; });
           ctaSpan.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.href = href; } });
+          // Add a real anchor next to the span and hide the span to guarantee clickability
+          const realAnchor = document.createElement('a');
+          realAnchor.setAttribute('href', href);
+          realAnchor.setAttribute('class', ctaSpan.getAttribute('class') || 'inline-flex items-center text-sm font-medium');
+          realAnchor.textContent = ctaSpan.textContent;
+          ctaSpan.insertAdjacentElement('afterend', realAnchor);
+          ctaSpan.style.display = 'none';
         }
       }
     });
