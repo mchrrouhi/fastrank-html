@@ -94,4 +94,24 @@
 <script src="../js/vendors/alpinejs.min.js" defer></script>
 <script src="../js/main.js" defer></script>
 </body>
+<script>
+// Immediate CTA span -> anchor conversion (runs without defer)
+(function(){
+	const articles = document.querySelectorAll('section#shopify article, section#wordpress article, section#core-web-vitals article');
+	articles.forEach(article => {
+		const titleLink = article.querySelector('h3 a');
+		const ctaSpan = Array.from(article.querySelectorAll('span')).find(s => (s.textContent||'').trim().startsWith('Read article'));
+		if(titleLink && ctaSpan){
+			const a = document.createElement('a');
+			a.href = titleLink.getAttribute('href');
+			a.className = ctaSpan.className || 'inline-flex items-center text-sm font-medium';
+			a.textContent = ctaSpan.textContent;
+			a.style.position='relative';
+			a.style.zIndex='2';
+			ctaSpan.replaceWith(a);
+		}
+	});
+})();
+</script>
+</body>
 </html>
