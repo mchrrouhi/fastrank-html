@@ -2,111 +2,129 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);} 
-            gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date());
+        gtag('config', 'G-EZ9KWQEM4F');
+    </script>
 
-            gtag('config', 'G-EZ9KWQEM4F');
-        </script>
-        <!-- Cookiebot -->
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3a3581e5-019e-48bb-806f-24f31fbd1959" type="text/javascript" async></script>
+    <!-- Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17714543566"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17714543566');
+    </script>
+
+    <!-- Cookiebot (keep async) -->
+    <script 
+        id="Cookiebot" 
+        src="https://consent.cookiebot.com/uc.js" 
+        data-cbid="3a3581e5-019e-48bb-806f-24f31fbd1959" 
+        type="text/javascript" 
+        async>
+    </script>
+
     <meta charset="utf-8">
     <title>Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank</title>
     <meta name="description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
     <link rel="canonical" href="https://fastrank.io/" />
+
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank">
     <meta property="og:description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
     <meta property="og:url" content="https://fastrank.io/">
     <meta property="og:image" content="https://fastrank.io/images/fastrank-logo.svg">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank">
     <meta name="twitter:description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
     <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
+
+    <!-- CSS -->
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" />
     <link href="./style.css" rel="stylesheet">
-    <!-- Crisp Live Chat -->
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17714543566"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
 
-            gtag('config', 'AW-17714543566');
-        </script>
-    <!-- Favicon -->
+    <!-- ⚠️ Crisp Chat was removed from HEAD (moved to lazy-load at bottom) -->
+
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Schema.org -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://fastrank.io/#organization",
-      "name": "Cadunlock LLC",
-      "url": "https://fastrank.io/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://fastrank.io/images/fastrank-logo.svg"
-      },
-      "telephone": "+1-302-294-9394",
-      "email": "support@fastrank.io",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "131 Continental Dr, Suite 305",
-        "addressLocality": "Newark",
-        "addressRegion": "DE",
-        "postalCode": "19713",
-        "addressCountry": "US"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://fastrank.io/#website",
-      "url": "https://fastrank.io/",
-      "name": "Fastrank",
-      "publisher": {
-        "@id": "https://fastrank.io/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://fastrank.io/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://fastrank.io/#breadcrumb",
-      "itemListElement": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://fastrank.io/"
+          "@type": "Organization",
+          "@id": "https://fastrank.io/#organization",
+          "name": "Cadunlock LLC",
+          "url": "https://fastrank.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://fastrank.io/images/fastrank-logo.svg"
+          },
+          "telephone": "+1-302-294-9394",
+          "email": "support@fastrank.io",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "131 Continental Dr, Suite 305",
+            "addressLocality": "Newark",
+            "addressRegion": "DE",
+            "postalCode": "19713",
+            "addressCountry": "US"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://fastrank.io/#website",
+          "url": "https://fastrank.io/",
+          "name": "Fastrank",
+          "publisher": {
+            "@id": "https://fastrank.io/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://fastrank.io/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://fastrank.io/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://fastrank.io/"
+            }
+          ]
         }
       ]
     }
-  ]
-}
-</script>
+    </script>
+
 </head>
 
 <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
