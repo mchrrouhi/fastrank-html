@@ -30,6 +30,19 @@
 	.flex.flex-wrap.justify-center.gap-4 > a:nth-child(3) { background: #16a34a; box-shadow: 0 8px 24px rgba(22,163,74,0.25); }
 	.flex.flex-wrap.justify-center.gap-4 > a:hover { filter: brightness(1.05); }
 	@media (min-width: 768px) { .flex.flex-wrap.justify-center.gap-4 > a { font-size: 0.95rem; } }
+
+	/* Responsive label + reading-time spacing on cards */
+	.grid .group > .flex.items-start { flex-wrap: wrap; column-gap: 0.5rem; row-gap: 0.35rem; }
+	.grid .group > .flex.items-start .inline-flex.rounded-full { white-space: nowrap; }
+	.grid .group > .flex.items-start .text-xs.text-slate-500 { margin-left: 0.25rem; }
+	@media (min-width: 640px) {
+		.grid .group > .flex.items-start { column-gap: 0.6rem; }
+		.grid .group > .flex.items-start .text-xs.text-slate-500 { margin-left: 0.35rem; }
+	}
+	@media (min-width: 768px) {
+		.grid .group > .flex.items-start { column-gap: 0.7rem; }
+		.grid .group > .flex.items-start .text-xs.text-slate-500 { margin-left: 0.4rem; }
+	}
 	/* Refined section divider: remove hard border and add subtle gradient hairline */
 	section.border-t { position: relative; margin-top: 3rem; border-top: 0; }
 	section.border-t::before {
