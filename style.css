@@ -5187,3 +5187,34 @@
 @media (prefers-reduced-motion: reduce) {
   .back-to-top { transition: none; }
 }
+
+/* Blog Post CTA Button Styles */
+.blog-post-cta .btn-cta-primary,
+.blog-post-cta .btn-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+  transition: all 200ms ease;
+}
+
+/* Purple Button */
+.blog-post-cta .btn-cta-primary {
+  background-color: #7c3aed;
+}
+.blog-post-cta .btn-cta-primary:hover {
+  background-color: #8b5cf6;
+}
+
+/* Blue Button */
+.blog-post-cta .btn-cta-secondary {
+  background-color: #2563eb;
+}
+.blog-post-cta .btn-cta-secondary:hover {
+  background-color: #3b82f6;
+}
