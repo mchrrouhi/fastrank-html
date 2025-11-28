@@ -360,11 +360,20 @@ highlighters.forEach((highlighter) => {
       const ctaSpan = Array.from(article.querySelectorAll('span')).find(s => (s.textContent || '').trim().startsWith('Read article'));
       if (titleLink && ctaSpan) {
         const href = titleLink.getAttribute('href');
-        const ctaAnchor = document.createElement('a');
-        ctaAnchor.setAttribute('href', href);
-        ctaAnchor.setAttribute('class', ctaSpan.getAttribute('class') || 'inline-flex items-center text-sm font-medium');
-        ctaAnchor.textContent = ctaSpan.textContent;
-        ctaSpan.replaceWith(ctaAnchor);
+        try {
+          const ctaAnchor = document.createElement('a');
+          ctaAnchor.setAttribute('href', href);
+          ctaAnchor.setAttribute('class', ctaSpan.getAttribute('class') || 'inline-flex items-center text-sm font-medium');
+          ctaAnchor.textContent = ctaSpan.textContent;
+          ctaSpan.replaceWith(ctaAnchor);
+        } catch (_) {
+          // Fallback: make span behave like a link
+          ctaSpan.style.cursor = 'pointer';
+          ctaSpan.setAttribute('role', 'link');
+          ctaSpan.setAttribute('tabindex', '0');
+          ctaSpan.addEventListener('click', () => { location.href = href; });
+          ctaSpan.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.href = href; } });
+        }
       }
     });
   };
