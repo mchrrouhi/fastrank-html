@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <title>Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank</title>
+    <meta name="description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fastrank.io/" />
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank">
+    <meta property="og:description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
+    <meta property="og:url" content="https://fastrank.io/">
+    <meta property="og:image" content="https://fastrank.io/images/fastrank-logo.svg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Speed Optimization for WordPress, WooCommerce & Shopify | Fastrank">
+    <meta name="twitter:description" content="We fix slow WordPress, WooCommerce and Shopify sites by improving PageSpeed and Core Web Vitals with safe, white-hat performance optimization.">
+    <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
+<!-- Preload critical CSS -->
+<link rel="preload" href="./style.css" as="style" />
+<link rel="stylesheet" href="./style.css" />
+
+<!-- Lazy-load AOS + Swiper CSS -->
+<link rel="preload" href="./css/vendors/swiper-bundle.min.css" as="style" />
+<link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" media="print" onload="this.media='all'">
+
+<link rel="preload" href="./css/vendors/aos.css" as="style" />
+<link rel="stylesheet" href="./css/vendors/aos.css" media="print" onload="this.media='all'">
+<!-- Fallback for users with JS disabled -->
+<noscript>
+  <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/vendors/aos.css">
+</noscript>
+<!-- Crisp Live Chat -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fastrank.io/#organization",
+      "name": "Cadunlock LLC",
+      "url": "https://fastrank.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://fastrank.io/images/fastrank-logo.svg"
+      },
+      "telephone": "+1-302-294-9394",
+      "email": "support@fastrank.io",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "131 Continental Dr, Suite 305",
+        "addressLocality": "Newark",
+        "addressRegion": "DE",
+        "postalCode": "19713",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fastrank.io/#website",
+      "url": "https://fastrank.io/",
+      "name": "Fastrank",
+      "publisher": {
+        "@id": "https://fastrank.io/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://fastrank.io/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://fastrank.io/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fastrank.io/"
+        }
+      ]
+    }
+  ]
+}
+<!-- Google Tag (Global site tag - gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  /* Google Analytics */
+  gtag('config', 'G-EZ9KWQEM4F');
+
+  /* Google Ads Conversion */
+  gtag('config', 'AW-17714543566');
+</script>
+
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="EjNmLeOeDJ1ZJgrx1SjNXw" async></script>
+
+    </script>
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+
+    <!-- Page wrapper -->
+    <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+
+        <!-- Site header -->
+        <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Fastrank">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="blog">Blog</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                    <ul class="flex-1 flex justify-end items-center">
+                        <li class="ml-6">
+                            <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="get-report.html">
+                                <span class="relative inline-flex items-center">
+                                    Get Report <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="#pricing">Pricing</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+<main class="grow">
+
+    <!-- Hero: Shopify Speed Optimization -->
+    <section class="relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700/60 bg-slate-900/60 text-xs text-slate-300 mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    <span>Shopify Speed Optimization · Core Web Vitals · AU · CA · US</span>
+                </div>
+
+                <h1 class="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
+                    Shopify Speed Optimization Service<br class="hidden sm:block">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-emerald-300">
+                        Faster Stores, Better Core Web Vitals
+                    </span>
+                </h1>
+
+                <p class="text-slate-400 text-base md:text-lg mb-6">
+                    We analyze and optimize your Shopify store for real users, not just lab scores. 
+                    Faster load times, better Core Web Vitals, more revenue from the same traffic.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="#pricing"
+                        class="btn text-sm sm:text-base text-slate-900 bg-gradient-to-r from-white/90 via-white to-white/90 hover:bg-white px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2">
+                        Get a 48-Hour Performance Audit
+                        <span class="text-purple-500 translate-x-0.5">→</span>
+                    </a>
+                    <a href="#how-it-works"
+                        class="text-sm sm:text-base text-slate-300 hover:text-white underline underline-offset-4 decoration-slate-600">
+                        See how it works
+                    </a>
+                </div>
+
+                <p class="mt-3 text-xs text-slate-500">
+                    Ideal for Shopify stores in Australia, Canada and the US with real traffic and slow performance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Pain & Outcomes -->
+    <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 lg:pb-12">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <!-- Pain -->
+                <div class="p-6 rounded-2xl border border-slate-800 bg-slate-950/60">
+                    <h2 class="text-sm font-medium text-slate-300 mb-2">
+                        Why merchants book a speed optimization
+                    </h2>
+                    <p class="text-slate-400 text-sm mb-4">
+                        Most Shopify stores we audit have:
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <span class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                            <span>Slow first load on mobile (3–6s+ before anything really shows).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                            <span>Core Web Vitals warnings in PageSpeed Insights or Search Console.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                            <span>App bloat and heavy themes — every new feature makes the store slower.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="mt-1 w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                            <span>Paid traffic (Meta / Google Ads) sending users to slow landing pages.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Outcomes -->
+                <div class="p-6 rounded-2xl border border-slate-800 bg-slate-950/60">
+                    <h2 class="text-sm font-medium text-slate-300 mb-2">
+                        What you can expect after the sprint
+                    </h2>
+                    <p class="text-slate-400 text-sm mb-4">
+                        We don’t promise fake 100/100 scores – we ship realistic, measurable improvements:
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                            </svg>
+                            <span>Improved LCP, CLS and INP across your key templates.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                            </svg>
+                            <span>Leaner theme and app setup – less bloat, faster first paint.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                            </svg>
+                            <span>Dev-ready list of changes you can reuse on other stores.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                            </svg>
+                            <span>Clear before/after report you can show to your team or clients.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 lg:py-10">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
+                    48-Hour Audit → 7-Day Optimization Sprint
+                </h2>
+                <p class="text-sm text-slate-400">
+                    A simple process designed for busy Shopify teams.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-4 text-sm">
+                <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/60">
+                    <div class="text-xs font-medium text-slate-400 mb-1">Step 1</div>
+                    <div class="text-slate-50 font-semibold mb-1">Kickoff form</div>
+                    <p class="text-slate-400">
+                        You send us your store URL, main markets, apps list and biggest performance pain.
+                    </p>
+                </div>
+                <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/60">
+                    <div class="text-xs font-medium text-slate-400 mb-1">Step 2</div>
+                    <div class="text-slate-50 font-semibold mb-1">48-hour audit</div>
+                    <p class="text-slate-400">
+                        We run lab & field tests, review your theme and apps, and build a dev-ready checklist.
+                    </p>
+                </div>
+                <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/60">
+                    <div class="text-xs font-medium text-slate-400 mb-1">Step 3</div>
+                    <div class="text-slate-50 font-semibold mb-1">Optimization sprint</div>
+                    <p class="text-slate-400">
+                        We implement agreed changes on a staging or duplicate theme, then prepare before/after results.
+                    </p>
+                </div>
+                <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/60">
+                    <div class="text-xs font-medium text-slate-400 mb-1">Step 4</div>
+                    <div class="text-slate-50 font-semibold mb-1">Deploy & support</div>
+                    <p class="text-slate-400">
+                        You review, we deploy together, and we stay available for questions & fine-tuning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Packs -->
+    <section id="pricing">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:py-14">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <h2 class="text-xl md:text-2xl font-semibold text-slate-50 mb-2">
+                    Simple, productized Shopify speed packages
+                </h2>
+                <p class="text-sm text-slate-400">
+                    Start small with an audit or book a full optimization sprint. Prices can be adapted per store size.
+                </p>
+            </div>
+
+            <div class="border border-slate-800 rounded-3xl bg-slate-950/60 overflow-hidden">
+                <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-800">
+                    <!-- Pack 1: Audit -->
+                    <div class="px-6 py-6 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-medium text-slate-400 mb-1">
+                                Starter · For testing the waters
+                            </div>
+                            <div class="flex items-baseline gap-1 mb-2">
+                                <span class="text-3xl font-bold text-slate-50">$299</span>
+                                <span class="text-xs text-slate-500">USD · one-time</span>
+                            </div>
+                            <p class="text-sm text-slate-400 mb-3">
+                                48-hour Shopify performance & Core Web Vitals audit, ideal for first-time optimization.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-400">
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Full performance & CWV audit (key templates).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Dev-ready checklist with impact vs effort.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Loom walkthrough to explain every key issue.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#contact"
+                               class="btn-sm w-full text-slate-900 bg-gradient-to-r from-white/85 via-white to-white hover:bg-white transition flex items-center justify-center gap-1">
+                                Book Starter Audit
+                                <span class="text-purple-500">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pack 2: Optimization Sprint (featured) -->
+                    <div class="px-6 py-6 flex flex-col justify-between bg-slate-900/60">
+                        <div>
+                            <div class="inline-flex items-center gap-2 mb-2">
+                                <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wide">Most popular</span>
+                            </div>
+                            <div class="flex items-baseline gap-1 mb-2">
+                                <span class="text-3xl font-bold text-slate-50">$749</span>
+                                <span class="text-xs text-slate-500">USD · one-time</span>
+                            </div>
+                            <p class="text-sm text-slate-300 mb-3">
+                                7-day Shopify speed optimization sprint for growing stores with real revenue.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Everything in Starter Audit included.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Theme & app optimization on key templates.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Core Web Vitals–driven improvements (LCP, CLS, INP).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Before/after report with real test results.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#contact"
+                               class="btn-sm w-full text-white bg-purple-500 hover:bg-purple-600 transition flex items-center justify-center gap-1">
+                                Start Optimization Sprint
+                                <span class="text-purple-200">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pack 3: Plus / Complex -->
+                    <div class="px-6 py-6 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-medium text-slate-400 mb-1">
+                                Advanced · Shopify Plus / complex stores
+                            </div>
+                            <div class="flex items-baseline gap-1 mb-2">
+                                <span class="text-3xl font-bold text-slate-50">From $1,500</span>
+                                <span class="text-xs text-slate-500">USD · scoped</span>
+                            </div>
+                            <p class="text-sm text-slate-400 mb-3">
+                                For high-traffic Shopify or Plus stores with complex themes, apps and international traffic.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-400">
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Deeper profiling of theme, apps and third-party scripts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Support for multiple templates / markets.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="mt-[3px] shrink-0 fill-emerald-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                        <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" />
+                                    </svg>
+                                    <span>Custom scope, roadmap and monitoring plan.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="#contact"
+                               class="btn-sm w-full text-slate-900 bg-gradient-to-r from-white/85 via-white to-white hover:bg-white transition flex items-center justify-center gap-1">
+                                Request Custom Quote
+                                <span class="text-purple-500">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-4 text-center text-[11px] text-slate-500">
+                Prices are indicative and can be adjusted for store size, revenue and markets (AU, CA, US).
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-14">
+            <div class="rounded-3xl border border-slate-800 bg-slate-950/60 p-6 md:p-8 text-center">
+                <h2 class="text-lg md:text-xl font-semibold text-slate-50 mb-2">
+                    Share your Shopify store and get a 48-hour performance review
+                </h2>
+                <p class="text-sm text-slate-400 mb-5">
+                    Send us your store URL, main markets (AU, CA, US) and biggest performance issue. 
+                    We’ll get back with a short Loom and a suggested plan.
+                </p>
+
+                <!-- You can replace this with your real form / Shopify contact form shortcode -->
+                <form class="grid gap-3 text-left max-w-md mx-auto">
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Store URL</label>
+                        <input type="url" class="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="https://yourstore.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Main markets</label>
+                        <input type="text" class="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-purple-500" placeholder="Australia · Canada · US">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Biggest performance issue</label>
+                        <textarea class="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-purple-500" rows="3" placeholder="Slow mobile, CWV warnings, app bloat, theme issues…"></textarea>
+                    </div>
+                    <button type="submit" class="mt-2 btn-sm w-full text-slate-900 bg-gradient-to-r from-white/90 via-white to-white hover:bg-white font-medium">
+                        Send details &amp; request audit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+        <!-- Site footer -->
+        <footer>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Footer blocks -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
+                    
+                    <!-- Logo + Address column -->
+                    <div>
+                        <!-- Logo -->
+                        <a class="inline-flex" href="/" aria-label="fastrank.io">
+                            <img 
+                              src="images/logo.svg" 
+                              alt="Fastrank logo" 
+                              class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4"
+                            />
+                        </a>
+                        
+                        <!-- Company info -->
+                        <div class="flex flex-col gap-2 text-slate-300 text-sm">
+                          <span class="font-semibold text-slate-100">Fastrank by Cadunlock LLC</span>
+                          <span>131 Continental Dr, Suite 305</span>
+                          <span>Newark, DE 19713, United States</span>
+                          <span>Phone: +1 (302) 294-9394</span>
+                          <a href="mailto:support@fastrank.io" class="hover:text-white transition">support@fastrank.io</a>
+                        </div>
+                        
+                        <!-- Social links -->
+                        <ul class="flex mt-4">
+                            <li>
+                                <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Twitter">
+                                    <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Dev.to">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                        <path class="w-8 h-8 fill-current" d="M12.29 14.3a.69.69 0 0 0-.416-.155h-.623v3.727h.623a.689.689 0 0 0 .416-.156.543.543 0 0 0 .21-.466v-2.488a.547.547 0 0 0-.21-.462ZM22.432 8H9.568C8.704 8 8.002 8.7 8 9.564v12.872A1.568 1.568 0 0 0 9.568 24h12.864c.864 0 1.566-.7 1.568-1.564V9.564A1.568 1.568 0 0 0 22.432 8Zm-8.925 9.257a1.631 1.631 0 0 1-1.727 1.687h-1.657v-5.909h1.692a1.631 1.631 0 0 1 1.692 1.689v2.533ZM17.1 14.09h-1.9v1.372h1.163v1.057H15.2v1.371h1.9v1.056h-2.217a.72.72 0 0 1-.74-.7v-4.471a.721.721 0 0 1 .7-.739H17.1v1.054Zm3.7 4.118c-.471 1.1-1.316.88-1.694 0l-1.372-5.172H18.9l1.058 4.064 1.056-4.062h1.164l-1.378 5.17Z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ml-2">
+                                <a class="flex justify-center items-center text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" href="#0" aria-label="Github">
+                                    <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Products column -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#pricing">Pricing &amp; Plans</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="get-report.html">Free Speed Report</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Company column -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/">Home</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="about.html">Our Expertise</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Legals column -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="refund-policy.html">Refund policy</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="terms-of-service.html">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="privacy-policy.html">Privacy policy</a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                </div>
+                
+                <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+                  © 2025 Cadunlock LLC. All rights reserved.
+                </p>
+        
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+    <script src="./js/vendors/aos.js"></script>
+    <script src="./js/vendors/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
