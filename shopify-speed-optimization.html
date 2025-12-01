@@ -265,7 +265,13 @@
                     </div>
 
                     <div class="py-12 md:py-16">
-                        <div class="overflow-hidden">
+                        <!-- Restored dark (noir) styled clients bar with internal gradient -->
+                        <div class="overflow-hidden relative rounded-3xl border border-slate-800/40 bg-slate-900/80 backdrop-blur-sm px-4 py-6 shadow-[0_0_0_1px_rgba(100,116,139,0.25)]">
+                            <!-- Radial gradient background recreation -->
+                            <div class="pointer-events-none absolute inset-0 -z-10">
+                                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] aspect-square rounded-full bg-purple-500/20 blur-[120px]"></div>
+                                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-purple-400/30 blur-[90px]"></div>
+                            </div>
 
                             <div class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                                 <ul class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
