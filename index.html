@@ -811,7 +811,7 @@
                 </div>
             </div>
 
-            <!-- Subtle glow effect -->
+            <!-- Subtle glow like pricing/results -->
             <div class="relative">
                 <div class="max-md:hidden absolute bottom-0 -mb-20 left-2/3 -translate-x-1/2 blur-2xl opacity-70 pointer-events-none" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
@@ -825,703 +825,99 @@
                     </svg>
                 </div>
 
-                <!-- Horizontal scroll container for mobile, grid for desktop -->
-                <div class="relative -mx-5 px-5 sm:mx-0 sm:px-0">
-                    <style>
-                        .scrollbar-hide::-webkit-scrollbar { display: none; }
-                        .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
-                    </style>
-                    
-                    <!-- Mobile: Horizontal scroll with snap -->
-                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 -mx-5 px-5 sm:hidden scrollbar-hide">
-                        
-                        <!-- Fastrank Card - First on mobile (Winner) -->
-                        <div class="flex-none w-[88vw] max-w-sm snap-center">
-                            <div class="relative h-full rounded-2xl border-2 border-purple-500/60 bg-gradient-to-br from-slate-900/95 via-purple-950/40 to-slate-900/95 p-8 backdrop-blur-xl shadow-2xl shadow-purple-500/20">
-                                <!-- Winner badge -->
-                                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full text-xs font-bold text-white shadow-xl tracking-wide">
-                                    ✨ RECOMMENDED
-                                </div>
-                                
-                                <!-- Glow effect -->
-                                <div class="absolute -inset-1 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl blur-xl -z-10"></div>
-                                
-                                <div class="mt-2">
-                                    <div class="text-2xl font-bold text-white mb-1.5">FASTRANK</div>
-                                    <div class="text-sm text-purple-300/80 mb-6 font-medium">Engineering-Grade Solutions</div>
-                                    
-                                    <ul class="space-y-4 text-sm mb-8">
-                                        <li class="flex items-start gap-3 group">
-                                            <div class="shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold mb-0.5">Guaranteed Core Web Vitals</div>
-                                                <div class="text-slate-400 text-xs">Metrics-driven results</div>
-                                            </div>
-                                        </li>
-                                        <li class="flex items-start gap-3 group">
-                                            <div class="shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold mb-0.5">Engineering-Grade Code</div>
-                                                <div class="text-slate-400 text-xs">Safe, rollback-ready</div>
-                                            </div>
-                                        </li>
-                                        <li class="flex items-start gap-3 group">
-                                            <div class="shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold mb-0.5">Transparent Reporting</div>
-                                                <div class="text-slate-400 text-xs">Full before/after benchmarks</div>
-                                            </div>
-                                        </li>
-                                        <li class="flex items-start gap-3 group">
-                                            <div class="shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold mb-0.5">Zero Downtime</div>
-                                                <div class="text-slate-400 text-xs">Expert direct support</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    
-                                    <a href="/get-report/" class="block w-full text-center px-6 py-3.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 text-sm">
-                                        Get Started →
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Speed Apps -->
-                        <div class="flex-none w-[88vw] max-w-sm snap-center">
-                            <div class="h-full rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-800/50 via-slate-900/70 to-slate-800/50 p-8 backdrop-blur">
-                                <div class="text-lg font-bold text-slate-300 mb-6">Speed Apps</div>
-                                <ul class="space-y-4 text-sm text-slate-400">
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <span>Temporary fixes, no guarantee</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <span>Code bloat increases risk</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <span>Basic dashboards only</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                            </svg>
-                                        </div>
-                                        <span>Frequent app conflicts</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Freelancers -->
-                        <div class="flex-none w-[88vw] max-w-sm snap-center">
-                            <div class="h-full rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-800/50 via-slate-900/70 to-slate-800/50 p-8 backdrop-blur">
-                                <div class="text-lg font-bold text-slate-300 mb-6">Freelancers</div>
-                                <ul class="space-y-4 text-sm text-slate-400">
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>Varies, rarely guaranteed</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>Risky for large stores</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>Minimal reporting</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>Can break sites, no rollback</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Agencies -->
-                        <div class="flex-none w-[88vw] max-w-sm snap-center">
-                            <div class="h-full rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-800/50 via-slate-900/70 to-slate-800/50 p-8 backdrop-blur">
-                                <div class="text-lg font-bold text-slate-300 mb-6">Agencies</div>
-                                <ul class="space-y-4 text-sm text-slate-400">
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>Often ignored, focus on design</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>Branding over speed</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>No technical benchmarks</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center">
-                                            <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                            </svg>
-                                        </div>
-                                        <span>May outsource, slow delivery</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <!-- 4-Column Comparison (1/2/4 responsive) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Apps -->
+                    <div class="rounded-3xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 backdrop-blur hover:border-purple-500/30 transition-all duration-300">
+                        <div class="text-sm font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Speed Apps</div>
+                        <ul class="space-y-3 text-sm text-slate-300/85">
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Core Web Vitals:</span> Temporary, unstable fixes—no guarantee</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Code Quality &amp; Safety:</span> Adds code bloat, increases risk</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Reporting:</span> Basic dashboards, no real benchmarks</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Risk &amp; Downtime:</span> Frequent app conflicts, support issues</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <!-- Desktop: Grid layout -->
-                    <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <!-- Fastrank - Winner Card -->
-                        <div class="relative group">
-                            <!-- Animated glow -->
-                            <div class="absolute -inset-2 bg-gradient-to-r from-purple-600/30 via-indigo-600/30 to-purple-600/30 rounded-2xl blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
-                            <div class="relative h-full rounded-2xl border-2 border-purple-500/60 bg-gradient-to-br from-slate-900/95 via-purple-950/40 to-slate-900/95 p-6 backdrop-blur-xl">
-                                <!-- Winner badge -->
-                                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full text-xs font-bold text-white shadow-xl tracking-wide whitespace-nowrap">
-                                    ✨ RECOMMENDED
-                                </div>
-                                
-                                <div class="mt-3">
-                                    <div class="text-xl font-bold text-white mb-1">FASTRANK</div>
-                                    <div class="text-xs text-purple-300/80 mb-5 font-medium">Engineering-Grade Solutions</div>
-                                    
-                                    <ul class="space-y-3.5 text-sm mb-6">
-                                        <li class="flex items-start gap-2.5 group/item">
-                                            <div class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover/item:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold leading-tight">Guaranteed Core Web Vitals</div>
-                                                <div class="text-slate-400 text-xs mt-0.5">Metrics-driven results</div>
-                                            </div>
-                                        </li>
-                                        <li class="flex items-start gap-2.5 group/item">
-                                            <div class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover/item:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold leading-tight">Engineering-Grade Code</div>
-                                                <div class="text-slate-400 text-xs mt-0.5">Safe, rollback-ready</div>
-                                            </div>
-                                        </li>
-                                        <li class="flex items-start gap-2.5 group/item">
-                                            <div class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover/item:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold leading-tight">Transparent Reporting</div>
-                                                <div class="text-slate-400 text-xs mt-0.5">Full benchmarks</div>
-                                            </div>
-                                        </li>
-                                        <li class="flex items-start gap-2.5 group/item">
-                                            <div class="shrink-0 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover/item:bg-emerald-500/30 transition-colors">
-                                                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="text-white font-semibold leading-tight">Zero Downtime</div>
-                                                <div class="text-slate-400 text-xs mt-0.5">Expert support</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    
-                                    <a href="/get-report/" class="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 text-sm">
-                                        Get Started →
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Speed Apps -->
-                        <div class="h-full rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-800/50 via-slate-900/70 to-slate-800/50 p-6 backdrop-blur hover:border-slate-600/60 transition-all duration-300">
-                            <div class="text-base font-bold text-slate-300 mb-5">Speed Apps</div>
-                            <ul class="space-y-3.5 text-sm text-slate-400">
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Temporary fixes, no guarantee</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Code bloat increases risk</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Basic dashboards only</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Frequent app conflicts</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Freelancers -->
-                        <div class="h-full rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-800/50 via-slate-900/70 to-slate-800/50 p-6 backdrop-blur hover:border-slate-600/60 transition-all duration-300">
-                            <div class="text-base font-bold text-slate-300 mb-5">Freelancers</div>
-                            <ul class="space-y-3.5 text-sm text-slate-400">
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Varies, rarely guaranteed</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Risky for large stores</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Minimal reporting</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Can break sites, no rollback</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Agencies -->
-                        <div class="h-full rounded-2xl border border-slate-700/60 bg-gradient-to-br from-slate-800/50 via-slate-900/70 to-slate-800/50 p-6 backdrop-blur hover:border-slate-600/60 transition-all duration-300">
-                            <div class="text-base font-bold text-slate-300 mb-5">Agencies</div>
-                            <ul class="space-y-3.5 text-sm text-slate-400">
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Often ignored, focus on design</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">Branding over speed</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">No technical benchmarks</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
-                                        <svg class="w-3.5 h-3.5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                        </svg>
-                                    </div>
-                                    <span class="leading-tight">May outsource, slow delivery</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Mobile scroll indicator dots -->
-                    <div class="flex justify-center gap-2 mt-6 sm:hidden">
-                        <div class="w-2 h-2 rounded-full bg-purple-500 shadow-sm shadow-purple-500/50"></div>
-                        <div class="w-2 h-2 rounded-full bg-slate-700"></div>
-                        <div class="w-2 h-2 rounded-full bg-slate-700"></div>
-                        <div class="w-2 h-2 rounded-full bg-slate-700"></div>
-                    </div>
-                </div>
-            </div>
-                        
-                        <!-- Fastrank Card - First on mobile (Winner) -->
-                        <div class="flex-none w-[85vw] snap-center">
-                            <div class="relative h-full rounded-3xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-900/20 via-slate-900/60 to-indigo-900/20 p-6 backdrop-blur-xl shadow-[0_0_30px_rgba(168,85,247,0.15)]">
-                                <!-- Winner badge -->
-                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-xs font-bold text-white shadow-lg">
-                                    ✨ RECOMMENDED
-                                </div>
-                                
-                                <div class="mt-3">
-                                    <div class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400 mb-2">FASTRANK</div>
-                                    <div class="text-xs text-purple-300/90 mb-4">Engineering-Grade Speed Solutions</div>
-                                    
-                                    <ul class="space-y-3 text-sm text-slate-200 mb-6">
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Guaranteed Core Web Vitals</span> — Metrics-driven results, not just scores</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Engineering-Grade Code</span> — Safe, rollback-ready implementations</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Transparent Reporting</span> — Full before/after benchmarks</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Zero Downtime</span> — Expert support, direct delivery</span>
-                                        </li>
-                                    </ul>
-                                    
-                                    <a href="/get-report/" class="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
-                                        Get Started →
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Speed Apps -->
-                        <div class="flex-none w-[85vw] snap-center">
-                            <div class="h-full rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-6 backdrop-blur">
-                                <div class="text-base font-semibold text-slate-300 mb-3">Speed Apps</div>
-                                <ul class="space-y-3 text-sm text-slate-400">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Temporary fixes, no guarantee</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Code bloat increases risk</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Basic dashboards only</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Frequent app conflicts</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Freelancers -->
-                        <div class="flex-none w-[85vw] snap-center">
-                            <div class="h-full rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-6 backdrop-blur">
-                                <div class="text-base font-semibold text-slate-300 mb-3">Freelancers</div>
-                                <ul class="space-y-3 text-sm text-slate-400">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Varies, rarely guaranteed</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Risky for large stores</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Minimal reporting</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Can break sites, no rollback</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Agencies -->
-                        <div class="flex-none w-[85vw] snap-center">
-                            <div class="h-full rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-6 backdrop-blur">
-                                <div class="text-base font-semibold text-slate-300 mb-3">Agencies</div>
-                                <ul class="space-y-3 text-sm text-slate-400">
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Often ignored, focus on design</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>Branding over speed</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>No technical benchmarks</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                        </svg>
-                                        <span>May outsource, slow delivery</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <!-- Freelancers -->
+                    <div class="rounded-3xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 backdrop-blur hover:border-purple-500/30 transition-all duration-300">
+                        <div class="text-sm font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Freelancers</div>
+                        <ul class="space-y-3 text-sm text-slate-300/85">
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Core Web Vitals:</span> Varies, rarely guaranteed</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Code Quality &amp; Safety:</span> Depends on individual skills, risky for large stores</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Reporting:</span> Minimal, rarely before/after benchmarks</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Risk &amp; Downtime:</span> Can break sites, no rollback</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <!-- Desktop: Grid layout -->
-                    <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <!-- Fastrank - Winner Card -->
-                        <div class="relative">
-                            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl blur opacity-25"></div>
-                            <div class="relative h-full rounded-3xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-900/20 via-slate-900/60 to-indigo-900/20 p-6 backdrop-blur-xl">
-                                <!-- Winner badge -->
-                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-xs font-bold text-white shadow-lg whitespace-nowrap">
-                                    ✨ RECOMMENDED
-                                </div>
-                                
-                                <div class="mt-3">
-                                    <div class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400 mb-2">FASTRANK</div>
-                                    <div class="text-xs text-purple-300/90 mb-4">Engineering-Grade Speed Solutions</div>
-                                    
-                                    <ul class="space-y-3 text-sm text-slate-200 mb-6">
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Guaranteed Core Web Vitals</span><br/><span class="text-slate-400 text-xs">Metrics-driven results</span></span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Engineering-Grade Code</span><br/><span class="text-slate-400 text-xs">Safe, rollback-ready</span></span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Transparent Reporting</span><br/><span class="text-slate-400 text-xs">Full benchmarks</span></span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <svg class="mt-1 shrink-0 w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                            </svg>
-                                            <span><span class="text-white font-semibold">Zero Downtime</span><br/><span class="text-slate-400 text-xs">Expert support</span></span>
-                                        </li>
-                                    </ul>
-                                    
-                                    <a href="/get-report/" class="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
-                                        Get Started →
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Speed Apps -->
-                        <div class="h-full rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-6 backdrop-blur opacity-75 hover:opacity-100 transition-opacity duration-300">
-                            <div class="text-base font-semibold text-slate-300 mb-4">Speed Apps</div>
-                            <ul class="space-y-3 text-sm text-slate-400">
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Temporary fixes, no guarantee</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Code bloat increases risk</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Basic dashboards only</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-orange-500/80" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Frequent app conflicts</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Freelancers -->
-                        <div class="h-full rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-6 backdrop-blur opacity-75 hover:opacity-100 transition-opacity duration-300">
-                            <div class="text-base font-semibold text-slate-300 mb-4">Freelancers</div>
-                            <ul class="space-y-3 text-sm text-slate-400">
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Varies, rarely guaranteed</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Risky for large stores</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Minimal reporting</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Can break sites, no rollback</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Agencies -->
-                        <div class="h-full rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/40 via-slate-900/60 to-slate-800/40 p-6 backdrop-blur opacity-75 hover:opacity-100 transition-opacity duration-300">
-                            <div class="text-base font-semibold text-slate-300 mb-4">Agencies</div>
-                            <ul class="space-y-3 text-sm text-slate-400">
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Often ignored, focus on design</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Branding over speed</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>No technical benchmarks</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <svg class="mt-1 shrink-0 w-5 h-5 text-red-500/70" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>May outsource, slow delivery</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <!-- Agencies -->
+                    <div class="rounded-3xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 backdrop-blur hover:border-purple-500/30 transition-all duration-300">
+                        <div class="text-sm font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Agencies</div>
+                        <ul class="space-y-3 text-sm text-slate-300/85">
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Core Web Vitals:</span> Often ignored, focus on design</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Code Quality &amp; Safety:</span> Prioritize branding, not speed engineering</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Reporting:</span> Top-level only, no technical benchmarks</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M5.657 1.05 4.243 2.464 7.778 6l-3.535 3.536 1.414 1.414L10.607 6 5.657 1.05Z"/></svg>
+                                <span><span class="text-slate-200">Risk &amp; Downtime:</span> May outsource, slow delivery</span>
+                            </li>
+                        </ul>
                     </div>
-                    
-                    <!-- Mobile scroll indicator -->
-                    <div class="flex justify-center gap-2 mt-4 sm:hidden">
-                        <div class="w-2 h-2 rounded-full bg-purple-500"></div>
-                        <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                        <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-                        <div class="w-2 h-2 rounded-full bg-slate-600"></div>
+
+                    <!-- Fastrank -->
+                        <div class="relative rounded-3xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 backdrop-blur hover:border-purple-500/40 transition-all duration-300 before:absolute before:-inset-px before:rounded-[inherit] before:border-x-2 before:border-purple-500/70 before:-z-10 before:pointer-events-none">
+                    <div class="text-sm font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Fastrank</div>
+                        <div class="text-xs text-purple-300 mb-2">Speed Optimization, CRO, Analytics, Theme/App Integrations, Performance Retainers</div>
+                        <ul class="space-y-3 text-sm text-slate-300/85">
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/></svg>
+                                <span><span class="text-slate-200">Core Web Vitals:</span> Guaranteed pass—metrics-driven, not just a score</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/></svg>
+                                <span><span class="text-slate-200">Code Quality &amp; Safety:</span> Engineering-grade, safe, rollback-ready for Shopify</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/></svg>
+                                <span><span class="text-slate-200">Reporting:</span> Full, transparent before/after Core Web Vitals and load time reports</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="mt-[3px] shrink-0 fill-purple-400" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"/></svg>
+                                <span><span class="text-slate-200">Risk &amp; Downtime:</span> Zero-downtime workflow, direct delivery, expert support</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
