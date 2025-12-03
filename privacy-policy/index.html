@@ -89,46 +89,40 @@
             </a>
           </div>
 
-          <!-- Desktop nav center -->
-          <nav class="hidden md:flex md:grow">
-            <ul class="flex grow flex-wrap items-center justify-center text-sm font-medium text-slate-200">
-              <li class="px-4">
-                <a href="about.html" class="hover:text-white transition">About</a>
-              </li>
-              <li class="px-4">
-                <a href="#pricing" class="hover:text-white transition">Pricing</a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Mobile button right -->
-          <div class="flex items-center md:hidden">
-            <button type="button"
-              class="inline-flex items-center justify-center rounded-full border border-slate-700/70 bg-slate-900/80 p-2.5 text-slate-200 shadow-sm shadow-slate-900/50 backdrop-blur"
-              @click="mobileOpen = true" aria-label="Open main menu">
-              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M3 5.25h14M3 10h14M3 14.75h14" stroke="currentColor" stroke-width="1.6"
-                  stroke-linecap="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile overlay menu -->
-      <div x-show="mobileOpen" x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 translate-y-2"
-        class="fixed inset-0 z-40 bg-slate-950/90 backdrop-blur-lg md:hidden" style="display: none;">
-        <div class="flex h-full flex-col">
-          <div class="flex items-center justify-between px-4 pt-4 sm:px-6">
-            <!-- Mobile logo -->
-            <a href="index.html" class="inline-flex items-center gap-2">
-              <span
-                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/90 ring-1 ring-slate-700/70">
-                <img src="images/fastrank-logo.svg" alt="Fastrank" class="h-8 w-8 flex-shrink-0" />
-              </span>
+          <!-- Site header (canonical) -->
+          <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+              <div class="flex items-center justify-between h-16 md:h-20">
+                <div class="flex-1">
+                  <a class="inline-flex" href="/" aria-label="Fastrank">
+                    <img class="max-w-none" src="../images/logo.svg" width="48" height="48" alt="Fastrank">
+                  </a>
+                </div>
+                <nav class="hidden md:flex md:grow">
+                  <ul class="flex grow justify-center flex-wrap items-center">
+                    <li>
+                      <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/about.html">About</a>
+                    </li>
+                    <li>
+                      <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/#pricing">Pricing</a>
+                    </li>
+                    <li>
+                      <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/blog/">Blog</a>
+                    </li>
+                  </ul>
+                </nav>
+                <ul class="flex-1 flex justify-end items-center">
+                  <li class="ml-6">
+                    <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="/get-report/">
+                      <span class="relative inline-flex items-center">
+                        Get Report <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
             </a>
 
             <button type="button"
