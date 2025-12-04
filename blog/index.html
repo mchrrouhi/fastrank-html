@@ -24,11 +24,18 @@
 <link href="../style.css" rel="stylesheet">
 <style>
 	/* Fallback styling to render hero quick links as responsive buttons */
-	.flex.flex-wrap.justify-center.gap-4 > a { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; font-weight: 600; border-radius: 9999px; text-decoration: none; color: #fff; box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25); }
-	.flex.flex-wrap.justify-center.gap-4 > a:nth-child(1) { background: #7c3aed; }
-	.flex.flex-wrap.justify-center.gap-4 > a:nth-child(2) { background: #7c3aed; box-shadow: 0 8px 24px rgba(124,58,237,0.25); }
-	.flex.flex-wrap.justify-center.gap-4 > a:nth-child(3) { background: #7c3aed; box-shadow: 0 8px 24px rgba(124,58,237,0.25); }
-	.flex.flex-wrap.justify-center.gap-4 > a:hover { filter: brightness(1.05); }
+	.flex.flex-wrap.justify-center.gap-4 > a { display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; font-weight: 600; border-radius: 9999px; text-decoration: none; color: #fff; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35); transition: transform .15s ease, filter .15s ease, box-shadow .15s ease; }
+	.flex.flex-wrap.justify-center.gap-4 > a:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+	/* Per-button accent glows by target anchor */
+	.flex.flex-wrap.justify-center.gap-4 > a[href="#shopify"] { box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35); }
+	.flex.flex-wrap.justify-center.gap-4 > a[href="#shopify"]:hover { box-shadow: 0 10px 28px rgba(124, 58, 237, 0.45); }
+
+	.flex.flex-wrap.justify-center.gap-4 > a[href="#wordpress"] { box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35); }
+	.flex.flex-wrap.justify-center.gap-4 > a[href="#wordpress"]:hover { box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45); }
+
+	.flex.flex-wrap.justify-center.gap-4 > a[href="#core-web-vitals"] { box-shadow: 0 8px 24px rgba(22, 163, 74, 0.35); }
+	.flex.flex-wrap.justify-center.gap-4 > a[href="#core-web-vitals"]:hover { box-shadow: 0 10px 28px rgba(22, 163, 74, 0.45); }
 	@media (min-width: 768px) { .flex.flex-wrap.justify-center.gap-4 > a { font-size: 0.95rem; } }
 
 	/* Improve pill label breathing room on cards */
@@ -88,7 +95,7 @@
 	.category-head::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(124,58,237,0.18), transparent 65%); pointer-events:none; }
 	#wordpress .category-head::before { background:radial-gradient(circle at 18% 30%, rgba(37,99,235,0.18), transparent 65%); }
 	#core-web-vitals .category-head::before { background:radial-gradient(circle at 18% 30%, rgba(124,58,237,0.18), transparent 65%); }
-	.category-head h2 { margin:0; background:linear-gradient(90deg,#ffffff,#cbd5e1 60%); -webkit-background-clip:text; color:transparent; letter-spacing:-0.5px; }
+	.category-head h2 { margin:0; background:linear-gradient(90deg,#ffffff,#cbd5e1 60%); background-clip:text; -webkit-background-clip:text; color:transparent; letter-spacing:-0.5px; }
 	.category-head p { margin-top:0.6rem; color:#94a3b8; }
 	.category-head > div:first-child span { background:rgba(0,0,0,0.25); border:1px solid rgba(148,163,184,0.25); box-shadow:0 0 0 1px rgba(255,255,255,0.04) inset; }
 	.category-head:hover { box-shadow:0 6px 26px -8px rgba(0,0,0,0.6), 0 0 0 1px rgba(124,58,237,0.18) inset; }
@@ -103,7 +110,7 @@
 	#shopify > div > div.flex.items-center.gap-4.mb-10::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(124,58,237,0.18), transparent 65%); pointer-events:none; }
 	#wordpress > div > div.flex.items-center.gap-4.mb-10::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(37,99,235,0.18), transparent 65%); pointer-events:none; }
 	#core-web-vitals > div > div.flex.items-center.gap-4.mb-10::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 18% 30%, rgba(124,58,237,0.18), transparent 65%); pointer-events:none; }
-	#shopify h2, #wordpress h2, #core-web-vitals h2 { margin:0; background:linear-gradient(90deg,#ffffff,#cbd5e1 60%); -webkit-background-clip:text; color:transparent; letter-spacing:-0.5px; }
+	#shopify h2, #wordpress h2, #core-web-vitals h2 { margin:0; background:linear-gradient(90deg,#ffffff,#cbd5e1 60%); background-clip:text; -webkit-background-clip:text; color:transparent; letter-spacing:-0.5px; }
 	#shopify h2 + p, #wordpress h2 + p, #core-web-vitals h2 + p { margin-top:0.6rem !important; color:#94a3b8 !important; }
 	#shopify > div > div.flex.items-center.gap-4.mb-10 > div.flex-shrink-0 span,
 	#wordpress > div > div.flex.items-center.gap-4.mb-10 > div.flex-shrink-0 span,
