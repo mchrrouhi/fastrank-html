@@ -469,3 +469,31 @@ if ('requestIdleCallback' in window) {
   window.addEventListener('scroll', toggle, { passive: true });
   window.addEventListener('resize', adjustForChat, { passive: true });
 })();
+
+// Footer safe area (keeps bottom links visible above Crisp chat)
+(function() {
+  const adjustFooterSafeArea = () => {
+    const footers = document.querySelectorAll('footer');
+    if (!footers.length) return;
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const offsetPx = isMobile ? 132 : 108; // match Back-to-Top offsets
+    footers.forEach(f => {
+      try {
+        const current = parseInt(getComputedStyle(f).paddingBottom || '0', 10);
+        if (!Number.isFinite(current) || current < offsetPx) {
+          f.style.paddingBottom = offsetPx + 'px';
+        }
+      } catch (_) {}
+    });
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(adjustFooterSafeArea, { timeout: 1500 });
+  } else if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', adjustFooterSafeArea, { once: true });
+  } else {
+    setTimeout(adjustFooterSafeArea, 1);
+  }
+
+  window.addEventListener('resize', adjustFooterSafeArea, { passive: true });
+})();
