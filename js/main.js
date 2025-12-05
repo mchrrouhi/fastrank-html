@@ -473,8 +473,7 @@ if ('requestIdleCallback' in window) {
 // Footer safe area (keeps bottom links visible above Crisp chat)
 (function() {
   const adjustFooterSafeArea = () => {
-    // Skip footers explicitly opting out via data-no-safe-area
-    const footers = document.querySelectorAll('footer:not([data-no-safe-area])');
+    const footers = document.querySelectorAll('footer');
     if (!footers.length) return;
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
     // Safe minimal padding to avoid overlap with Crisp chat
