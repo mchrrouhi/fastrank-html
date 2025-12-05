@@ -215,7 +215,7 @@
                     <!-- Illustration -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
                         <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-                            <img src="../images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="lazy" decoding="async" fetchpriority="low">
+                            <img src="../images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -556,7 +556,7 @@
 
     <!-- Illustration -->
     <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
-        <img src="../images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration" loading="lazy" decoding="async" fetchpriority="low">
+        <img src="../images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
     </div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -684,21 +684,125 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="py-16 md:py-20">
 
-<!-- Real Shopify Speed graphic replace -->
-<section id="comparison-proof" class="relative">
-    <div class="max-w-7xl mx-auto px-0 sm:px-0">
-        <div class="py-16 md:py-20">
-            <div class="relative">
-                <!-- Subtle radial glow to match other sections -->
-                <div class="absolute -top-8 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[720px] aspect-square hidden md:block" aria-hidden="true">
-                    <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[110px] opacity-25"></div>
-                    <div class="absolute w-56 h-56 translate-z-0 bg-purple-400 rounded-full blur-[70px] opacity-60"></div>
+            <!-- Section header -->
+            <div class="text-center pb-8 md:pb-12">
+                <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">
+                    Who Is This For?
                 </div>
-                <img src="./images/Real-Shopify-Speed.svg" alt="Graph showing Shopify mobile speed score increasing from 35 to 94 after Fastrank optimization" class="w-full h-auto rounded-3xl border border-slate-800/60 shadow-lg" loading="lazy" decoding="async">
+                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                    Built for Shopify stores serious about performance
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-lg text-slate-400">
+                        Whether you're losing sales to slow pages or scaling paid ads, we help you recover revenue and grow faster.
+                    </p>
+                </div>
             </div>
+
+            <!-- Cards grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Losing sales from slow mobile -->
+                <div class="rounded-2xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 hover:border-purple-500/30 transition-all duration-300">
+                    <h3 class="text-base font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Stores losing mobile sales</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Slow product pages killing mobile conversions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>High bounce rates on mobile traffic</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Poor Core Web Vitals hurting SEO rankings</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Running paid ads -->
+                <div class="rounded-2xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 hover:border-purple-500/30 transition-all duration-300">
+                    <h3 class="text-base font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Stores running Meta & Google Ads</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Wasting ad budget on slow landing pages</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Low ROAS from high-intent paid traffic</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Need faster checkout to reduce drop-offs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Shopify Plus & high-traffic -->
+                <div class="rounded-2xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 hover:border-purple-500/30 transition-all duration-300">
+                    <h3 class="text-base font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Shopify Plus & high-traffic stores</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Complex themes with custom features</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>International traffic needs optimization</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Performance at scale during flash sales</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Too many apps/scripts -->
+                <div class="rounded-2xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 hover:border-purple-500/30 transition-all duration-300">
+                    <h3 class="text-base font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Stores with app & script bloat</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Dozens of apps slowing down your store</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Tracking scripts blocking page rendering</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Need expert audit to identify the worst offenders</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Agencies -->
+                <div class="rounded-2xl border border-slate-800/60 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 hover:border-purple-500/30 transition-all duration-300">
+                    <h3 class="text-base font-semibold bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 mb-4">Agencies & dev teams</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Need performance engineering expertise</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>White-label speed optimization for clients</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="mt-[3px] shrink-0 fill-purple-500" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z" /></svg>
+                            <span>Partner for ongoing Core Web Vitals support</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </section>
+
 <!-- Competition Comparison + Proof + Trust -->
 <section id="comparison-proof" class="relative">
     <!-- Particles animation -->
