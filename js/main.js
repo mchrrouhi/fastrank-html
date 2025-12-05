@@ -476,8 +476,8 @@ if ('requestIdleCallback' in window) {
     const footers = document.querySelectorAll('footer');
     if (!footers.length) return;
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
-    // Reduce bottom padding to minimize visible empty space
-    const offsetPx = isMobile ? 32 : 24;
+    // Remove bottom padding entirely to eliminate the gap
+    const offsetPx = 0;
     footers.forEach(f => {
       try {
         const current = parseInt(getComputedStyle(f).paddingBottom || '0', 10);
