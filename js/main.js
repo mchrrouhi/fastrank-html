@@ -1,9 +1,19 @@
-AOS.init({
-  once: true,
-  disable: 'phone',
-  duration: 1000,
-  easing: 'ease-out-cubic',
-});
+function initAOS() {
+  try {
+    AOS.init({
+      once: true,
+      disable: 'phone',
+      duration: 1000,
+      easing: 'ease-out-cubic',
+    });
+  } catch (_) {}
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initAOS, { timeout: 1500 });
+} else {
+  setTimeout(initAOS, 0);
+}
 
 // Initialize Swiper after DOM is stable to prevent forced reflows
 function initSwipers() {
@@ -239,16 +249,23 @@ class ParticleAnimation {
   }
 }
 
-// Init ParticleAnimation
-const canvasElements = document.querySelectorAll('[data-particle-animation]');
-canvasElements.forEach(canvas => {
-  const options = {
-    quantity: canvas.dataset.particleQuantity,
-    staticity: canvas.dataset.particleStaticity,
-    ease: canvas.dataset.particleEase,
-  };
-  new ParticleAnimation(canvas, options);
-});
+function initParticles() {
+  const canvasElements = document.querySelectorAll('[data-particle-animation]');
+  canvasElements.forEach(canvas => {
+    const options = {
+      quantity: canvas.dataset.particleQuantity,
+      staticity: canvas.dataset.particleStaticity,
+      ease: canvas.dataset.particleEase,
+    };
+    new ParticleAnimation(canvas, options);
+  });
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initParticles, { timeout: 2000 });
+} else {
+  setTimeout(initParticles, 1);
+}
 
 
 // Box highlighter - optimized to batch DOM reads and writes
@@ -342,11 +359,18 @@ class Highlighter {
   }  
 }
 
-// Init Highlighter
-const highlighters = document.querySelectorAll('[data-highlighter]');
-highlighters.forEach((highlighter) => {
-  new Highlighter(highlighter);
-});
+function initHighlighters() {
+  const highlighters = document.querySelectorAll('[data-highlighter]');
+  highlighters.forEach((highlighter) => {
+    new Highlighter(highlighter);
+  });
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initHighlighters, { timeout: 2000 });
+} else {
+  setTimeout(initHighlighters, 1);
+}
 
 // Make blog index card CTA "Read article →" clickable
 (function() {
