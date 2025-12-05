@@ -476,7 +476,8 @@ if ('requestIdleCallback' in window) {
     const footers = document.querySelectorAll('footer');
     if (!footers.length) return;
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
-    const offsetPx = isMobile ? 132 : 108; // match Back-to-Top offsets
+    // Reduce bottom padding to minimize visible empty space
+    const offsetPx = isMobile ? 32 : 24;
     footers.forEach(f => {
       try {
         const current = parseInt(getComputedStyle(f).paddingBottom || '0', 10);
