@@ -476,8 +476,8 @@ if ('requestIdleCallback' in window) {
     const footers = document.querySelectorAll('footer');
     if (!footers.length) return;
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
-    // Remove bottom padding entirely to eliminate the gap
-    const offsetPx = 0;
+    // Safe minimal padding to avoid overlap with Crisp chat
+    const offsetPx = isMobile ? 32 : 24;
     footers.forEach(f => {
       try {
         const current = parseInt(getComputedStyle(f).paddingBottom || '0', 10);
