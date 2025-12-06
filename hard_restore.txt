@@ -2,3 +2,15 @@ HEAD is now at 2f7b906 Update index.html
  
 1355
  
+warning: in the working copy of 'hard_restore.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pull_log.txt', LF will be replaced by CRLF the next time Git touches it
+[main e107437] Permanently restore full homepage (1357 lines) from commit 2f7b906
+ 4 files changed, 43 insertions(+)
+ create mode 100644 hard_restore.txt
+ create mode 100644 permanent_restore.bat
+ create mode 100644 pull_log.txt
+ create mode 100644 restore_all.bat
+ 
+To https://github.com/mchrrouhi/fastrank-html.git
+ + e59a0df...e107437 main -> main (forced update)
+Restore complete 
