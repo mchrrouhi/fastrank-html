@@ -39,7 +39,18 @@
   <link rel="stylesheet" href="./css/vendors/aos.css">
 </noscript>
 <!-- Crisp Live Chat -->
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script>
+window.$crisp=[];
+window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";
+window.addEventListener("load", function () {
+   setTimeout(() => {
+      const d=document,s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";
+      s.async=1;
+      d.body.appendChild(s);
+   }, 2500);
+});
+</script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
