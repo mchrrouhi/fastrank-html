@@ -1351,9 +1351,23 @@ Get a professional 48-hour diagnostic and a roadmap to improve speed, Core Web V
     </div>
 
     <script src="./js/vendors/alpinejs.min.js" defer></script>
-    <script src="./js/vendors/aos.js" defer></script>
-    <script src="./js/vendors/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script>
+window.addEventListener("load", () => {
+   setTimeout(() => {
+      let js = [
+         "./js/vendors/aos.js",
+         "./js/vendors/swiper-bundle.min.js",
+         "./js/main.js"
+      ];
+      js.forEach(src => {
+         let s=document.createElement("script");
+         s.src=src;
+         s.defer=true;
+         document.body.appendChild(s);
+      });
+   }, 1800);
+});
+</script>
 
 </body>
 
