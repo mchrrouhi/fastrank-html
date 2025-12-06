@@ -47,7 +47,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <!-- Preload LCP hero image to improve LCP -->
-    <link rel="preload" as="image" href="./images/glow-bottom.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/glow-bottom.webp" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -217,8 +217,8 @@
 
                     <!-- Illustration -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
-                        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-                            <img src="./images/glow-bottom.webp" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="eager" decoding="async" fetchpriority="high">
+                        <div class="relative w-full max-w-[450px] mx-auto aspect-[2146/774]">
+                            <img src="./images/glow-bottom.webp" class="w-full h-full object-contain" width="2146" height="774" alt="Hero Illustration" loading="lazy" decoding="async" fetchpriority="high">
                         </div>
                     </div>
 
