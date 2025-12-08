@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date());
+
+            gtag('config', 'G-EZ9KWQEM4F');
+        </script>
+            <!-- Preload critical CSS -->
+            <link rel="preload" href="../style.css" as="style" />
+            <link rel="stylesheet" href="../style.css" />
+
+            <!-- Lazy-load vendor CSS (AOS + Swiper) -->
+            <link rel="preload" href="../css/vendors/swiper-bundle.min.css" as="style" />
+            <link rel="stylesheet" href="../css/vendors/swiper-bundle.min.css" media="print" onload="this.media='all'">
+            <link rel="preload" href="../css/vendors/aos.css" as="style" />
+            <link rel="stylesheet" href="../css/vendors/aos.css" media="print" onload="this.media='all'">
+                        <noscript>
+                            <link rel="stylesheet" href="../css/vendors/swiper-bundle.min.css">
+                            <link rel="stylesheet" href="../css/vendors/aos.css">
+                        </noscript>
+        
+                                        <script type="application/ld+json">
+                        {
+                            "@context": "https://schema.org",
+                            "@graph": [
+                                {
+                                    "@type": "Organization",
+                                    "@id": "https://fastrank.io/#organization",
+                                    "name": "Cadunlock LLC",
+                                    "url": "https://fastrank.io/",
+                                    "logo": {
+                                        "@type": "ImageObject",
+                                        "url": "https://fastrank.io/images/fastrank-logo.svg"
+                                    }
+                                },
+                                {
+                                    "@type": "WebSite",
+                                    "@id": "https://fastrank.io/#website",
+                                    "url": "https://fastrank.io/",
+                                    "name": "Fastrank",
+                                    "publisher": {
+                                        "@id": "https://fastrank.io/#organization"
+                                    }
+                                },
+                                {
+                                    "@type": "BreadcrumbList",
+                                    "@id": "https://fastrank.io/#breadcrumb",
+                                    "itemListElement": [
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 1,
+                                            "name": "Home",
+                                            "item": "https://fastrank.io/"
+                                        },
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 2,
+                                            "name": "About",
+                                            "item": "https://fastrank.io/about/"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                                        </script>
+</head>
+
+<body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
+            <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
+                <header class="absolute w-full z-30">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center justify-between h-16 md:h-20">
+
+                    <!-- Site branding -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <a class="inline-flex" href="/" aria-label="Fastrank">
+                            <img class="max-w-none" src="../images/logo.svg" width="48" height="48" alt="Fastrank">
+                        </a>
+                    </div>
+
+                    <!-- Desktop navigation -->
+                    <nav class="hidden md:flex md:grow">
+
+                        <!-- Desktop menu links -->
+                        <ul class="flex grow justify-center flex-wrap items-center">
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/about/">About</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/shopify-speed-optimization/#pricing">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="/blog/">Blog</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                    <!-- Desktop sign in links -->
+                    <ul class="flex-1 flex justify-end items-center">
+                        <li class="ml-6">
+                            <a class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="/get-report/">
+                                <span class="relative inline-flex items-center">
+                                    Get Report <span class="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile menu -->
+                    <div class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
+
+                        <!-- Hamburger button -->
+                        <button class="group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition" aria-controls="mobile-nav" :aria-expanded="expanded" @click.stop="expanded = !expanded">
+                            <span class="sr-only">Menu</span>
+                            <svg class="w-4 h-4 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] -translate-y-[5px] group-aria-expanded:rotate-[315deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center group-aria-expanded:rotate-45 transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)]" y="7" width="16" height="2" rx="1"></rect>
+                                <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] translate-y-[5px] group-aria-expanded:rotate-[135deg] group-aria-expanded:translate-y-0" y="7" width="16" height="2" rx="1"></rect>
+                            </svg>
+                        </button>
+
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
+                            <ul class="border border-transparent [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] rounded-lg px-4 py-1.5">
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/about/">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/shopify-speed-optimization/#pricing">Pricing</a>
+                                </li>
+                                <li>
+                                    <a class="flex font-medium text-sm text-slate-300 hover:text-white py-1.5" href="/blog/">Blog</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <main class="grow">
+
+            <!-- Hero -->
+            <section class="relative">
+
+                <!-- Radial gradient -->
+                <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
+                    <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
+                    <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+                </div>
+
+                <!-- Particles animation -->
+                <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
+                    <canvas data-particle-animation data-particle-quantity="15"></canvas>
+                </div>
+
+                <!-- Illustration -->
+                <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
+                    <img src="../images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration">
+                </div>
+
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="pt-32 pb-10 md:pt-40">                        <!-- Hero content -->
+                        <div class="text-center">
+                            <div class="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">Certified Performance Experts in Web Vitals</div>
+                            <h1 class="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-6">Blending creativity with technical excellence</h1>
+                            <!-- Rings illustration -->
+                            <div class="inline-flex items-center justify-center relative">
+                                <!-- Particles animation -->
+                                <div class="absolute inset-0 -z-10" aria-hidden="true">
+                                    <canvas data-particle-animation data-particle-quantity="10"></canvas>
+                                </div>
+                                <div class="inline-flex [mask-image:_radial-gradient(circle_at_bottom,transparent_15%,black_70%)]">
+                                    <img src="../images/about-illustration.svg" width="446" height="446" alt="About illustration" />
+                                </div>
+                                <img class="absolute mt-[30%] drop-shadow-lg animate-float" src="../images/about-icon.svg" width="72" height="72" alt="About icon" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Story -->
+            <section class="relative">
+
+                <!-- Blurred shape -->
+                <div class="absolute top-0 -mt-32 left-1/2 -translate-x-1/2 ml-10 blur-2xl opacity-70 pointer-events-none -z-10" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
+                        <defs>
+                            <linearGradient id="bs4-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
+                                <stop offset="0%" stop-color="#A855F7"></stop>
+                                <stop offset="100%" stop-color="#6366F1" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#bs4-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z" transform="matrix(1 0 0 -1 0 427)"></path>
+                    </svg>
+                </div>
+
+                <div class="px-4 sm:px-6">
+                    <div class="max-w-5xl mx-auto">
+                        <div class="pb-12 md:pb-20">
+                        
+                            <!-- Section header -->
+                            <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                                <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60">Our Story: Years of Expertise in Website Speed Optimization</h2>
+                            </div>
+                        
+                            <div class="md:flex justify-between space-x-6 md:space-x-8 lg:space-x-14">
+                                <figure class="min-w-[240px]">
+                                    <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="../images/mouhsine-and-meriem.jpg" width="420" height="280" alt="picture mouhsine and meriem" />
+                                </figure>                                <div class="max-w-[548px] mx-auto">
+                                    <div class="text-slate-400 space-y-6">
+                                        <p>
+                                            Our journey began with one passion: transforming slow websites into fast, reliable digital assets. We believe brand success requires flawless technical performance. Our core expertise focuses on <strong class="text-slate-50 font-medium">Performance Optimization</strong> and mastering <strong class="text-slate-50 font-medium">Core Web Vitals</strong> standards to ensure top Google ranking. <a href="/" class="text-purple-400 hover:text-purple-300 transition">Discover our services</a> and see how we can help optimize your site, or <a href="./index.html#pricing" class="text-purple-400 hover:text-purple-300 transition">view our pricing plans</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team -->
+            <section class="relative">
+                <!-- Radial gradient -->
+                <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10" aria-hidden="true">
+                    <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 w-1/3 aspect-square">
+                        <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-50"></div>
+                    </div>
+                </div>
+                <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                    <div class="py-12 md:py-20">                        <!-- Content -->
+                        <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+                            <h2 class="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Our Dedicated Team for Website Performance Measurement and Grading</h2>
+                            <p class="text-lg text-slate-400">We are a lean, agile technical team, led by experts, fully committed to one mission: optimizing the web. We use data-driven methodologies to ensure every optimization leads to the fastest user experience.</p>
+                        </div>
+                        <!-- Team members -->
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-6">
+                            <!-- Jihane Arroud -->
+                            <div class="relative flex items-center justify-between py-4 pl-4 pr-3 group before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-0 hover:before:opacity-10 focus-within:before:opacity-10 before:rounded-xl before:transition-opacity">
+                                <div class="flex items-center space-x-4">
+                                    <img class="shrink-0 rounded-full" src="../images/Jihane-Arroud.jpg" width="48" height="48" alt="Jihane Arroud" />
+                                    <div>
+                                        <div class="text-sm font-semibold text-slate-200">Jihane Arroud</div>
+                                        <div class="text-xs text-slate-400">QA Lead — Web Vitals</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Hicham Hallou -->
+                            <div class="relative flex items-center justify-between py-4 pl-4 pr-3 group before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-0 hover:before:opacity-10 focus-within:before:opacity-10 before:rounded-xl before:transition-opacity">
+                                <div class="flex items-center space-x-4">
+                                    <img class="shrink-0 rounded-full" src="../images/Hicham-Hallou.jpg" width="48" height="48" alt="Hicham Hallou" />
+                                    <div>
+                                        <div class="text-sm font-semibold text-slate-200">Hicham Hallou</div>
+                                        <div class="text-xs text-slate-400">Frontend Optimization Engineer</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Mohamed Zouine -->
+                            <div class="relative flex items-center justify-between py-4 pl-4 pr-3 group before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-0 hover:before:opacity-10 focus-within:before:opacity-10 before:rounded-xl before:transition-opacity">
+                                <div class="flex items-center space-x-4">
+                                    <img class="shrink-0 rounded-full" src="../images/Mohamed-Zouine.jpg" width="48" height="48" alt="Mohamed Zouine" />
+                                    <div>
+                                        <div class="text-sm font-semibold text-slate-200">Mohamed Zouine</div>
+                                        <div class="text-xs text-slate-400">Backend & Infrastructure</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Yasmine Charrat -->
+                            <div class="relative flex items-center justify-between py-4 pl-4 pr-3 group before:absolute before:inset-0 before:-z-10 before:border before:border-slate-300 before:bg-slate-700 before:opacity-0 hover:before:opacity-10 focus-within:before:opacity-10 before:rounded-xl before:transition-opacity">
+                                <div class="flex items-center space-x-4">
+                                    <img class="shrink-0 rounded-full" src="../images/Yasmine-Charrat.jpg" width="48" height="48" alt="Yasmine Charrat" />
+                                    <div>
+                                        <div class="text-sm font-semibold text-slate-200">Yasmine Charrat</div>
+                                        <div class="text-xs text-slate-400">Design & UX Performance</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Spacer to separate from footer -->
+            <div class="h-2"></div>
+        </main>
+
+        <!-- Site footer -->
+        <footer>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+                <!-- Footer blocks -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 md:py-12 items-start">
+                    
+                    <!-- Logo + Address column -->
+                    <div>
+                        <!-- Logo -->
+                        <a class="inline-flex" href="/" aria-label="fastrank.io">
+                            <img 
+                              src="../images/logo.svg" 
+                              alt="Fastrank logo" 
+                              class="h-8 md:h-9 w-auto opacity-95 drop-shadow-[0_0_4px_rgba(130,80,255,0.55)] mb-4"
+                            />
+                        </a>
+                        
+                        <!-- Company info -->
+                        <div class="flex flex-col gap-2 text-slate-300 text-sm">
+                          <span class="font-semibold text-slate-100">Fastrank by Cadunlock LLC</span>
+                          <span>131 Continental Dr, Suite 305</span>
+                          <span>Newark, DE 19713, United States</span>
+                          <span class="text-base">Phone: +1 (302) 294-9394</span>
+                          <a href="mailto:support@fastrank.io" class="text-base hover:text-white transition">support@fastrank.io</a>
+                        </div>
+                        
+                        <!-- Trusted badge -->
+                        <div class="flex mt-4 items-center">
+                            <picture>
+                                <source srcset="../images/trusted-icon-fastrank.webp" type="image/webp">
+                                <img src="../images/trusted-icon-fastrank.svg" alt="Trusted by Fastrank" class="h-7 opacity-90" loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <!-- Products column -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+                        <ul class="text-sm space-y-2">
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/shopify-speed-optimization/#pricing">Pricing &amp; Plans</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="get-report/">get Report</a>
+                            </li>
+                            <li>
+                                <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="about/">Our Expertise</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Legals & Policies B (moved up to replace Company) -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legals &amp; Policies</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/dpa/">Data Processing Addendum (DPA)</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/sla/">Service Level Agreement (SLA)</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/support-policy/">Support Policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/performance-disclaimer/">Performance Disclaimer</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/Guarantee%20%26%20Refunds%20Policy/">Guarantee &amp; Refunds Policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/billing-payments/">Billing &amp; Payments</a></li>
+                        </ul>
+                    </div>
+                    <!-- Legal & Compliance -->
+                    <div>
+                        <h6 class="text-sm text-slate-50 font-medium mb-2">Legal &amp; Compliance</h6>
+                        <ul class="text-sm space-y-2">
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/privacy-policy/">Privacy Policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/terms-of-service/">Terms of Service</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/acceptable-use-policy/">Acceptable Use Policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/cookie-policy/">Cookie Policy</a></li>
+                            <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/gdpr-policy/">GDPR Policy</a></li>
+                        </ul>
+                    </div>        
+                </div>
+                <p class="mt-10 text-center text-xs text-slate-500 opacity-80">
+                  © 2025 Cadunlock LLC. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../js/vendors/alpinejs.min.js" defer></script>
+    <script src="../js/vendors/aos.js" defer></script>
+    <script src="../js/vendors/swiper-bundle.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+</body>
+
+</html>
