@@ -1152,69 +1152,7 @@ window.addEventListener("load", function () {
                                 </template>
                             </div>
                         </div>
-<!-- Carousel data and functionality -->
-<script>
-document.addEventListener('alpine:init', () => {
-    Alpine.data('carousel', () => ({
-        active: 0,
-        autorotate: true,
-        autorotateTiming: 7000,
-        
-        items: [
-            {
-                img: "./images/Jed-Seigle-96.webp",
-                quote: "Real results, zero hassle. Highly recommended",
-                name: "Jed S",
-                role: "Business Development"
-            },
-            {
-                img: "./images/Clotilde-Bedoya.webp",
-                quote: "Our slow Shopify store was costing us sales. Fastrank diagnosed the problem and raised our Mobile Speed Score 25 points immediately.",
-                name: "Clotilde Bedoya",
-                role: "Marketing"
-            },
-            {
-                img: "./images/Kevin-Sanderson.webp",
-                quote: "They stabilized our LCP issues instantly. We saw our ad spend ROI jump after their fixes. Simple, effective, and crucial for Shopify/e-commerce performance.",
-                name: "K Sanderson",
-                role: "Ecommerce"
-            },
-        ],
-
-        init() {
-            // Auto slide
-            if (this.autorotate) {
-                this.autorotateInterval = setInterval(() => {
-                    this.next()
-                }, this.autorotateTiming);
-            }
-
-            // fix height for transitions
-            this.$nextTick(() => this.heightFix());
-            this.$watch('active', () => this.heightFix());
-        },
-
-        next() {
-            this.active = (this.active + 1) % this.items.length;
-        },
-
-        stopAutorotate() {
-            clearInterval(this.autorotateInterval);
-            this.autorotateInterval = null;
-        },
-
-        heightFix() {
-            this.$nextTick(() => {
-                if (this.$refs.testimonials && this.$refs.testimonials.children[this.active]) {
-                    this.$refs.testimonials.style.height =
-                        this.$refs.testimonials.children[this.active].offsetHeight + 'px';
-                }
-            });
-        }
-    }))
-});
-</script>
-<!-- CTA -->
+                        <!-- CTA -->
             <section>
                 <div class="max-w-6xl mx-auto px-4 sm:px-6">
                     <div class="relative px-8 py-12 md:py-20 rounded-[3rem] overflow-hidden">
