@@ -99,20 +99,22 @@ window.addEventListener("load", function () {
     }
   ]
 }
-        </script>
-        <!-- Google Tag (Global site tag - gtag.js) -->
-        <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
-        <script defer>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);} 
-            gtag('js', new Date());
+<!-- Google Analytics + Google Ads (Optimized gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
 
-            /* Google Analytics */
-            gtag('config', 'G-EZ9KWQEM4F');
+    gtag('js', new Date());
 
-            /* Google Ads Conversion */
-            gtag('config', 'AW-17714543566');
-        </script>
+    /* Google Analytics (GA4) */
+    gtag('config', 'G-EZ9KWQEM4F', {
+        send_page_view: true
+    });
+
+    /* Google Ads Conversion Tracking */
+    gtag('config', 'AW-17714543566');
+</script>
 </head>
 
 <body class="font-inter antialiased bg-slate-900 text-slate-100 tracking-tight">
