@@ -3,6 +3,10 @@
     @apply text-5xl font-extrabold;
 }
 
+.heading-xl {
+    @apply text-5xl font-extrabold;
+}
+
 .h2 {
     @apply text-4xl font-extrabold;
 }
@@ -17,6 +21,10 @@
 
 @media (width >= theme(--breakpoint-md)) {
     .h1 {
+        @apply text-6xl;
+    }
+
+    .heading-xl {
         @apply text-6xl;
     }
 
