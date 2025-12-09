@@ -371,20 +371,26 @@ window.addEventListener("load", function () {
             <!-- Why Choose Us -->
 <section id="why-choose-us" class="relative overflow-hidden">
 
-    <!-- Radial gradient -->
-    <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-        <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-        <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
-    </div>
+    <!-- Background with gradient and image -->
+    <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <!-- Strong blue gradient background -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-blue-950/40 to-slate-900"></div>
+        
+        <!-- Radial gradient overlay -->
+        <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none w-[800px] aspect-square">
+            <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
+            <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+        </div>
 
-    <!-- Particles animation -->
-    <div class="absolute inset-0 h-96 -z-10" aria-hidden="true">
-        <canvas data-particle-animation data-particle-quantity="15"></canvas>
-    </div>
+        <!-- Particles animation -->
+        <div class="absolute inset-0 h-96">
+            <canvas data-particle-animation data-particle-quantity="15"></canvas>
+        </div>
 
-    <!-- Illustration -->
-    <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none -z-10" aria-hidden="true">
-        <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration" loading="lazy" decoding="async" fetchpriority="low">
+        <!-- Illustration -->
+        <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-16 blur-2xl opacity-90 pointer-events-none">
+            <img src="./images/page-illustration.svg" class="max-w-none" width="1440" height="427" alt="Page Illustration" loading="lazy" decoding="async" fetchpriority="low">
+        </div>
     </div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
