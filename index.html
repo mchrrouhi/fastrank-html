@@ -27,12 +27,10 @@
 <link rel="preconnect" href="https://assets.speedvitals.com" crossorigin>
 <link rel="dns-prefetch" href="//assets.speedvitals.com">
 <!-- Preload critical CSS -->
-<link rel="preload" href="./style.css" as="style" />
 <link rel="stylesheet" href="./style.css" />
 <!-- Preload LCP hero image -->
 <link rel="preload" as="image" href="./images/glow-bottom.svg" fetchpriority="high">
 <!-- Lazy-load vendor CSS to avoid render-blocking -->
-<link rel="preload" href="./css/vendors/swiper-bundle.min.css" as="style" />
 <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css">
 <link rel="stylesheet" href="./css/vendors/aos.css">
 <link rel="stylesheet" href="./css/vendors/aos.css" media="print" onload="this.media='all'">
@@ -1035,54 +1033,66 @@ window.addEventListener("load", function () {
                                 </template>
                             </div>
                         </div>
-                        <!-- Carousel data and functionality: https://github.com/alpinejs/alpine -->
-                        <script>
-                            document.addEventListener('alpine:init', () => {
-                                Alpine.data('carousel', () => ({
-                                    active: 0,
-                                    autorotate: true,
-                                    autorotateTiming: 7000,
-                                    items: [
-                                        {
-                                           img: "./images/Jed-Seigle.webp",
-                                           quote: "Real results, zero hassle. Highly recommended",
-                                           name: "Jed S",
-                                           role: "Business Development"
-                                        },
+<!-- Carousel data and functionality: https://github.com/alpinejs/alpine -->
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('carousel', () => ({
+        active: 0,
+        autorotate: true,
+        autorotateTiming: 7000,
 
-                                        {
-                                            img: './images/Clotilde-Bedoya.webp',
-                                            quote: "Our slow Shopify store was costing us sales. Fastrank diagnosed the problem and raised our Mobile Speed Score 25 points immediately. ",
-                                            name: 'Clotilde Bedoya',
-                                            role: 'Marketing'
-                                        },
-                                        {
-                                            img: './images/Kevin-Sanderson.webp',
-                                            quote: "They stabilized our LCP issues instantly. We saw our ad spend ROI jump after their fixes. Simple, effective, and crucial for Shopify/e-commerce performance",
-                                            name: 'K Sanderson',
-                                            role: 'Ecommerce'
-                                        },
-                                    ],
-                                    init() {
-                                        if (this.autorotate) {
-                                            this.autorotateInterval = setInterval(() => {
-                                                this.active = this.active + 1 === this.items.length ? 0 : this.active + 1
-                                            }, this.autorotateTiming)
-                                        }
-                                        this.$watch('active', callback => this.heightFix())
-                                    },
-                                    stopAutorotate() {
-                                        clearInterval(this.autorotateInterval)
-                                        this.autorotateInterval = null
-                                    },
-                                    heightFix() {
-                                        this.$nextTick(() => {
-                                            this.$refs.testimonials.style.height = this.$refs.testimonials.children[this.active + 1].offsetHeight + 'px'
-                                        })
-                                    }
-                                }))
-                            })
-                        </script>
+        items: [
+            {
+                img: "./images/Jed-Seigle.webp",
+                quote: "Real results, zero hassle. Highly recommended",
+                name: "Jed S",
+                role: "Business Development"
+            },
+            {
+                img: "./images/Clotilde-Bedoya.webp",
+                quote: "Our slow Shopify store was costing us sales. Fastrank diagnosed the problem and raised our Mobile Speed Score 25 points immediately.",
+                name: "Clotilde Bedoya",
+                role: "Marketing"
+            },
+            {
+                img: "./images/Kevin-Sanderson.webp",
+                quote: "They stabilized our LCP issues instantly. We saw our ad spend ROI jump after their fixes. Simple, effective, and crucial for Shopify/e-commerce performance",
+                name: "K Sanderson",
+                role: "Ecommerce"
+            },
+        ],
+
+        init() {
+            // autorotate fix
+            if (this.autorotate) {
+                this.autorotateInterval = setInterval(() => {
+                    this.active = (this.active + 1) % this.items.length;
+                }, this.autorotateTiming);
+            }
+
+            // heightFix after render
+            this.$nextTick(() => this.heightFix());
+            this.$watch('active', () => this.heightFix());
+        },
+
+        stopAutorotate() {
+            clearInterval(this.autorotateInterval);
+            this.autorotateInterval = null;
+        },
+
+        heightFix() {
+            this.$nextTick(() => {
+                const parent = this.$refs.testimonials;
+                const child = parent?.children[this.active];
+
+                if (child) {
+                    parent.style.height = child.offsetHeight + 'px';
+                }
+            });
+        }
+    }))
+});
+</script>
             
                     </div>
                 </div>
