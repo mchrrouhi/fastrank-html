@@ -19,6 +19,13 @@
     <meta name="twitter:title" content="Shopify Speed Optimization Service – Faster Load Times & Core Web Vitals Fixes">
     <meta name="twitter:description" content="48-hour Shopify performance audit and 7-day optimization sprint. Improve Core Web Vitals, load times, and conversions for Shopify stores in AU, CA & US.">
     <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
+<!-- Performance: preconnect to critical third-party domains -->
+<link rel="preconnect" href="https://client.crisp.chat" crossorigin>
+<link rel="dns-prefetch" href="//client.crisp.chat">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://assets.speedvitals.com" crossorigin>
+<link rel="dns-prefetch" href="//assets.speedvitals.com">
 <!-- Preload critical CSS -->
 <link rel="preload" href="./style.css" as="style" />
 <link rel="stylesheet" href="./style.css" />
@@ -26,6 +33,13 @@
 <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-v20-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Preload LCP hero image -->
+<link rel="preload" as="image" href="./images/glow-bottom.svg" fetchpriority="high">
+<!-- Lazy-load vendor CSS to avoid render-blocking -->
+<link rel="preload" href="./css/vendors/swiper-bundle.min.css" as="style" />
+<link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css" media="print" onload="this.media='all'">
+<link rel="preload" href="./css/vendors/aos.css" as="style" />
+<link rel="stylesheet" href="./css/vendors/aos.css" media="print" onload="this.media='all'">
 <!-- Fallback for users with JS disabled -->
 <noscript>
   <link rel="stylesheet" href="./css/vendors/swiper-bundle.min.css">
@@ -1215,8 +1229,8 @@ Get a professional 48-hour diagnostic and a roadmap to improve speed, Core Web V
 
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/vendors/aos.js" defer></script>
-    <script src="./js/vendors/swiper-bundle.min.js" fetchpriority="low"></script>
-    <script src="./js/main.js" ></script>
+    <script src="./js/vendors/swiper-bundle.min.js" fetchpriority="low" defer></script>
+    <script src="./js/main.js" defer></script>
 
 </body>
 
