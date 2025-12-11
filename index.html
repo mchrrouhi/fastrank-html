@@ -27,6 +27,7 @@
 <link rel="preconnect" href="https://assets.speedvitals.com" crossorigin>
 <link rel="dns-prefetch" href="//assets.speedvitals.com">
 <!-- Preload critical CSS -->
+<link rel="preload" href="./style.css" as="style" />
 <link rel="stylesheet" href="./style.css" />
 <!-- Preload LCP hero image -->
 <link rel="preload" as="image" href="./images/glow-bottom.svg" fetchpriority="high">
@@ -37,18 +38,7 @@
   <link rel="stylesheet" href="./css/vendors/aos.css">
 </noscript>
 <!-- Crisp Live Chat -->
-    <script>
-window.$crisp=[];
-window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";
-window.addEventListener("load", function () {
-   setTimeout(() => {
-      const d=document,s=d.createElement("script");
-      s.src="https://client.crisp.chat/l.js";
-      s.async=1;
-      d.body.appendChild(s);
-   }, 2500);
-});
-</script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="883b2d77-164f-457f-add0-22394a2a3bb2";;(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -109,29 +99,15 @@ window.addEventListener("load", function () {
   ]
 }
 </script>
-<!-- Google Analytics + Google Ads (Optimized gtag.js) -->
+<!-- Google Analytics + Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-
     gtag('js', new Date());
 
-    /* Google Analytics (GA4) - Optimized to prevent forced reflow */
-    gtag('config', 'G-EZ9KWQEM4F', {
-        send_page_view: false,  // Manual control to avoid layout thrashing
-        transport_type: 'beacon',  // Use sendBeacon API for better performance
-        allow_ad_personalization_signals: false  // Reduce unnecessary DOM queries
-    });
-    
-    /* Send page view after DOM is ready to avoid reflow */
-    if (document.readyState === 'complete') {
-        gtag('event', 'page_view');
-    } else {
-        window.addEventListener('load', function() {
-            gtag('event', 'page_view');
-        }, { once: true });
-    }
+    /* Google Analytics (GA4) */
+    gtag('config', 'G-EZ9KWQEM4F');
 
     /* Google Ads Conversion Tracking */
     gtag('config', 'AW-17714543566');
