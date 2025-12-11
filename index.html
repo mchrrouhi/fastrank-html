@@ -26,11 +26,9 @@
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
 <link rel="preconnect" href="https://assets.speedvitals.com" crossorigin>
 <link rel="dns-prefetch" href="//assets.speedvitals.com">
-<!-- Preload critical CSS -->
-<link rel="preload" href="./style.css" as="style" />
-<link rel="stylesheet" href="./style.css" />
-<!-- Preload LCP hero image -->
-<link rel="preload" as="image" href="./images/glow-bottom.svg" fetchpriority="high">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="./style.css?v=20251206" as="style" />
+    <link rel="stylesheet" href="./style.css?v=20251206" />
 <!-- Lazy-load vendor CSS to avoid render-blocking -->
 <link rel="stylesheet" href="./css/vendors/aos.css" media="print" onload="this.media='all'">
 <!-- Fallback for users with JS disabled -->
@@ -46,7 +44,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <!-- Preload LCP hero image to improve LCP -->
-    <script type="application/ld+json">
+    <link rel="preload" as="image" href="./images/glow-bottom.svg" fetchpriority="high">
 {
   "@context": "https://schema.org",
   "@graph": [
