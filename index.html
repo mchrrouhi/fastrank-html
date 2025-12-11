@@ -117,10 +117,21 @@ window.addEventListener("load", function () {
 
     gtag('js', new Date());
 
-    /* Google Analytics (GA4) */
+    /* Google Analytics (GA4) - Optimized to prevent forced reflow */
     gtag('config', 'G-EZ9KWQEM4F', {
-        send_page_view: true
+        send_page_view: false,  // Manual control to avoid layout thrashing
+        transport_type: 'beacon',  // Use sendBeacon API for better performance
+        allow_ad_personalization_signals: false  // Reduce unnecessary DOM queries
     });
+    
+    /* Send page view after DOM is ready to avoid reflow */
+    if (document.readyState === 'complete') {
+        gtag('event', 'page_view');
+    } else {
+        window.addEventListener('load', function() {
+            gtag('event', 'page_view');
+        }, { once: true });
+    }
 
     /* Google Ads Conversion Tracking */
     gtag('config', 'AW-17714543566');
@@ -1232,7 +1243,7 @@ Get a professional 48-hour diagnostic and a roadmap to improve speed, Core Web V
 
     <script src="./js/vendors/alpinejs.min.js" defer></script>
     <script src="./js/vendors/aos.js" defer></script>
-    <script src="./js/main.js" ></script>
+    <script src="./js/main.js" defer></script>
 
 </body>
 

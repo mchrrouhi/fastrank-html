@@ -7,8 +7,20 @@
     transform: translateZ(0);
 }
 
-/* Custom AOS distance */
+/* Custom AOS distance - Optimized for LCP performance */
 @media screen {
+    /* Add will-change hint to animated elements for GPU acceleration */
+    html:not(.no-js) body [data-aos] {
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+    
+    /* Remove will-change after animation completes to free resources */
+    html:not(.no-js) body [data-aos].aos-animate {
+        will-change: auto;
+    }
+
     html:not(.no-js) body [data-aos=fade-up] {
         -webkit-transform: translate3d(0, 14px, 0);
         transform: translate3d(0, 14px, 0);
