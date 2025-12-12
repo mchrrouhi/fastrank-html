@@ -92,18 +92,34 @@
     ]
 }
 </script>
-<!-- Google Analytics + Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
 <script>
+(function () {
+  let loaded = false;
+
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+
+    const s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F';
+    s.async = true;
+    document.head.appendChild(s);
+
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
     gtag('js', new Date());
-
-    /* Google Analytics (GA4) */
-    gtag('config', 'G-EZ9KWQEM4F');
-
-    /* Google Ads Conversion Tracking */
+    gtag('config', 'G-EZ9KWQEM4F', { send_page_view: true });
     gtag('config', 'AW-17714543566');
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => {
+    window.addEventListener(evt, loadGA, { once: true, passive: true });
+  });
+
+  setTimeout(loadGA, 5000); // fallback
+})();
 </script>
 <script data-rum-site-id="6e0639d4-cc54-45fd-b288-2dc709ea0003" src="https://assets.speedvitals.com/vitals.min.js" defer></script>
 </head>
