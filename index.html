@@ -90,35 +90,6 @@
     ]
 }
 </script>
-<script>
-(function () {
-  let loaded = false;
-
-  function loadGA() {
-    if (loaded) return;
-    loaded = true;
-
-    const s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F';
-    s.async = true;
-    document.head.appendChild(s);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', 'G-EZ9KWQEM4F', { send_page_view: true });
-    gtag('config', 'AW-17714543566');
-  }
-
-  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => {
-    window.addEventListener(evt, loadGA, { once: true, passive: true });
-  });
-
-  setTimeout(loadGA, 5000); // fallback
-})();
-</script>
 <script data-rum-site-id="6e0639d4-cc54-45fd-b288-2dc709ea0003" src="https://assets.speedvitals.com/vitals.min.js" defer></script>
 </head>
 
@@ -1228,6 +1199,35 @@ Get a professional 48-hour diagnostic and a roadmap to improve speed, Core Web V
     <script src="./js/main.js" ></script>
 
     <script> (function () { let crispLoaded = false; function loadCrisp() { if (crispLoaded) return; crispLoaded = true; window.$crisp = []; window.CRISP_WEBSITE_ID = "883b2d77-164f-457f-add0-22394a2a3bb2"; const s = document.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = true; document.body.appendChild(s); } // Load Crisp on first user interaction ["scroll", "mousemove", "touchstart", "keydown"].forEach(event => { window.addEventListener(event, loadCrisp, { once: true, passive: true }); }); // Fallback: load after 7 seconds (in case no interaction) setTimeout(loadCrisp, 7000); })(); </script>
+<script>
+(function () {
+  let loaded = false;
+
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+
+    const s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F';
+    s.async = true;
+    document.head.appendChild(s);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', 'G-EZ9KWQEM4F', { send_page_view: true });
+    gtag('config', 'AW-17714543566');
+  }
+
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(evt => {
+    window.addEventListener(evt, loadGA, { once: true, passive: true });
+  });
+
+  setTimeout(loadGA, 5000); // fallback
+})();
+</script>
 
 </body>
 
