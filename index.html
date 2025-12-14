@@ -1225,37 +1225,27 @@ Get a professional 48-hour diagnostic and a roadmap to improve speed, Core Web V
                 setTimeout(loadCrisp, 7000);
             })();
         </script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        <script>
-            (function () {
-                let loaded = false;
-
-                function loadGA4() {
-                    if (loaded) return;
-                    loaded = true;
-
-                    const s = document.createElement("script");
-                    s.src = "https://www.googletagmanager.com/gtag/js?id=G-EZ9KWQEM4F";
-                    s.async = true;
-                    document.head.appendChild(s);
-
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag() {
-                        dataLayer.push(arguments);
-                    }
-                    window.gtag = gtag;
-
-                    gtag("js", new Date());
-                    gtag("config", "G-EZ9KWQEM4F", { send_page_view: true });
-                }
-
-                ["scroll", "mousemove", "touchstart", "keydown"].forEach((evt) => {
-                    window.addEventListener(evt, loadGA4, { once: true, passive: true });
-                });
-
-                setTimeout(loadGA4, 5000);
-            })();
-        </script>
+  gtag('config', 'G-EZ9KWQEM4F');
+</script>
+<!-- Crisp Live Chat -->
+<script>
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "883b2d77-164f-457f-add0-22394a2a3bb2";
+  (function () {
+    var d = document;
+    var s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = true;
+    d.getElementsByTagName("body")[0].appendChild(s);
+  })();
+</script>
 
 </body>
 
