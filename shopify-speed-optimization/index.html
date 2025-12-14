@@ -25,9 +25,6 @@
     <meta name="twitter:title" content="Shopify Speed Optimization Service — Faster Load Times & Core Web Vitals Fixes">
     <meta name="twitter:description" content="48-hour Shopify performance audit and 7-day optimization sprint. Improve Core Web Vitals, load times, and conversions for Shopify stores in AU, CA & US.">
     <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
-    <!-- Preload LCP hero image to improve LCP -->
-    <link rel="preload" as="image" href="../images/glow-bottom.svg" fetchpriority="high">
-                                
     <!-- Preload critical CSS -->
     <link rel="preload" href="../style.css?v=20251206" as="style" />
     <link rel="stylesheet" href="../style.css?v=20251206" />
@@ -202,11 +199,9 @@
                         <canvas data-particle-animation></canvas>
                     </div>
 
-                    <!-- Illustration -->
+                    <!-- Illustration (decorative glow via CSS background to avoid LCP) -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
-                        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-                            <img src="../images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration">
-                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10 hero-glow-bg" aria-hidden="true"></div>
                     </div>
 
                     <div class="pt-32 pb-16 md:pt-40 md:pb-32">

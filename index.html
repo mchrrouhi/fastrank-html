@@ -35,8 +35,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- Preload LCP hero image to improve LCP -->
-    <link rel="preload" as="image" href="./images/glow-bottom.svg" fetchpriority="high">
         <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -192,11 +190,9 @@
                         <canvas data-particle-animation></canvas>
                     </div>
 
-                    <!-- Illustration -->
+                    <!-- Illustration (decorative glow via CSS background to avoid LCP) -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
-                        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-                            <img src="./images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration">
-                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10 hero-glow-bg" aria-hidden="true"></div>
                     </div>
 
                     <div class="pt-32 pb-16 md:pt-40 md:pb-32">
