@@ -2,6 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
+    <!-- Preload LCP image FIRST - before any other resources -->
+    <link rel="preload" as="image" href="https://fastrank.b-cdn.net/images/glow-bottom.svg" />
     <title>Shopify Speed Optimization Service — Faster Load Times & Core Web Vitals Fixes</title>
     <meta name="description" content="48-hour Shopify performance audit and 7-day optimization sprint. Improve Core Web Vitals, load times, and conversions for Shopify stores in AU, CA & US.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,9 +27,9 @@
     <meta name="twitter:title" content="Shopify Speed Optimization Service — Faster Load Times & Core Web Vitals Fixes">
     <meta name="twitter:description" content="48-hour Shopify performance audit and 7-day optimization sprint. Improve Core Web Vitals, load times, and conversions for Shopify stores in AU, CA & US.">
     <meta name="twitter:image" content="https://fastrank.io/images/fastrank-logo.svg">
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="../style.css?v=20251206" as="style" />
-    <link rel="stylesheet" href="../style.css?v=20251206" />
+    <!-- Preload critical CSS from CDN -->
+    <link rel="preload" href="https://fastrank.b-cdn.net/style.css?v=20251206" as="style" />
+    <link rel="stylesheet" href="https://fastrank.b-cdn.net/style.css?v=20251206" />
                             
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
