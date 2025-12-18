@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <!-- Preload LCP image FIRST - before any other resources, with high priority -->
     <link rel="preload" as="image" href="https://fastrank.b-cdn.net/images/glow-bottom.svg" fetchpriority="high" />
-    <!-- Preload critical web fonts to reduce render delay on LCP text -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-v20-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-v20-latin-600.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-v20-latin-800.woff2" crossorigin>
     <!-- Inline font-face with font-display: swap to prevent render blocking -->
     <style>
       @font-face {
