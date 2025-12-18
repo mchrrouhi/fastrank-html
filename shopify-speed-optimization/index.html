@@ -2,12 +2,36 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
-    <!-- Preload LCP image FIRST - before any other resources -->
-    <link rel="preload" as="image" href="https://fastrank.b-cdn.net/images/glow-bottom.svg" />
+    <!-- Preload LCP image FIRST - before any other resources, with high priority -->
+    <link rel="preload" as="image" href="https://fastrank.b-cdn.net/images/glow-bottom.svg" fetchpriority="high" />
     <!-- Preload critical web fonts to reduce render delay on LCP text -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-v20-latin-regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-v20-latin-600.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-v20-latin-800.woff2" crossorigin>
+    <!-- Inline font-face with font-display: swap to prevent render blocking -->
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter-v20-latin-regular.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+        font-stretch: 100%;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter-v20-latin-600.woff2') format('woff2');
+        font-weight: 600;
+        font-display: swap;
+        font-stretch: 100%;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/inter-v20-latin-800.woff2') format('woff2');
+        font-weight: 800;
+        font-display: swap;
+        font-stretch: 100%;
+      }
+    </style>
     <title>Shopify Speed Optimization Service — Faster Load Times & Core Web Vitals Fixes</title>
     <meta name="description" content="48-hour Shopify performance audit and 7-day optimization sprint. Improve Core Web Vitals, load times, and conversions for Shopify stores in AU, CA & US.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -199,13 +223,13 @@
 
                     <!-- Particles animation -->
                     <div class="absolute inset-0 -z-10 hidden md:block" aria-hidden="true">
-                        <canvas data-particle-animation></canvas>
+                        <canvas data-particle-animation data-particle-defer="true"></canvas>
                     </div>
 
                     <!-- Illustration -->
                     <div class="absolute inset-0 -z-10 -mx-28 rounded-b-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
                         <div class="absolute left-1/2 -translate-x-1/2 bottom-0 -z-10">
-                            <img src="../images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="lazy" decoding="async">
+                            <img src="../images/glow-bottom.svg" class="max-w-none" width="2146" height="774" alt="Hero Illustration" loading="eager" fetchpriority="high" decoding="async">
                         </div>
                     </div>
 
