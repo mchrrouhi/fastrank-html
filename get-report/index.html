@@ -109,53 +109,21 @@
 
                                 <div class="relative rounded-3xl border border-slate-800/60 bg-slate-900/40 backdrop-blur-xl p-8 md:p-10 shadow-2xl">
 
-                                    <form action="https://formspree.io/f/mzzngqqn" method="POST">
-
-                                        <div class="text-center mb-8">
-                                            <h2 class="text-2xl font-bold text-transparent bg-linear-to-r from-purple-500 to-purple-200 bg-clip-text mb-2">
-                                                Request Your Performance Check
-                                            </h2>
-                                            <p class="text-sm text-slate-400">Fill out the form below and we'll get back to you within 48 hours</p>
-                                        </div>
-
-                                        <!-- Email -->
-                                        <div class="mb-6">
-                                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">
-                                                Your email: <span class="text-purple-400">*</span>
-                                            </label>
-                                            <input type="email" id="email" name="email" required placeholder="you@company.com"
-                                                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900">
-                                        </div>
-
-                                        <!-- Message -->
-                                        <div class="mb-8">
-                                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">
-                                                Your message: <span class="text-purple-400">*</span>
-                                            </label>
-                                            <textarea 
-                                                id="message" 
-                                                name="message"
-                                                rows="4"
-                                                required
-                                                placeholder="Tell us about your Shopify store, performance concerns, or any questions..."
-                                                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-500 
-                                                focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition duration-150 ease-in-out"
-                                            ></textarea>
-                                        </div>
-
-                                        <!-- Submit -->
-                                        <button type="submit"
-                                            class="w-full inline-flex items-center justify-center btn-sm text-white bg-purple-500 hover:bg-purple-600 rounded-xl shadow-lg transition duration-150 ease-in-out group"
-                                            aria-label="Submit Performance Check Request">
-                                            Send Message <span class="tracking-normal text-purple-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
-                                        </button>
-
-                                        <div class="mt-6 text-center">
-                                            <p class="text-xs text-slate-400">Every report is reviewed and validated by our optimization specialists.</p>
-                                        </div>
-
-                                    </form>
-
+<form
+  action="https://formspree.io/f/mzzngqqn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
                                 </div>
                             </div>
                         </div>
