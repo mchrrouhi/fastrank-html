@@ -109,95 +109,21 @@
 
                                 <div class="relative rounded-3xl border border-slate-800/60 bg-slate-900/40 backdrop-blur-xl p-8 md:p-10 shadow-2xl">
 
-                                    <form id="performance-check-form" action="https://formspree.io/f/mzzngqqn" method="POST">
-
-                                        <div class="text-center mb-8">
-                                            <h2 class="text-2xl font-bold text-transparent bg-linear-to-r from-purple-500 to-purple-200 bg-clip-text mb-2">
-                                                Request Your Performance Check
-                                            </h2>
-                                            <p class="text-sm text-slate-400">Fill out the form below and we'll get back to you within 48 hours</p>
-                                        </div>
-
-                                        <!-- Store URL -->
-                                        <div class="mb-6">
-                                            <label for="store-url" class="block text-sm font-medium text-slate-300 mb-2">
-                                                Shopify Store URL <span class="text-purple-400">*</span>
-                                            </label>
-                                            <input type="url" id="store-url" name="store-url" required placeholder="https://yourstore.myshopify.com"
-                                                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900">
-                                        </div>
-
-                                        <!-- Email -->
-                                        <div class="mb-6">
-                                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">
-                                                Email Address <span class="text-purple-400">*</span>
-                                            </label>
-                                            <input type="email" id="email" name="email" required placeholder="you@company.com"
-                                                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900">
-                                        </div>
-
-                                        <!-- UNIVERSAL: Store Size -->
-                                        <div class="mb-6">
-                                            <label for="store-size" class="block text-sm font-medium text-slate-300 mb-2">
-                                                Store Size <span class="text-purple-400">*</span>
-                                            </label>
-                                            <select id="store-size" name="store-size" required
-                                                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900">
-                                                <option value="" disabled selected>Select store size...</option>
-                                                <option value="small">Small Store</option>
-                                                <option value="medium">Medium Store</option>
-                                                <option value="large">Large Store</option>
-                                                <option value="enterprise">Enterprise</option>
-                                                <option value="high-scale">High-Scale / Shopify Plus</option>
-                                            </select>
-                                        </div>
-
-                                        <!-- UNIVERSAL: Main Issue -->
-                                        <div class="mb-8">
-                                            <label for="main-issue" class="block text-sm font-medium text-slate-300 mb-2">
-                                                Main Performance Issue <span class="text-purple-400">*</span>
-                                            </label>
-                                            <select id="main-issue" name="main-issue" required
-                                                class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900">
-                                                <option value="" disabled selected>Select your main concern...</option>
-                                                <option value="speed-performance">Speed / Performance issues</option>
-                                                <option value="conversion-issues">Low conversions</option>
-                                                <option value="technical-problems">Technical problems</option>
-                                                <option value="design-ux">Design / UX concerns</option>
-                                                <option value="mobile-issues">Mobile performance issues</option>
-                                                <option value="seo-issues">SEO / Ranking issues</option>
-                                                <option value="ads-performance">Ads not converting</option>
-                                                <option value="not-sure">Other / Not sure</option>
-                                            </select>
-                                        </div>
-                                        <!-- Additional Details -->
-<div class="mb-8">
-    <label for="extra-details" class="block text-sm font-medium text-slate-300 mb-2">
-        Additional Details (optional)
-    </label>
-    <textarea 
-        id="extra-details" 
-        name="extra-details"
-        rows="4"
-        placeholder="Describe the issue you're facing, apps causing problems, specific pages that are slow, or anything else you'd like us to check..."
-        class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder-slate-500 
-        focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition duration-150 ease-in-out"
-    ></textarea>
-</div>
-
-                                        <!-- Submit -->
-                                        <button type="submit"
-                                            class="w-full inline-flex items-center justify-center btn-sm text-white bg-purple-500 hover:bg-purple-600 rounded-xl shadow-lg transition duration-150 ease-in-out group"
-                                            aria-label="Submit Performance Check Request">
-                                            Request Your Performance Check <span class="tracking-normal text-purple-200 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">→</span>
-                                        </button>
-
-                                        <div class="mt-6 text-center">
-                                            <p class="text-xs text-slate-400">Every report is reviewed and validated by our optimization specialists.</p>
-                                        </div>
-
-                                    </form>
-
+<form
+  action="https://formspree.io/f/mzzngqqn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
                                 </div>
                             </div>
                         </div>
@@ -269,9 +195,9 @@
                 <ul class="text-sm space-y-2">
                     <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../privacy-policy/">Privacy Policy</a></li>
                     <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../terms-of-service/">Terms of Service</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../acceptable-use-policy/index.html">Acceptable Use Policy</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../cookie-policy/index.html">Cookie Policy</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../gdpr-policy/index.html">GDPR Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../acceptable-use-policy/">Acceptable Use Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../cookie-policy/">Cookie Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../gdpr-policy/">GDPR Policy</a></li>
                 </ul>
             </div>
 
@@ -279,12 +205,12 @@
             <div>
                 <h6 class="text-sm text-slate-50 font-medium mb-2">Legal &amp; Compliance</h6>
                 <ul class="text-sm space-y-2">
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../dpa/index.html">Data Processing Addendum (DPA)</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../sla/index.html">Service Level Agreement (SLA)</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../support-policy/index.html">Support Policy</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../performance-disclaimer/index.html">Performance Disclaimer</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../dpa/">Data Processing Addendum (DPA)</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../sla/">Service Level Agreement (SLA)</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../support-policy/">Support Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../performance-disclaimer/">Performance Disclaimer</a></li>
                     <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="https://fastrank.io/guarantee/">Guarantee &amp; Refunds Policy</a></li>
-                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="../billing-payments/index.html">Billing &amp; Payments</a></li>
+                    <li><a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="/billing-payments/">Billing &amp; Payments</a></li>
                 </ul>
             </div>
 
